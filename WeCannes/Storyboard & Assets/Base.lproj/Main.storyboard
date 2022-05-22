@@ -11,7 +11,7 @@
         <!--Map-->
         <scene sceneID="Czh-61-Lwt">
             <objects>
-                <viewController id="mw7-Ya-W6x" sceneMemberID="viewController">
+                <viewController id="mw7-Ya-W6x" customClass="MapViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tpU-tT-lAj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,12 +28,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deI-Vu-2Jv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398.55072463768118" y="38.839285714285715"/>
+            <point key="canvasLocation" x="-399" y="133"/>
         </scene>
         <!--Wallet-->
         <scene sceneID="ksV-vV-OT2">
             <objects>
-                <viewController id="eZ6-sB-OZm" sceneMemberID="viewController">
+                <viewController id="eZ6-sB-OZm" customClass="WalletViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eQj-1o-6z1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,12 +51,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBR-AS-bz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521.73913043478262" y="53.571428571428569"/>
+            <point key="canvasLocation" x="651" y="133"/>
         </scene>
         <!--Home-->
         <scene sceneID="51h-oM-rrJ">
             <objects>
-                <viewController id="6GZ-cs-J3e" sceneMemberID="viewController">
+                <viewController id="6GZ-cs-J3e" customClass="HomeViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CMP-UE-nMA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,18 +70,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Redeem Points"/>
+                                <connections>
+                                    <segue destination="het-RM-W9p" kind="show" id="AFG-xW-xt1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i5-4Q-VFS">
                                 <rect key="frame" x="69" y="608" width="276" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Earn Points"/>
+                                <connections>
+                                    <segue destination="4bJ-tU-P7f" kind="show" id="Gie-BJ-rGu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rc-5x-XBO">
                                 <rect key="frame" x="69" y="679" width="276" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Upcoming Events"/>
+                                <connections>
+                                    <segue destination="K5h-af-e0N" kind="show" id="TVR-JN-by9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yqr-ql-7dv"/>
@@ -92,6 +101,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRf-eL-UcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-398.55072463768118" y="-568.52678571428567"/>
+        </scene>
+        <!--Earn Points View Controller-->
+        <scene sceneID="5U3-Um-cTw">
+            <objects>
+                <viewController id="4bJ-tU-P7f" customClass="EarnPointsViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZLG-6w-UyF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ApB-eh-ytW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kAK-QX-Gry"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Rz-wy-jRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="-1296"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dM9-Vn-YIm">
@@ -113,6 +138,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnX-Rw-Ig4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1288" y="-264"/>
+        </scene>
+        <!--Redeem Points View Controller-->
+        <scene sceneID="oSu-H5-ywY">
+            <objects>
+                <viewController id="het-RM-W9p" customClass="RedeemPointsViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ste-Ft-v50">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CHD-Ij-oMq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="keH-Oh-nuJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VN0-Yh-BW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="-569"/>
+        </scene>
+        <!--Scheduled Events View Controller-->
+        <scene sceneID="4Ko-xo-yj6">
+            <objects>
+                <viewController id="K5h-af-e0N" customClass="ScheduledEventsViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="154-Br-2LD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ILo-DF-QJJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dgo-l8-9pP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2H-3A-XLk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="-2016"/>
         </scene>
     </scenes>
     <resources>

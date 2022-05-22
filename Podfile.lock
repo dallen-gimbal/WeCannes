@@ -1,16 +1,16 @@
 PODS:
-  - Gimbal (2.91)
+  - GimbalXCFramework (2.91)
 
 DEPENDENCIES:
-  - Gimbal
+  - GimbalXCFramework
 
 SPEC REPOS:
   trunk:
-    - Gimbal
+    - GimbalXCFramework
 
 SPEC CHECKSUMS:
-  Gimbal: d50ee28915149c3443691474cbb1d5b76a45a79c
+  GimbalXCFramework: 2bfbadc3c447e455f19308281b98dfaef3600a9a
 
-PODFILE CHECKSUM: a15823881a6070435ae15e8f57729b8bc2226a59
+PODFILE CHECKSUM: f412108e5a385440fbbc7fccc1736b6574316b76
 
 COCOAPODS: 1.11.3

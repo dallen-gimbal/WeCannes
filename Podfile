@@ -6,7 +6,7 @@ target 'WeCannes' do
   use_frameworks!
 
   # Pods for WeCannes
-  pod 'Gimbal'
+  pod 'GimbalXCFramework'
   
 
   target 'WeCannesTests' do

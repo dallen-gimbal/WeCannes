@@ -10,9 +10,11 @@
 		8DCEFB1E0EBF637C3F6DB93A /* Pods_WeCannesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B1DF147F2E7FB543617E2E /* Pods_WeCannesTests.framework */; };
 		9B8B80491AD2C8A9CABECC58 /* Pods_WeCannes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB26792A1D1A7CDF0E8EFF99 /* Pods_WeCannes.framework */; };
 		D79BBC2C264AB883FCC89518 /* Pods_WeCannes_WeCannesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E235DDFC3D9C9FD15153FF5C /* Pods_WeCannes_WeCannesUITests.framework */; };
+		F03F3F172839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
+		F03F3F182839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
+		F03F3F192839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
 		F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C32839BFC10084A126 /* AppDelegate.swift */; };
 		F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C52839BFC10084A126 /* SceneDelegate.swift */; };
-		F0B874C82839BFC10084A126 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C72839BFC10084A126 /* MapViewController.swift */; };
 		F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874C92839BFC10084A126 /* Main.storyboard */; };
 		F0B874D02839BFC30084A126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874CE2839BFC30084A126 /* LaunchScreen.storyboard */; };
 		F0B874DB2839BFC40084A126 /* WeCannesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874DA2839BFC40084A126 /* WeCannesTests.swift */; };
@@ -45,6 +47,8 @@
 		F0B875182839D0DE0084A126 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0B875172839D0DE0084A126 /* GoogleService-Info.plist */; };
 		F0B875192839D0DE0084A126 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0B875172839D0DE0084A126 /* GoogleService-Info.plist */; };
 		F0B8751A2839D0DE0084A126 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0B875172839D0DE0084A126 /* GoogleService-Info.plist */; };
+		F0B8751F2839DC5A0084A126 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F0B8751E2839DC5A0084A126 /* FirebaseAuth */; };
+		F0B875212839DC5A0084A126 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F0B875202839DC5A0084A126 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +78,10 @@
 		BC2AB7A406CE914FCE5089A2 /* Pods-WeCannes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCannes.release.xcconfig"; path = "Target Support Files/Pods-WeCannes/Pods-WeCannes.release.xcconfig"; sourceTree = "<group>"; };
 		C25A6F42F0848DB735456FD7 /* Pods-WeCannesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCannesTests.debug.xcconfig"; path = "Target Support Files/Pods-WeCannesTests/Pods-WeCannesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E235DDFC3D9C9FD15153FF5C /* Pods_WeCannes_WeCannesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeCannes_WeCannesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F03F3F162839E43200E605A7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B874C52839BFC10084A126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0B874C72839BFC10084A126 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F0B874CA2839BFC10084A126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0B874CF2839BFC30084A126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0B874D12839BFC30084A126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8B80491AD2C8A9CABECC58 /* Pods_WeCannes.framework in Frameworks */,
+				F0B8751F2839DC5A0084A126 /* FirebaseAuth in Frameworks */,
+				F0B875212839DC5A0084A126 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +151,6 @@
 				C25A6F42F0848DB735456FD7 /* Pods-WeCannesTests.debug.xcconfig */,
 				943B663BAE19A1E481E67E8E /* Pods-WeCannesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,6 +181,8 @@
 			children = (
 				F0B874C32839BFC10084A126 /* AppDelegate.swift */,
 				F0B874C52839BFC10084A126 /* SceneDelegate.swift */,
+				F0B875172839D0DE0084A126 /* GoogleService-Info.plist */,
+				F0B874D12839BFC30084A126 /* Info.plist */,
 				F0B875132839CA150084A126 /* Views */,
 				F0B8751C2839D0F40084A126 /* Storyboard & Assets */,
 				F0B8751B2839D0E90084A126 /* PropertyLists */,
@@ -213,8 +220,8 @@
 		F0B875142839CA280084A126 /* TabBarViews */ = {
 			isa = PBXGroup;
 			children = (
-				F0B874C72839BFC10084A126 /* MapViewController.swift */,
 				F0B874FB2839C9850084A126 /* WalletViewController.swift */,
+				F03F3F162839E43200E605A7 /* MapViewController.swift */,
 				F0B874F72839C9680084A126 /* HomeViewController.swift */,
 			);
 			path = TabBarViews;
@@ -242,8 +249,6 @@
 		F0B8751B2839D0E90084A126 /* PropertyLists */ = {
 			isa = PBXGroup;
 			children = (
-				F0B874D12839BFC30084A126 /* Info.plist */,
-				F0B875172839D0DE0084A126 /* GoogleService-Info.plist */,
 			);
 			path = PropertyLists;
 			sourceTree = "<group>";
@@ -276,6 +281,10 @@
 			dependencies = (
 			);
 			name = WeCannes;
+			packageProductDependencies = (
+				F0B8751E2839DC5A0084A126 /* FirebaseAuth */,
+				F0B875202839DC5A0084A126 /* FirebaseFirestoreSwift */,
+			);
 			productName = WeCannes;
 			productReference = F0B874C02839BFC10084A126 /* WeCannes.app */;
 			productType = "com.apple.product-type.application";
@@ -351,6 +360,9 @@
 				Base,
 			);
 			mainGroup = F0B874B72839BFC10084A126;
+			packageReferences = (
+				F0B8751D2839DC5A0084A126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F0B874C12839BFC10084A126 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -505,7 +517,7 @@
 				F0B8750C2839CA050084A126 /* RegisterViewController.swift in Sources */,
 				F0B875002839C9950084A126 /* RedeemPointsViewController.swift in Sources */,
 				F0B875042839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
-				F0B874C82839BFC10084A126 /* MapViewController.swift in Sources */,
+				F03F3F172839E43200E605A7 /* MapViewController.swift in Sources */,
 				F0B875082839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */,
 				F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */,
@@ -523,6 +535,7 @@
 				F0B874F92839C9680084A126 /* HomeViewController.swift in Sources */,
 				F0B8750D2839CA050084A126 /* RegisterViewController.swift in Sources */,
 				F0B875012839C9950084A126 /* RedeemPointsViewController.swift in Sources */,
+				F03F3F182839E43200E605A7 /* MapViewController.swift in Sources */,
 				F0B875112839CA0E0084A126 /* SignInViewController.swift in Sources */,
 				F0B875092839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B875052839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
@@ -537,6 +550,7 @@
 				F0B874E72839BFC40084A126 /* WeCannesUITestsLaunchTests.swift in Sources */,
 				F0B874FE2839C9850084A126 /* WalletViewController.swift in Sources */,
 				F0B874E52839BFC40084A126 /* WeCannesUITests.swift in Sources */,
+				F03F3F192839E43200E605A7 /* MapViewController.swift in Sources */,
 				F0B8750E2839CA050084A126 /* RegisterViewController.swift in Sources */,
 				F0B875022839C9950084A126 /* RedeemPointsViewController.swift in Sources */,
 				F0B875122839CA0E0084A126 /* SignInViewController.swift in Sources */,
@@ -716,7 +730,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gimbal.WeCannes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gimbal.wecannes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -745,7 +759,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gimbal.WeCannes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gimbal.wecannes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -873,6 +887,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F0B8751D2839DC5A0084A126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F0B8751E2839DC5A0084A126 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0B8751D2839DC5A0084A126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F0B875202839DC5A0084A126 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0B8751D2839DC5A0084A126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F0B874B82839BFC10084A126 /* Project object */;
 }
