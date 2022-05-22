@@ -6,24 +6,25 @@
 //
 
 import UIKit
+import Gimbal
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, PlaceManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if (!Gimbal.isStarted()) {
+            Gimbal.start()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: Gimbal Methods
+    func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
+        
     }
-    */
+    
+    func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
+        
+    }
 
 }

@@ -220,9 +220,9 @@
 		F0B875142839CA280084A126 /* TabBarViews */ = {
 			isa = PBXGroup;
 			children = (
-				F0B874FB2839C9850084A126 /* WalletViewController.swift */,
-				F03F3F162839E43200E605A7 /* MapViewController.swift */,
 				F0B874F72839C9680084A126 /* HomeViewController.swift */,
+				F03F3F162839E43200E605A7 /* MapViewController.swift */,
+				F0B874FB2839C9850084A126 /* WalletViewController.swift */,
 			);
 			path = TabBarViews;
 			sourceTree = "<group>";
