@@ -8,17 +8,29 @@
 import UIKit
 import FirebaseCore
 import Gimbal
+import CloudKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let permissions = Permissions()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
         Gimbal.setAPIKey("0722b77d-831d-4121-91d7-ca2a032ad99d", options: [:])
+        
+        let locationStatus = permissions.checkLocationStatus()
+        if locationStatus == .authorizedAlways || locationStatus == .authorizedWhenInUse {
+            Gimbal.start()
+        } else {
+            if locationStatus == .notDetermined {
+                print("Not requested")
+            } else {
+                print("Denied")
+            }
+        }
         
         return true
     }

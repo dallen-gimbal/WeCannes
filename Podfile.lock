@@ -1,16 +1,20 @@
 PODS:
   - GimbalXCFramework (2.91)
+  - SwiftyOnboard (1.4.0)
 
 DEPENDENCIES:
   - GimbalXCFramework
+  - SwiftyOnboard
 
 SPEC REPOS:
   trunk:
     - GimbalXCFramework
+    - SwiftyOnboard
 
 SPEC CHECKSUMS:
   GimbalXCFramework: 2bfbadc3c447e455f19308281b98dfaef3600a9a
+  SwiftyOnboard: 76a648dc1dcbc844343b6b95fe5883cb64a62f4a
 
-PODFILE CHECKSUM: f412108e5a385440fbbc7fccc1736b6574316b76
+PODFILE CHECKSUM: cbafda8c7462870b27c37572a7d9bb034d439e18
 
 COCOAPODS: 1.11.3

@@ -7,6 +7,7 @@ target 'WeCannes' do
 
   # Pods for WeCannes
   pod 'GimbalXCFramework'
+  pod 'SwiftyOnboard'
   
 
   target 'WeCannesTests' do

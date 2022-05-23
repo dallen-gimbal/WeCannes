@@ -13,6 +13,8 @@
 		F03F3F172839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
 		F03F3F182839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
 		F03F3F192839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
+		F03F3F1C283B14F600E605A7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F1B283B14F600E605A7 /* OnboardingViewController.swift */; };
+		F03F3F1F283B1C0800E605A7 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F1E283B1C0700E605A7 /* Permissions.swift */; };
 		F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C32839BFC10084A126 /* AppDelegate.swift */; };
 		F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C52839BFC10084A126 /* SceneDelegate.swift */; };
 		F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874C92839BFC10084A126 /* Main.storyboard */; };
@@ -79,6 +81,8 @@
 		C25A6F42F0848DB735456FD7 /* Pods-WeCannesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCannesTests.debug.xcconfig"; path = "Target Support Files/Pods-WeCannesTests/Pods-WeCannesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E235DDFC3D9C9FD15153FF5C /* Pods_WeCannes_WeCannesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeCannes_WeCannesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03F3F162839E43200E605A7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F03F3F1B283B14F600E605A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F03F3F1E283B1C0700E605A7 /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
 		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B874C52839BFC10084A126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F03F3F1A283B14A400E605A7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F03F3F1B283B14F600E605A7 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F03F3F1D283B1BE800E605A7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F03F3F1E283B1C0700E605A7 /* Permissions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		F0B874B72839BFC10084A126 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +204,7 @@
 				F0B875172839D0DE0084A126 /* GoogleService-Info.plist */,
 				F0B874D12839BFC30084A126 /* Info.plist */,
 				F0B875132839CA150084A126 /* Views */,
+				F03F3F1D283B1BE800E605A7 /* Utilities */,
 				F0B8751C2839D0F40084A126 /* Storyboard & Assets */,
 				F0B8751B2839D0E90084A126 /* PropertyLists */,
 			);
@@ -210,6 +231,7 @@
 		F0B875132839CA150084A126 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F03F3F1A283B14A400E605A7 /* Onboarding */,
 				F0B875142839CA280084A126 /* TabBarViews */,
 				F0B875152839CA390084A126 /* AuthenticationViews */,
 				F0B875162839CA510084A126 /* SegueViews */,
@@ -518,11 +540,13 @@
 				F0B875002839C9950084A126 /* RedeemPointsViewController.swift in Sources */,
 				F0B875042839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
 				F03F3F172839E43200E605A7 /* MapViewController.swift in Sources */,
+				F03F3F1F283B1C0800E605A7 /* Permissions.swift in Sources */,
 				F0B875082839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */,
 				F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */,
 				F0B874F82839C9680084A126 /* HomeViewController.swift in Sources */,
 				F0B875102839CA0E0084A126 /* SignInViewController.swift in Sources */,
+				F03F3F1C283B14F600E605A7 /* OnboardingViewController.swift in Sources */,
 				F0B874FC2839C9850084A126 /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
