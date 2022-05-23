@@ -8,16 +8,20 @@
 import Foundation
 import UserNotifications
 import CoreLocation
+import CoreBluetooth
 
 class Permissions {
     let location = CLLocationManager.init()
     
+    //MARK: Request Permissions
+    
+    // Notification
     func requestNotificationPermission() {
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             
             if error != nil {
-                // Handle the error here.
+                print("Error with notification request")
             }
             
             if (granted) {
@@ -28,10 +32,24 @@ class Permissions {
         }
     }
     
+    // When in Use
     func requestWhenInUsePermission() {
         location.requestWhenInUseAuthorization()
     }
     
+    // Always
+    func requestAlwaysPermission() {
+        location.requestAlwaysAuthorization()
+    }
+    
+    // Bluetooth
+    func requestBluetooth() {
+        
+    }
+    
+    //MARK: Check Status
+    
+    // Location
     func checkLocationStatus() -> CLAuthorizationStatus {
         if location.authorizationStatus == .authorizedWhenInUse {
             print("Authorized When in Use")

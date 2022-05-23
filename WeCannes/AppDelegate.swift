@@ -17,12 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Firebase
         FirebaseApp.configure()
         
+        // Gimbal
         Gimbal.setAPIKey("0722b77d-831d-4121-91d7-ca2a032ad99d", options: [:])
         
+        // Permissions
         let locationStatus = permissions.checkLocationStatus()
         if locationStatus == .authorizedAlways || locationStatus == .authorizedWhenInUse {
+            // Start Gimbal
             Gimbal.start()
         } else {
             if locationStatus == .notDetermined {

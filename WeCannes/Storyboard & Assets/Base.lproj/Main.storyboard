@@ -204,17 +204,27 @@
         <!--Onboarding View Controller-->
         <scene sceneID="7js-Ej-IZO">
             <objects>
-                <viewController id="kOa-hZ-qpx" customClass="OnboardingViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kOa-hZ-qpx" customClass="OnboardingViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G8W-yy-3A8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cVZ-Cx-bdT" customClass="SwiftyOnboard" customModule="SwiftyOnboard">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bgu-1N-99f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="swiftyOnboard" destination="cVZ-Cx-bdT" id="ver-pU-jts"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrz-5O-kG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1288" y="-2549"/>
+            <point key="canvasLocation" x="-1288.4057971014495" y="-2549.3303571428569"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="pai-Qs-SwQ">
