@@ -15,6 +15,12 @@
 		F03F3F192839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
 		F03F3F1C283B14F600E605A7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F1B283B14F600E605A7 /* OnboardingViewController.swift */; };
 		F03F3F1F283B1C0800E605A7 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F1E283B1C0700E605A7 /* Permissions.swift */; };
+		F03F3F31283B4B7D00E605A7 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F30283B4B7D00E605A7 /* DataStorage.swift */; };
+		F03F3F32283B4B7D00E605A7 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F30283B4B7D00E605A7 /* DataStorage.swift */; };
+		F03F3F33283B4B7D00E605A7 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F30283B4B7D00E605A7 /* DataStorage.swift */; };
+		F03F3F35283BBB9700E605A7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F34283BBB9700E605A7 /* Notifications.swift */; };
+		F03F3F36283BBB9700E605A7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F34283BBB9700E605A7 /* Notifications.swift */; };
+		F03F3F37283BBB9700E605A7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F34283BBB9700E605A7 /* Notifications.swift */; };
 		F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C32839BFC10084A126 /* AppDelegate.swift */; };
 		F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C52839BFC10084A126 /* SceneDelegate.swift */; };
 		F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874C92839BFC10084A126 /* Main.storyboard */; };
@@ -83,6 +89,8 @@
 		F03F3F162839E43200E605A7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F03F3F1B283B14F600E605A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F03F3F1E283B1C0700E605A7 /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
+		F03F3F30283B4B7D00E605A7 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		F03F3F34283BBB9700E605A7 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B874C52839BFC10084A126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				F03F3F1E283B1C0700E605A7 /* Permissions.swift */,
+				F03F3F30283B4B7D00E605A7 /* DataStorage.swift */,
+				F03F3F34283BBB9700E605A7 /* Notifications.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -536,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03F3F31283B4B7D00E605A7 /* DataStorage.swift in Sources */,
 				F0B8750C2839CA050084A126 /* RegisterViewController.swift in Sources */,
 				F0B875002839C9950084A126 /* RedeemPointsViewController.swift in Sources */,
 				F0B875042839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
@@ -543,6 +554,7 @@
 				F03F3F1F283B1C0800E605A7 /* Permissions.swift in Sources */,
 				F0B875082839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */,
+				F03F3F35283BBB9700E605A7 /* Notifications.swift in Sources */,
 				F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */,
 				F0B874F82839C9680084A126 /* HomeViewController.swift in Sources */,
 				F0B875102839CA0E0084A126 /* SignInViewController.swift in Sources */,
@@ -557,12 +569,14 @@
 			files = (
 				F0B874DB2839BFC40084A126 /* WeCannesTests.swift in Sources */,
 				F0B874F92839C9680084A126 /* HomeViewController.swift in Sources */,
+				F03F3F36283BBB9700E605A7 /* Notifications.swift in Sources */,
 				F0B8750D2839CA050084A126 /* RegisterViewController.swift in Sources */,
 				F0B875012839C9950084A126 /* RedeemPointsViewController.swift in Sources */,
 				F03F3F182839E43200E605A7 /* MapViewController.swift in Sources */,
 				F0B875112839CA0E0084A126 /* SignInViewController.swift in Sources */,
 				F0B875092839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B875052839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
+				F03F3F32283B4B7D00E605A7 /* DataStorage.swift in Sources */,
 				F0B874FD2839C9850084A126 /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +585,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03F3F37283BBB9700E605A7 /* Notifications.swift in Sources */,
+				F03F3F33283B4B7D00E605A7 /* DataStorage.swift in Sources */,
 				F0B874E72839BFC40084A126 /* WeCannesUITestsLaunchTests.swift in Sources */,
 				F0B874FE2839C9850084A126 /* WalletViewController.swift in Sources */,
 				F0B874E52839BFC40084A126 /* WeCannesUITests.swift in Sources */,

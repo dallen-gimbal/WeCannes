@@ -18,7 +18,6 @@ class OnboardingViewController: UIViewController {
     private let permissions = Permissions()
     private var count = 0
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

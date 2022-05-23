@@ -12,6 +12,7 @@ import CoreBluetooth
 
 class Permissions {
     let location = CLLocationManager.init()
+    let storage = UserDefaults.init()
     
     //MARK: Request Permissions
     
@@ -25,9 +26,9 @@ class Permissions {
             }
             
             if (granted) {
-                print("Granted")
+                self.storage.set(true, forKey: "NotificationPermissions")
             } else {
-                print("Not Granted")
+                self.storage.set(true, forKey: "NotificationPermissions")
             }
         }
     }
@@ -67,5 +68,9 @@ class Permissions {
             print("Restricted")
             return .restricted
         }
+    }
+    
+    func checkNotificationStatus() -> Bool {
+        return storage.bool(forKey: "NotificationPermissions")
     }
 }
