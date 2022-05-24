@@ -11,20 +11,24 @@ import Gimbal
 class HomeViewController: UIViewController, PlaceManagerDelegate {
     
     let notifications = LocalNotifications.init()
+    let placeManager = PlaceManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if (!Gimbal.isStarted()) {
             Gimbal.start()
         }
+        
+        placeManager.delegate = self
+        print("Visits: \(placeManager.currentVisits())")
         
     }
     
     //MARK: Gimbal Methods
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
         handlePlaceNotifications(visit: visit)
-        
+        print(visit.place.name)
     }
     
     func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {

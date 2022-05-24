@@ -16,12 +16,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
 
         setupMapView()
-        locationManager.delegate = self
         checkLocationAuthorization()
     }
     
+    //MARK: MapView Code
     func setupMapView() {
            view.addSubview(mapView)
            mapView.translatesAutoresizingMaskIntoConstraints = false
@@ -37,20 +39,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             mapView.setRegion(region, animated: true)
         }
        
-        func checkLocationAuthorization() {
-            let permissions = Permissions.init()
-            let locationStatus = permissions.checkLocationStatus()
-            if (locationStatus == .authorizedAlways || locationStatus == .authorizedWhenInUse) {
-                print("authorized")
-                mapView.showsUserLocation = true
-                followUserLocation()
-            }
+    func checkLocationAuthorization() {
+        let permissions = Permissions.init()
+        let locationStatus = permissions.checkLocationStatus()
+        if (locationStatus == .authorizedAlways || locationStatus == .authorizedWhenInUse) {
+            print("authorized")
+            mapView.showsUserLocation = true
+            followUserLocation()
         }
-        
-        func followUserLocation() {
-            if let location = locationManager.location?.coordinate {
-                let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 4000, longitudinalMeters: 4000)
-                mapView.setRegion(region, animated: true)
-            }
+    }
+    
+    func followUserLocation() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 4000, longitudinalMeters: 4000)
+            mapView.setRegion(region, animated: true)
         }
+    }
 }
