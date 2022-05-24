@@ -52,22 +52,23 @@ class Permissions {
     
     // Location
     func checkLocationStatus() -> CLAuthorizationStatus {
-        if location.authorizationStatus == .authorizedWhenInUse {
-            print("Authorized When in Use")
-            return .authorizedWhenInUse
-        } else if location.authorizationStatus == .authorizedAlways {
-            print("Authorized Always")
-            return .authorizedAlways
-        } else if location.authorizationStatus == .denied {
-            print("Denied")
-            return .denied
-        } else if location.authorizationStatus == .notDetermined {
-            print("Not Determined")
-            return .notDetermined
-        } else {
-            print("Restricted")
-            return .restricted
-        }
+        return location.authorizationStatus
+//        if location.authorizationStatus == .authorizedWhenInUse {
+//            print("Authorized When in Use")
+//            return .authorizedWhenInUse
+//        } else if location.authorizationStatus == .authorizedAlways {
+//            print("Authorized Always")
+//            return .authorizedAlways
+//        } else if location.authorizationStatus == .denied {
+//            print("Denied")
+//            return .denied
+//        } else if location.authorizationStatus == .notDetermined {
+//            print("Not Determined")
+//            return .notDetermined
+//        } else {
+//            print("Restricted")
+//            return .restricted
+//        }
     }
     
     func checkNotificationStatus() -> Bool {

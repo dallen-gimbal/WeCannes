@@ -27,18 +27,25 @@ class OnboardingViewController: UIViewController {
     
     @objc func handleContinue(sender: UIButton) {
 //        var index = sender.tag
+        // When in Use
         if (count == 0) {
             permissions.requestWhenInUsePermission()
             goToNextPage(index: count)
             count = 1
+            
+        // Notifications
         } else if (count == 1) {
             permissions.requestNotificationPermission()
             goToNextPage(index: count)
             count = 2
+            
+        // Always
         } else if (count == 2) {
             permissions.requestAlwaysPermission()
             goToNextPage(index: count)
             count = 3
+            
+        // Bluetooth
         } else {
             permissions.requestBluetooth()
         }
