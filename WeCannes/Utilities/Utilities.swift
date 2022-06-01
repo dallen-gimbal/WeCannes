@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Utilities {
     func randomString(length: Int) -> String {
@@ -22,5 +23,14 @@ class Utilities {
     
     func checkValue(key: String) -> String {
         return UserDefaults.init().string(forKey: key) ?? ""
+    }
+}
+
+extension UIColor {
+    class var infillionBlack:UIColor {
+        return UIColor.init(red: 22/255, green: 29/255, blue: 36/255, alpha: 1.0)
+    }
+    class var infillionGreen:UIColor {
+        return UIColor.init(red: 0/255, green: 195/255, blue: 71/255, alpha: 1.0)
     }
 }

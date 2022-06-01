@@ -11,13 +11,24 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var companyField: UITextField!
+    @IBOutlet weak var phoneField: UITextField!
+    
+    @IBOutlet weak var registerButton: UIButton!
     
     private let firebaseFunctions = FirebaseFunctions()
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        registerButton.setTitle("Register", for: .normal)
+        registerButton.setTitleColor(UIColor.infillionBlack, for: .normal)
+        registerButton.tintColor = UIColor.infillionGreen
     }
     
     
