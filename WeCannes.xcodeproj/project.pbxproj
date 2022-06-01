@@ -34,6 +34,9 @@
 		F03F3F4B2847DDF100E605A7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F4A2847DDF100E605A7 /* Utilities.swift */; };
 		F03F3F4C2847DDF100E605A7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F4A2847DDF100E605A7 /* Utilities.swift */; };
 		F03F3F4D2847DDF100E605A7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F4A2847DDF100E605A7 /* Utilities.swift */; };
+		F03F3F9C284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */; };
+		F03F3F9D284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */; };
+		F03F3F9E284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */; };
 		F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C32839BFC10084A126 /* AppDelegate.swift */; };
 		F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C52839BFC10084A126 /* SceneDelegate.swift */; };
 		F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874C92839BFC10084A126 /* Main.storyboard */; };
@@ -104,6 +107,7 @@
 		F03F3F3C2847B54300E605A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
 		F03F3F4A2847DDF100E605A7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeVietnamPro-ExtraLight.ttf"; sourceTree = "<group>"; };
 		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B874C52839BFC10084A126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +202,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		F03F3F522848266400E605A7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F0B874B72839BFC10084A126 = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +243,6 @@
 				F0B875132839CA150084A126 /* Views */,
 				F03F3F1D283B1BE800E605A7 /* Utilities */,
 				F0B8751C2839D0F40084A126 /* Storyboard & Assets */,
-				F0B8751B2839D0E90084A126 /* PropertyLists */,
 			);
 			path = WeCannes;
 			sourceTree = "<group>";
@@ -293,16 +304,10 @@
 			path = SegueViews;
 			sourceTree = "<group>";
 		};
-		F0B8751B2839D0E90084A126 /* PropertyLists */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PropertyLists;
-			sourceTree = "<group>";
-		};
 		F0B8751C2839D0F40084A126 /* Storyboard & Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F03F3F522848266400E605A7 /* Fonts */,
 				F0B874C92839BFC10084A126 /* Main.storyboard */,
 				F0B874F32839C4850084A126 /* Assets.xcassets */,
 				F0B874CE2839BFC30084A126 /* LaunchScreen.storyboard */,
@@ -426,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03F3F9C284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
 				F03F3F39283D481900E605A7 /* GPXTesting.gpx in Resources */,
 				F0B874D02839BFC30084A126 /* LaunchScreen.storyboard in Resources */,
 				F03F3F3D2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
@@ -438,6 +444,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03F3F9D284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
 				F0B874F52839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3A283D481900E605A7 /* GPXTesting.gpx in Resources */,
 				F03F3F3E2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
@@ -448,6 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03F3F9E284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
 				F0B874F62839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3B283D481900E605A7 /* GPXTesting.gpx in Resources */,
 				F03F3F3F2847B54300E605A7 /* GoogleService-Info.plist in Resources */,

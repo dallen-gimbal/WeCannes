@@ -16,7 +16,7 @@ class OnboardingViewController: UIViewController {
     private var count = 0
     
     var swiftyOnboard: SwiftyOnboard!
-    var titleArray: [String] = ["Welcome to Confess!", "It’s completely anonymous", "Say something positive", "Bluetooth"]
+    var titleArray: [String] = ["This App Uses Location", "Notifications Enhance Your Experience", "Always Improves Your Experience", "Experience Beacon Magic"]
     var subTitleArray: [String] = ["Confess lets you anonymously\n send confessions to your friends\n and receive confessions from them.", "All confessions sent are\n anonymous. Your friends will only\n know that it came from one of\n their facebook friends.", "Be nice to your friends.\n Send them confessions that\n will make them smile :)", "Because you're awesome"]
     
     override func viewDidLoad() {
@@ -82,12 +82,21 @@ extension OnboardingViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSour
         myLayer.contents = myImage
         view.layer.addSublayer(myLayer)
         
+        guard let customFont = UIFont(name: "BeVietnamPro-ExtraLight", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "CustomFont-Light" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
+        
         
         // Set Title Label
         let title: UILabel = UILabel()
         updateLabel(label: title)
         title.frame = CGRect(x: 50, y: 150, width: 200, height: 21)
         title.text = titleArray[index]
+        title.font = customFont
         view.addSubview(title)
         
         let subTitle: UILabel = UILabel()
@@ -95,6 +104,7 @@ extension OnboardingViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSour
         subTitle.frame = CGRect(x: 50, y: 350, width: 200, height: 200)
         subTitle.numberOfLines = 5
         subTitle.text = subTitleArray[index]
+        subTitle.font = customFont
         view.addSubview(subTitle)
         
         //Return the page for the given index:
