@@ -6,12 +6,14 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
+    private let firebaseFunctions = FirebaseFunctions()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,18 +23,8 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func signInAction(_ sender: Any) {
-        signIn(email: emailField.text!, password: passwordField.text!)
-    }
-    
-
-
-    // MARK: - Firebase
-    func signIn(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-            guard let strongSelf = self else { return }
-            print(authResult?.user.uid as Any)
-            // ...
+        if firebaseFunctions.signIn(email: emailField.text!, password: passwordField.text!) {
+            print("Authenticated")
         }
     }
-
 }

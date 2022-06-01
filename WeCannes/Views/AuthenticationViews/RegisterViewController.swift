@@ -6,33 +6,26 @@
 //
 
 import UIKit
-import Firebase
 
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    private let firebaseFunctions = FirebaseFunctions()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
     
     @IBAction func submitRegistration(_ sender: Any) {
-        registerUser(email: emailField.text!, password: passwordField.text!)
-    }
-    
-
-    // MARK: - Firebase
-    func registerUser(email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            if (error != nil) {
-                print(error as Any)
-            } else{
-                print(authResult?.user.uid as Any)
-            }
+        if firebaseFunctions.registerUser(email: emailField.text!, password: passwordField.text!) {
+            print("True")
+            firebaseFunctions.storeUser(name: "John Doe")
         }
     }
+    
 }

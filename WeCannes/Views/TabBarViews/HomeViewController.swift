@@ -21,8 +21,6 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         }
         
         placeManager.delegate = self
-        print("Visits: \(placeManager.currentVisits())")
-        
     }
     
     //MARK: Gimbal Methods
