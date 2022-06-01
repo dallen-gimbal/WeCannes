@@ -11,6 +11,8 @@ import FirebaseFirestore
 
 class FirebaseFunctions {
     
+    private let utilities = Utilities.init()
+    
     // MARK: Authentication
     func registerUser(email: String, password: String, name: String, company: String, title: String, phone: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -19,7 +21,7 @@ class FirebaseFunctions {
             } else{
                 if let uid = authResult?.user.uid as? String {
                     print("UID: \(uid)")
-                    self.storeValue(key: "uid", value: uid) {
+                    self.utilities.storeValue(key: "uid", value: uid) {
                         self.storeUser(name: name, uid: uid, company: company, title: title, phone: phone)
                     }
                 }
@@ -41,19 +43,7 @@ class FirebaseFunctions {
     // MARK: Database
     func storeUser(name: String, uid: String, company: String, title: String, phone: String) {
         let collection = Firestore.firestore().collection("users")
-        let user = ["uid": uid, "name": name, "company": company, "title": title, "phone": phone]
+        let user = ["uid": uid, "name": name, "company": company, "title": title, "phone": phone, "ar_id": self.utilities.randomString(length: 3)]
         collection.addDocument(data: user)
-    }
-    
-
-    // MARK: Helpers
-    func storeValue(key: String, value: String, completionBlock: () -> ()) {
-        let user = UserDefaults.init()
-        user.setValue(value, forKey: key)
-        completionBlock()
-    }
-    
-    func checkValue(key: String) -> String {
-        return UserDefaults.init().string(forKey: key) ?? ""
     }
 }

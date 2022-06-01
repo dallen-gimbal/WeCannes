@@ -31,6 +31,9 @@
 		F03F3F462847B72B00E605A7 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */; };
 		F03F3F472847B72B00E605A7 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */; };
 		F03F3F492847C2B900E605A7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F03F3F482847C2B900E605A7 /* FirebaseFirestore */; };
+		F03F3F4B2847DDF100E605A7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F4A2847DDF100E605A7 /* Utilities.swift */; };
+		F03F3F4C2847DDF100E605A7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F4A2847DDF100E605A7 /* Utilities.swift */; };
+		F03F3F4D2847DDF100E605A7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F4A2847DDF100E605A7 /* Utilities.swift */; };
 		F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C32839BFC10084A126 /* AppDelegate.swift */; };
 		F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C52839BFC10084A126 /* SceneDelegate.swift */; };
 		F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874C92839BFC10084A126 /* Main.storyboard */; };
@@ -100,6 +103,7 @@
 		F03F3F38283D481900E605A7 /* GPXTesting.gpx */ = {isa = PBXFileReference; lastKnownFileType = file; path = GPXTesting.gpx; sourceTree = SOURCE_ROOT; };
 		F03F3F3C2847B54300E605A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
+		F03F3F4A2847DDF100E605A7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B874C52839BFC10084A126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				F03F3F30283B4B7D00E605A7 /* DataStorage.swift */,
 				F03F3F34283BBB9700E605A7 /* Notifications.swift */,
 				F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */,
+				F03F3F4A2847DDF100E605A7 /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				F0B875042839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
 				F03F3F172839E43200E605A7 /* MapViewController.swift in Sources */,
 				F03F3F452847B72B00E605A7 /* FirebaseFunctions.swift in Sources */,
+				F03F3F4B2847DDF100E605A7 /* Utilities.swift in Sources */,
 				F03F3F1F283B1C0800E605A7 /* Permissions.swift in Sources */,
 				F0B875082839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */,
@@ -585,6 +591,7 @@
 				F0B874F92839C9680084A126 /* HomeViewController.swift in Sources */,
 				F03F3F36283BBB9700E605A7 /* Notifications.swift in Sources */,
 				F0B8750D2839CA050084A126 /* RegisterViewController.swift in Sources */,
+				F03F3F4C2847DDF100E605A7 /* Utilities.swift in Sources */,
 				F0B875012839C9950084A126 /* RedeemPointsViewController.swift in Sources */,
 				F03F3F182839E43200E605A7 /* MapViewController.swift in Sources */,
 				F0B875112839CA0E0084A126 /* SignInViewController.swift in Sources */,
@@ -602,6 +609,7 @@
 			files = (
 				F03F3F37283BBB9700E605A7 /* Notifications.swift in Sources */,
 				F03F3F33283B4B7D00E605A7 /* DataStorage.swift in Sources */,
+				F03F3F4D2847DDF100E605A7 /* Utilities.swift in Sources */,
 				F0B874E72839BFC40084A126 /* WeCannesUITestsLaunchTests.swift in Sources */,
 				F0B874FE2839C9850084A126 /* WalletViewController.swift in Sources */,
 				F03F3F472847B72B00E605A7 /* FirebaseFunctions.swift in Sources */,
