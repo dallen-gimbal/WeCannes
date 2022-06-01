@@ -22,10 +22,7 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func submitRegistration(_ sender: Any) {
-        if firebaseFunctions.registerUser(email: emailField.text!, password: passwordField.text!) {
-            print("True")
-            firebaseFunctions.storeUser(name: "John Doe")
-        }
+        firebaseFunctions.registerUser(email: emailField.text!, password: passwordField.text!, name: "Dustin", company: "Infillion", title: "PM", phone: "123456789")
     }
     
 }

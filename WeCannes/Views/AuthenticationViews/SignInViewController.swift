@@ -23,8 +23,8 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func signInAction(_ sender: Any) {
-        if firebaseFunctions.signIn(email: emailField.text!, password: passwordField.text!) {
-            print("Authenticated")
-        }
+//        if firebaseFunctions.signIn(email: emailField.text!, password: passwordField.text!) {
+//            print("Authenticated")
+//        }
     }
 }

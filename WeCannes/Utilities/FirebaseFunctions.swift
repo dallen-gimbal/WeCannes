@@ -10,59 +10,50 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class FirebaseFunctions {
-    private var user = UserDefaults.standard
-    private var error = false
     
     // MARK: Authentication
-    func registerUser(email: String, password: String) -> Bool {
+    func registerUser(email: String, password: String, name: String, company: String, title: String, phone: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if (error != nil) {
                 print(error as Any)
             } else{
                 if let uid = authResult?.user.uid as? String {
-                    self.user.setValue(uid, forKey: "uid")
+                    print("UID: \(uid)")
+                    self.storeValue(key: "uid", value: uid) {
+                        self.storeUser(name: name, uid: uid, company: company, title: title, phone: phone)
+                    }
                 }
             }
         }
-        if error {
-            print(error)
-            return false
-        }
-        return true
     }
     
-    func signIn(email: String, password: String) -> Bool {
+    func signIn(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if (error != nil) {
                 print(error as Any)
             } else{
                 print(authResult?.user.uid as Any)
-                self.user.setValue(authResult?.user.uid, forKey: "uid")
+//                storeValue(key: "uid", value: <#T##String#>, completionBlock: <#T##() -> ()#>)
             }
         }
-        if (error) {
-            return false
-        }
-        return true
     }
     
     // MARK: Database
-    func storeUser(name: String) {
-        guard let uid = user.object(forKey: "uid") as? String else { return }
+    func storeUser(name: String, uid: String, company: String, title: String, phone: String) {
         let collection = Firestore.firestore().collection("users")
-        
-        let user = ["uid": uid]
-        
+        let user = ["uid": uid, "name": name, "company": company, "title": title, "phone": phone]
         collection.addDocument(data: user)
-//        (error:Error?, ) in
-//          if let error = error {
-//            print("Data could not be saved: \(error).")
-//          } else {
-//            print("Data saved successfully!")
-//          }
-//        }
     }
     
 
     // MARK: Helpers
+    func storeValue(key: String, value: String, completionBlock: () -> ()) {
+        let user = UserDefaults.init()
+        user.setValue(value, forKey: key)
+        completionBlock()
+    }
+    
+    func checkValue(key: String) -> String {
+        return UserDefaults.init().string(forKey: key) ?? ""
+    }
 }
