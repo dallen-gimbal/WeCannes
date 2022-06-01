@@ -324,7 +324,7 @@
         <segue reference="hbM-bT-MWb"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Cannes_theme_app" width="1242" height="2688"/>
+        <image name="Cannes_theme_app" width="1170" height="2532"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="map" catalog="system" width="128" height="110"/>
