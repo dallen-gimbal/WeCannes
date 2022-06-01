@@ -27,10 +27,10 @@
 		F03F3F3D2847B54300E605A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F03F3F3C2847B54300E605A7 /* GoogleService-Info.plist */; };
 		F03F3F3E2847B54300E605A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F03F3F3C2847B54300E605A7 /* GoogleService-Info.plist */; };
 		F03F3F3F2847B54300E605A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F03F3F3C2847B54300E605A7 /* GoogleService-Info.plist */; };
-		F03F3F432847B5F900E605A7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F03F3F422847B5F900E605A7 /* FirebaseDatabase */; };
 		F03F3F452847B72B00E605A7 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */; };
 		F03F3F462847B72B00E605A7 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */; };
 		F03F3F472847B72B00E605A7 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */; };
+		F03F3F492847C2B900E605A7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F03F3F482847C2B900E605A7 /* FirebaseFirestore */; };
 		F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C32839BFC10084A126 /* AppDelegate.swift */; };
 		F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C52839BFC10084A126 /* SceneDelegate.swift */; };
 		F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874C92839BFC10084A126 /* Main.storyboard */; };
@@ -127,8 +127,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8B80491AD2C8A9CABECC58 /* Pods_WeCannes.framework in Frameworks */,
-				F03F3F432847B5F900E605A7 /* FirebaseDatabase in Frameworks */,
 				F0B8751F2839DC5A0084A126 /* FirebaseAuth in Frameworks */,
+				F03F3F492847C2B900E605A7 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +325,7 @@
 			name = WeCannes;
 			packageProductDependencies = (
 				F0B8751E2839DC5A0084A126 /* FirebaseAuth */,
-				F03F3F422847B5F900E605A7 /* FirebaseDatabase */,
+				F03F3F482847C2B900E605A7 /* FirebaseFirestore */,
 			);
 			productName = WeCannes;
 			productReference = F0B874C02839BFC10084A126 /* WeCannes.app */;
@@ -958,10 +958,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F03F3F422847B5F900E605A7 /* FirebaseDatabase */ = {
+		F03F3F482847C2B900E605A7 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F0B8751D2839DC5A0084A126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
+			productName = FirebaseFirestore;
 		};
 		F0B8751E2839DC5A0084A126 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

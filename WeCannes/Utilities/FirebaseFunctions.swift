@@ -7,10 +7,9 @@
 
 import Foundation
 import FirebaseAuth
-import FirebaseDatabase
+import FirebaseFirestore
 
 class FirebaseFunctions {
-    private var ref: DatabaseReference!
     private var user = UserDefaults.standard
     private var error = false
     
@@ -50,16 +49,18 @@ class FirebaseFunctions {
     // MARK: Database
     func storeUser(name: String) {
         guard let uid = user.object(forKey: "uid") as? String else { return }
-        print("UID: \(uid)")
-        ref = Database.database().reference()
-        ref.child("users").child(uid).setValue(["test":name]) {
-        (error:Error?, ref:DatabaseReference) in
-          if let error = error {
-            print("Data could not be saved: \(error).")
-          } else {
-            print("Data saved successfully!")
-          }
-        }
+        let collection = Firestore.firestore().collection("users")
+        
+        let user = ["uid": uid]
+        
+        collection.addDocument(data: user)
+//        (error:Error?, ) in
+//          if let error = error {
+//            print("Data could not be saved: \(error).")
+//          } else {
+//            print("Data saved successfully!")
+//          }
+//        }
     }
     
 
