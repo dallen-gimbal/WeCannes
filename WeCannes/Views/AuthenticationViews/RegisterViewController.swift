@@ -26,9 +26,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerButton.setTitle("Register", for: .normal)
-        registerButton.setTitleColor(UIColor.infillionBlack, for: .normal)
-        registerButton.tintColor = UIColor.infillionGreen
+        Utilities.init().updateButtonStyle(button: registerButton, title: "Register")
     }
     
     

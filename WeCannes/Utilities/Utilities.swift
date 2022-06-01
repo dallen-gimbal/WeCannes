@@ -24,6 +24,12 @@ class Utilities {
     func checkValue(key: String) -> String {
         return UserDefaults.init().string(forKey: key) ?? ""
     }
+    
+    func updateButtonStyle(button: UIButton, title: String) {
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(UIColor.infillionBlack, for: .normal)
+        button.tintColor = UIColor.infillionGreen
+    }
 }
 
 extension UIColor {

@@ -18,15 +18,12 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.setTitle("Login", for: .normal)
-        loginButton.setTitleColor(UIColor.infillionBlack, for: .normal)
-        loginButton.tintColor = UIColor.infillionGreen
+        
+        Utilities.init().updateButtonStyle(button: loginButton, title: "Login")
     }
     
     
     @IBAction func signInAction(_ sender: Any) {
-//        if firebaseFunctions.signIn(email: emailField.text!, password: passwordField.text!) {
-//            print("Authenticated")
-//        }
+        firebaseFunctions.signIn(email: emailField.text!, password: passwordField.text!)
     }
 }

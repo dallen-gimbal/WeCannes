@@ -10,6 +10,10 @@ import Gimbal
 
 class HomeViewController: UIViewController, PlaceManagerDelegate {
     
+    @IBOutlet weak var redeemPointsButton: UIButton!
+    @IBOutlet weak var earnPointsButton: UIButton!
+    @IBOutlet weak var upcomingEventsButton: UIButton!
+    
     let notifications = LocalNotifications.init()
     let placeManager = PlaceManager()
 

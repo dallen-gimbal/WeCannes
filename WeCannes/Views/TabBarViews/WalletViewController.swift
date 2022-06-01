@@ -9,6 +9,11 @@ import UIKit
 
 class WalletViewController: UIViewController {
 
+    @IBOutlet weak var redeemPointsButton: UIButton!
+    @IBOutlet weak var earnPointsButton: UIButton!
+    @IBOutlet weak var upcomingEventsButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
