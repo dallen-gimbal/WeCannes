@@ -26,6 +26,12 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func signInAction(_ sender: Any) {
-        firebaseFunctions.signIn(email: emailField.text!, password: passwordField.text!)
+        firebaseFunctions.signIn(email: emailField.text!, password: passwordField.text!) { authResult, error in
+            if authResult {
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                self.present(nextViewController, animated:true, completion:nil)
+            }
+        }
     }
 }

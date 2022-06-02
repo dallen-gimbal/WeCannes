@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+import UIKit
 
 class FirebaseFunctions {
     
@@ -30,14 +31,14 @@ class FirebaseFunctions {
         }
     }
     
-    func signIn(email: String, password: String) {
-        
+    func signIn(email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if (error != nil) {
                 print(error as Any)
+                completion(false, error)
             } else{
-                print(authResult?.user.uid as Any)
                 self.store.set(true, forKey: "Authenticated")
+                completion(true, error)
             }
         }
     }
