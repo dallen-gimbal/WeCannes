@@ -75,6 +75,12 @@ extension OnboardingViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSour
     func swiftyOnboardPageForIndex(_ swiftyOnboard: SwiftyOnboard, index: Int) -> SwiftyOnboardPage? {
         let view = SwiftyOnboardPage()
         
+//        print("Width: \(self.view.frame.width)")
+//        print("Height: \(self.view.frame.height)")
+//
+//        print("MidX: \(self.view.frame.midX)")
+//        print("MidY: \(self.view.frame.midY)")
+        
         //Set the image on the page:
         let myLayer = CALayer()
         let myImage = UIImage(named: "Cannes_theme_app")?.cgImage
@@ -82,29 +88,27 @@ extension OnboardingViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSour
         myLayer.contents = myImage
         view.layer.addSublayer(myLayer)
         
-        guard let customFont = UIFont(name: "BeVietnamPro-ExtraLight", size: UIFont.labelFontSize) else {
-            fatalError("""
-                Failed to load the "CustomFont-Light" font.
-                Make sure the font file is included in the project and the font name is spelled correctly.
-                """
-            )
-        }
-        
+        let image = UIImage.init(named: "we_cannes_logo_lockuo")
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRect(x: self.view.frame.midX * 0.40, y: self.view.frame.midY * 0.50, width: self.view.frame.width * 0.60, height: self.view.frame.height * 0.15)
+        view.addSubview(imageView)
         
         // Set Title Label
         let title: UILabel = UILabel()
         updateLabel(label: title)
-        title.frame = CGRect(x: 50, y: 150, width: 200, height: 21)
+        print("ImageView Height: \(imageView.frame.maxY)")
+        title.frame = CGRect(x: self.view.frame.midX * 0.40, y: imageView.frame.maxY * 1.05, width: self.view.frame.width * 0.75, height: self.view.frame.height * 0.25)
+        title.numberOfLines = 2
         title.text = titleArray[index]
-        title.font = customFont
+        title.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 35)
         view.addSubview(title)
         
         let subTitle: UILabel = UILabel()
         updateLabel(label: subTitle)
-        subTitle.frame = CGRect(x: 50, y: 350, width: 200, height: 200)
+        subTitle.frame = CGRect(x: self.view.frame.midX * 0.40, y: imageView.frame.maxY * 1.35, width: 200, height: 200)
         subTitle.numberOfLines = 5
         subTitle.text = subTitleArray[index]
-        subTitle.font = customFont
+        subTitle.font = UIFont(name: "BeVietnamPro-ExtraLight", size: UIFont.labelFontSize)
         view.addSubview(subTitle)
         
         //Return the page for the given index:
