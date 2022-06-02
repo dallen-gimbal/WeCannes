@@ -51,6 +51,7 @@ class OnboardingViewController: UIViewController {
         // Bluetooth
         } else {
             permissions.requestBluetooth()
+            StoryboardLogic.init().tabBarSegue()
         }
         print(index)
     }

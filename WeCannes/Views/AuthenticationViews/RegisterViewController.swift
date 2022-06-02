@@ -39,7 +39,11 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func submitRegistration(_ sender: Any) {
-        firebaseFunctions.registerUser(email: emailField.text!, password: passwordField.text!, name: "Dustin", company: "Infillion", title: "PM", phone: "123456789")
+        firebaseFunctions.registerUser(email: emailField.text!, password: passwordField.text!, name: "Dustin", company: "Infillion", title: "PM", phone: "123456789") { authResult, error in
+            if authResult {
+                StoryboardLogic.init().onboardingSegue()
+            }
+        }
     }
     
 }

@@ -29,9 +29,7 @@ class SignInViewController: UIViewController {
     @IBAction func signInAction(_ sender: Any) {
         firebaseFunctions.signIn(email: emailField.text!, password: passwordField.text!) { authResult, error in
             if authResult {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let mainTabBarController = storyboard.instantiateViewController(identifier: "CustomTabBarController")
-                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setRootViewController(mainTabBarController)
+                StoryboardLogic.init().tabBarSegue()
             }
         }
     }

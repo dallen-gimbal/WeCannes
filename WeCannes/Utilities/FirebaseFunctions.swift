@@ -16,15 +16,16 @@ class FirebaseFunctions {
     private let store = UserDefaults.init()
     
     // MARK: Main Functions
-    func registerUser(email: String, password: String, name: String, company: String, title: String, phone: String) {
+    func registerUser(email: String, password: String, name: String, company: String, title: String, phone: String, completion: @escaping (Bool, Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if (error != nil) {
-                print(error as Any)
+                completion(false, error)
             } else{
                 if let uid = authResult?.user.uid as? String {
                     print("UID: \(uid)")
                     self.utilities.storeValue(key: "uid", value: uid) {
                         self.storeUser(name: name, uid: uid, company: company, title: title, phone: phone)
+                        completion(true, error)
                     }
                 }
             }
