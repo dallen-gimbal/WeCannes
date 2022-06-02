@@ -20,6 +20,13 @@ class RegisterViewController: UIViewController {
     
     private let firebaseFunctions = FirebaseFunctions()
     
+    class func instantiate() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "\(RegisterViewController.self)")
+
+        return viewController
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
     }

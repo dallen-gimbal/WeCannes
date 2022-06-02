@@ -13,13 +13,15 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     private let firebaseFunctions = FirebaseFunctions()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Utilities.init().updateButtonStyle(button: loginButton, title: "Login")
+        Utilities.init().updateButtonStyle(button: loginButton, title: "Sign In")
+        Utilities.init().updateButtonStyle(button: registerButton, title: "No Account? Register for Free!")
     }
     
     

@@ -14,10 +14,18 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
     @IBOutlet weak var earnPointsButton: UIButton!
     @IBOutlet weak var upcomingEventsButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
     
     let notifications = LocalNotifications.init()
     let placeManager = PlaceManager()
     private let util = Utilities.init()
+    
+    class func instantiate() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "\(HomeViewController.self)") 
+
+        return viewController
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +39,10 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Points")
         util.updateButtonStyle(button: earnPointsButton, title: "Earn Points")
         util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     //MARK: Gimbal Methods

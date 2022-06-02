@@ -13,7 +13,8 @@ import CloudKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let permissions = Permissions()
+    private let permissions = Permissions()
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

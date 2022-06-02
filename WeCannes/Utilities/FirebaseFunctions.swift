@@ -12,6 +12,7 @@ import FirebaseFirestore
 class FirebaseFunctions {
     
     private let utilities = Utilities.init()
+    private let store = UserDefaults.init()
     
     // MARK: Main Functions
     func registerUser(email: String, password: String, name: String, company: String, title: String, phone: String) {
@@ -36,7 +37,7 @@ class FirebaseFunctions {
                 print(error as Any)
             } else{
                 print(authResult?.user.uid as Any)
-                self.segueStoryboard()
+                self.store.set(true, forKey: "Authenticated")
             }
         }
     }
@@ -46,6 +47,7 @@ class FirebaseFunctions {
         let collection = Firestore.firestore().collection("users")
         let user = ["uid": uid, "name": name, "company": company, "title": title, "phone": phone, "ar_id": self.utilities.randomString(length: 3)]
         collection.addDocument(data: user)
+        store.set(true, forKey: "Authenticated")
     }
     
     private func segueStoryboard() {

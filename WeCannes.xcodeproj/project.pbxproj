@@ -37,6 +37,15 @@
 		F03F3F9C284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */; };
 		F03F3F9D284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */; };
 		F03F3F9E284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */; };
+		F03F3FA0284903FD00E605A7 /* StoryboardLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */; };
+		F03F3FA1284903FE00E605A7 /* StoryboardLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */; };
+		F03F3FA2284903FE00E605A7 /* StoryboardLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */; };
+		F03F3FA42849044500E605A7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA32849044500E605A7 /* Authentication.storyboard */; };
+		F03F3FA52849044500E605A7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA32849044500E605A7 /* Authentication.storyboard */; };
+		F03F3FA62849044500E605A7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA32849044500E605A7 /* Authentication.storyboard */; };
+		F03F3FA82849045C00E605A7 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA72849045C00E605A7 /* Onboarding.storyboard */; };
+		F03F3FA92849045C00E605A7 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA72849045C00E605A7 /* Onboarding.storyboard */; };
+		F03F3FAA2849045C00E605A7 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA72849045C00E605A7 /* Onboarding.storyboard */; };
 		F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C32839BFC10084A126 /* AppDelegate.swift */; };
 		F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C52839BFC10084A126 /* SceneDelegate.swift */; };
 		F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874C92839BFC10084A126 /* Main.storyboard */; };
@@ -108,6 +117,9 @@
 		F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
 		F03F3F4A2847DDF100E605A7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeVietnamPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLogic.swift; sourceTree = "<group>"; };
+		F03F3FA32849044500E605A7 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		F03F3FA72849045C00E605A7 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B874C52839BFC10084A126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				F03F3F1E283B1C0700E605A7 /* Permissions.swift */,
+				F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */,
 				F03F3F30283B4B7D00E605A7 /* DataStorage.swift */,
 				F03F3F34283BBB9700E605A7 /* Notifications.swift */,
 				F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */,
@@ -309,6 +322,8 @@
 			children = (
 				F03F3F522848266400E605A7 /* Fonts */,
 				F0B874C92839BFC10084A126 /* Main.storyboard */,
+				F03F3FA32849044500E605A7 /* Authentication.storyboard */,
+				F03F3FA72849045C00E605A7 /* Onboarding.storyboard */,
 				F0B874F32839C4850084A126 /* Assets.xcassets */,
 				F0B874CE2839BFC30084A126 /* LaunchScreen.storyboard */,
 			);
@@ -432,11 +447,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F03F3F9C284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
+				F03F3FA42849044500E605A7 /* Authentication.storyboard in Resources */,
 				F03F3F39283D481900E605A7 /* GPXTesting.gpx in Resources */,
 				F0B874D02839BFC30084A126 /* LaunchScreen.storyboard in Resources */,
 				F03F3F3D2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
 				F0B874F42839C4850084A126 /* Assets.xcassets in Resources */,
 				F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */,
+				F03F3FA82849045C00E605A7 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +464,9 @@
 				F03F3F9D284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
 				F0B874F52839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3A283D481900E605A7 /* GPXTesting.gpx in Resources */,
+				F03F3FA92849045C00E605A7 /* Onboarding.storyboard in Resources */,
 				F03F3F3E2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
+				F03F3FA52849044500E605A7 /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +477,9 @@
 				F03F3F9E284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
 				F0B874F62839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3B283D481900E605A7 /* GPXTesting.gpx in Resources */,
+				F03F3FAA2849045C00E605A7 /* Onboarding.storyboard in Resources */,
 				F03F3F3F2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
+				F03F3FA62849044500E605A7 /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +605,7 @@
 				F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */,
 				F03F3F35283BBB9700E605A7 /* Notifications.swift in Sources */,
 				F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */,
+				F03F3FA0284903FD00E605A7 /* StoryboardLogic.swift in Sources */,
 				F0B874F82839C9680084A126 /* HomeViewController.swift in Sources */,
 				F0B875102839CA0E0084A126 /* SignInViewController.swift in Sources */,
 				F03F3F1C283B14F600E605A7 /* OnboardingViewController.swift in Sources */,
@@ -606,6 +628,7 @@
 				F0B875092839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F03F3F462847B72B00E605A7 /* FirebaseFunctions.swift in Sources */,
 				F0B875052839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
+				F03F3FA1284903FE00E605A7 /* StoryboardLogic.swift in Sources */,
 				F03F3F32283B4B7D00E605A7 /* DataStorage.swift in Sources */,
 				F0B874FD2839C9850084A126 /* WalletViewController.swift in Sources */,
 			);
@@ -616,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F03F3F37283BBB9700E605A7 /* Notifications.swift in Sources */,
+				F03F3FA2284903FE00E605A7 /* StoryboardLogic.swift in Sources */,
 				F03F3F33283B4B7D00E605A7 /* DataStorage.swift in Sources */,
 				F03F3F4D2847DDF100E605A7 /* Utilities.swift in Sources */,
 				F0B874E72839BFC40084A126 /* WeCannesUITestsLaunchTests.swift in Sources */,
