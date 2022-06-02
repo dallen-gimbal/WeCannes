@@ -1,20 +1,24 @@
 PODS:
   - GimbalXCFramework (2.91)
+  - IQKeyboardManagerSwift (6.5.10)
   - SwiftyOnboard (1.4.0)
 
 DEPENDENCIES:
   - GimbalXCFramework
+  - IQKeyboardManagerSwift
   - SwiftyOnboard
 
 SPEC REPOS:
   trunk:
     - GimbalXCFramework
+    - IQKeyboardManagerSwift
     - SwiftyOnboard
 
 SPEC CHECKSUMS:
   GimbalXCFramework: 2bfbadc3c447e455f19308281b98dfaef3600a9a
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   SwiftyOnboard: 76a648dc1dcbc844343b6b95fe5883cb64a62f4a
 
-PODFILE CHECKSUM: cbafda8c7462870b27c37572a7d9bb034d439e18
+PODFILE CHECKSUM: 9b1ea25283b65a115deef5247305fda83fe1721d
 
 COCOAPODS: 1.11.3

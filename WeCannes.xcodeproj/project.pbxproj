@@ -40,12 +40,6 @@
 		F03F3FA0284903FD00E605A7 /* StoryboardLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */; };
 		F03F3FA1284903FE00E605A7 /* StoryboardLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */; };
 		F03F3FA2284903FE00E605A7 /* StoryboardLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */; };
-		F03F3FA42849044500E605A7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA32849044500E605A7 /* Authentication.storyboard */; };
-		F03F3FA52849044500E605A7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA32849044500E605A7 /* Authentication.storyboard */; };
-		F03F3FA62849044500E605A7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA32849044500E605A7 /* Authentication.storyboard */; };
-		F03F3FA82849045C00E605A7 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA72849045C00E605A7 /* Onboarding.storyboard */; };
-		F03F3FA92849045C00E605A7 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA72849045C00E605A7 /* Onboarding.storyboard */; };
-		F03F3FAA2849045C00E605A7 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03F3FA72849045C00E605A7 /* Onboarding.storyboard */; };
 		F03F3FAC284976D600E605A7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */; };
 		F03F3FAD284976D600E605A7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */; };
 		F03F3FAE284976D600E605A7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */; };
@@ -121,8 +115,6 @@
 		F03F3F4A2847DDF100E605A7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeVietnamPro-ExtraLight.ttf"; sourceTree = "<group>"; };
 		F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLogic.swift; sourceTree = "<group>"; };
-		F03F3FA32849044500E605A7 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
-		F03F3FA72849045C00E605A7 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -325,12 +317,10 @@
 		F0B8751C2839D0F40084A126 /* Storyboard & Assets */ = {
 			isa = PBXGroup;
 			children = (
-				F03F3F522848266400E605A7 /* Fonts */,
 				F0B874C92839BFC10084A126 /* Main.storyboard */,
-				F03F3FA32849044500E605A7 /* Authentication.storyboard */,
-				F03F3FA72849045C00E605A7 /* Onboarding.storyboard */,
 				F0B874F32839C4850084A126 /* Assets.xcassets */,
 				F0B874CE2839BFC30084A126 /* LaunchScreen.storyboard */,
+				F03F3F522848266400E605A7 /* Fonts */,
 			);
 			path = "Storyboard & Assets";
 			sourceTree = "<group>";
@@ -452,13 +442,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F03F3F9C284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
-				F03F3FA42849044500E605A7 /* Authentication.storyboard in Resources */,
 				F03F3F39283D481900E605A7 /* GPXTesting.gpx in Resources */,
 				F0B874D02839BFC30084A126 /* LaunchScreen.storyboard in Resources */,
 				F03F3F3D2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
 				F0B874F42839C4850084A126 /* Assets.xcassets in Resources */,
 				F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */,
-				F03F3FA82849045C00E605A7 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,9 +457,7 @@
 				F03F3F9D284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
 				F0B874F52839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3A283D481900E605A7 /* GPXTesting.gpx in Resources */,
-				F03F3FA92849045C00E605A7 /* Onboarding.storyboard in Resources */,
 				F03F3F3E2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
-				F03F3FA52849044500E605A7 /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,9 +468,7 @@
 				F03F3F9E284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
 				F0B874F62839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3B283D481900E605A7 /* GPXTesting.gpx in Resources */,
-				F03F3FAA2849045C00E605A7 /* Onboarding.storyboard in Resources */,
 				F03F3F3F2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
-				F03F3FA62849044500E605A7 /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
