@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
     
     let notifications = LocalNotifications.init()
     let placeManager = PlaceManager()
+    private let util = Utilities.init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,10 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         }
         
         placeManager.delegate = self
+        
+        util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Points")
+        util.updateButtonStyle(button: earnPointsButton, title: "Earn Points")
+        util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")
     }
     
     //MARK: Gimbal Methods
