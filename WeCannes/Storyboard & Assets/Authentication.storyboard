@@ -204,7 +204,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iod-OC-zue"/>
         <segue reference="eNK-cU-gS4"/>
     </inferredMetricsTieBreakers>
     <resources>

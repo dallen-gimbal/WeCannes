@@ -10,6 +10,8 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private let store = UserDefaults.init()
+    private let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
 
     var window: UIWindow?
 
@@ -21,12 +23,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = scene as? UIWindowScene else {return}
         window = UIWindow(windowScene: windowScene)
-        
-        if !store.bool(forKey: "Authenticated") {
-            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+
+        if store.bool(forKey: "Authenticated") {
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController")
             self.window?.rootViewController = initialViewController
+        } else {
+//            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+//            let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+//            self.window?.rootViewController = initialViewController
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "CustomTabBarController")
+            window?.rootViewController = initialViewController
         }
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -55,6 +63,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+    
+    func setRootViewController(_ vc: UIViewController) {
+         if let window = self.window {
+              window.rootViewController = vc
+         }
     }
 
 

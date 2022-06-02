@@ -14,6 +14,8 @@ import CloudKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private let permissions = Permissions()
+    private let store = UserDefaults.init()
+    private let storyboard = UIStoryboard(name: "Main", bundle: nil)
     
     var window: UIWindow?
 

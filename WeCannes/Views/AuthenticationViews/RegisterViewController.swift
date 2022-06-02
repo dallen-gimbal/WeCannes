@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var phoneField: UITextField!
     
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     
     private let firebaseFunctions = FirebaseFunctions()
     
