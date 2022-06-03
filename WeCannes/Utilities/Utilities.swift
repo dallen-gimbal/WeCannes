@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SafariServices
 
 class Utilities {
     func randomString(length: Int) -> String {
@@ -29,6 +30,18 @@ class Utilities {
         button.setTitle(title, for: .normal)
         button.setTitleColor(UIColor.infillionBlack, for: .normal)
         button.tintColor = UIColor.infillionGreen
+    }
+    
+    func showTutorial(theUrl: String) -> SFSafariViewController {
+        if let url = URL(string: theUrl) {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+
+            let vc = SFSafariViewController(url: url, configuration: config)
+            return vc
+//            present(vc, animated: true)
+        }
+        return SFSafariViewController.init(url: URL(string: "")!)
     }
 }
 

@@ -16,6 +16,7 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
     private var cellCount = 0
     private var cellTitleArray = [String]()
     private var cellTimeArray = [String]()
+    private var cellUrlArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +44,12 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
         
         return cell
     }
-
-    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // cell selected code here
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print(cellUrlArray[indexPath.row])
+        DispatchQueue.main.async {
+            self.present(Utilities.init().showTutorial(theUrl: self.cellUrlArray[indexPath.row]), animated: true)
+        }
     }
     
     private func updateEventsList() {
@@ -59,6 +63,10 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
                 }
                 if let time = doc.data()["time"] {
                     self.cellTimeArray.append(time as! String)
+                }
+                
+                if let url = doc.data()["url"] {
+                    self.cellUrlArray.append(url as! String)
                 }
                 
                 DispatchQueue.main.async {
