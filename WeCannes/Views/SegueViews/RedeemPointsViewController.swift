@@ -6,24 +6,39 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class RedeemPointsViewController: UIViewController {
-
+    
+    private var prizeCount = 0
+    private var companyArray = [String]()
+    private var imageUrlArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        retrievePrizes()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func retrievePrizes() {
+        FirebaseFunctions.init().getCollectionData(collection: "prizes", completion: { documents, error in
+            guard let docs = documents as QuerySnapshot? else { return }
+            for doc in docs.documents {
+                print(doc.data())
+                self.prizeCount = docs.documents.count
+                
+                if let title = doc.data()["title"] {
+                    self.companyArray.append(title as! String)
+                }
+                if let url = doc.data()["url"] {
+                    self.imageUrlArray.append(url as! String)
+                }
+                
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
+            }
+        })
     }
-    */
-
 }
