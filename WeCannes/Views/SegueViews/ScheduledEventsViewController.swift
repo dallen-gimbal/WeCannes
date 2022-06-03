@@ -20,6 +20,8 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        FirebaseFunctions.init().getUpcomingEvents()
     }
     
 
@@ -32,6 +34,7 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
         let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
         
         cell.textLabel?.text = "Worked"
+        cell.textLabel?.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 20.0)
         
         // set the text from the data model
 //        cell.textLabel?.text = self.animals[indexPath.row]
