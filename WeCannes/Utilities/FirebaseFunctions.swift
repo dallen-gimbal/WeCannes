@@ -45,8 +45,8 @@ class FirebaseFunctions {
     }
     
     // MARK: Retrieve Data
-    func getUpcomingEvents(completion: @escaping (QuerySnapshot?, Error?) -> Void) {
-        Firestore.firestore().collection("events").getDocuments(completion: { (documents, error) in
+    func getCollectionData(collection: String, completion: @escaping (QuerySnapshot?, Error?) -> Void) {
+        Firestore.firestore().collection(collection).getDocuments(completion: { (documents, error) in
             completion(documents, error)
         })
     }

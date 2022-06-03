@@ -53,7 +53,7 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     private func updateEventsList() {
-        FirebaseFunctions.init().getUpcomingEvents { documents, error in
+        FirebaseFunctions.init().getCollectionData(collection: "events", completion: { documents, error in
             guard let docs = documents as QuerySnapshot? else { return }
             for doc in docs.documents {
                 self.cellCount = docs.documents.count
@@ -69,7 +69,7 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
                     self.tableView.reloadData()
                 }
             }
-        }
+        })
     }
 
 }
