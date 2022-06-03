@@ -6,24 +6,44 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
-class PartnerViewController: UITabBarController {
+class PartnerViewController: UIViewController {
+    
+    private var partnerCount = 0
+    private var companyArray = [String]()
+    private var landingUrlArray = [String]()
+    private var imageUrlArray = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updatePartnerList()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updatePartnerList() {
+        FirebaseFunctions.init().getCollectionData(collection: "partners", completion: { documents, error in
+            guard let docs = documents as QuerySnapshot? else { return }
+            for doc in docs.documents {
+                print(doc.data())
+                self.partnerCount = docs.documents.count
+                
+                if let company = doc.data()["company"] {
+                    self.companyArray.append(company as! String)
+                }
+                if let image = doc.data()["image_url"] {
+                    self.imageUrlArray.append(image as! String)
+                }
+                if let landing = doc.data()["landing_url"] {
+                    self.landingUrlArray.append(landing as! String)
+                }
+                
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
+            }
+        })
     }
-    */
 
 }

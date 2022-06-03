@@ -36,14 +36,10 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // create a new cell if needed or reuse an old one
         let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
         
         cell.textLabel?.text = cellTitleArray[indexPath.row]
         cell.textLabel?.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 20.0)
-        
-        // set the text from the data model
-//        cell.textLabel?.text = self.animals[indexPath.row]
         
         return cell
     }
