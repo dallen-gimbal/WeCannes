@@ -37,7 +37,6 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         placeManager.delegate = self
         
         util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Points")
-        util.updateButtonStyle(button: earnPointsButton, title: "Earn Points")
         util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")
     }
     

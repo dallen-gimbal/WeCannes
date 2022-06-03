@@ -10,6 +10,7 @@
 		8DCEFB1E0EBF637C3F6DB93A /* Pods_WeCannesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B1DF147F2E7FB543617E2E /* Pods_WeCannesTests.framework */; };
 		9B8B80491AD2C8A9CABECC58 /* Pods_WeCannes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB26792A1D1A7CDF0E8EFF99 /* Pods_WeCannes.framework */; };
 		D79BBC2C264AB883FCC89518 /* Pods_WeCannes_WeCannesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E235DDFC3D9C9FD15153FF5C /* Pods_WeCannes_WeCannesUITests.framework */; };
+		F01AE1A4284999C9008DBE68 /* PartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AE1A3284999C9008DBE68 /* PartnerViewController.swift */; };
 		F03F3F172839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
 		F03F3F182839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
 		F03F3F192839E43200E605A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3F162839E43200E605A7 /* MapViewController.swift */; };
@@ -104,12 +105,13 @@
 		BC2AB7A406CE914FCE5089A2 /* Pods-WeCannes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCannes.release.xcconfig"; path = "Target Support Files/Pods-WeCannes/Pods-WeCannes.release.xcconfig"; sourceTree = "<group>"; };
 		C25A6F42F0848DB735456FD7 /* Pods-WeCannesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCannesTests.debug.xcconfig"; path = "Target Support Files/Pods-WeCannesTests/Pods-WeCannesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E235DDFC3D9C9FD15153FF5C /* Pods_WeCannes_WeCannesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeCannes_WeCannesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01AE1A3284999C9008DBE68 /* PartnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerViewController.swift; sourceTree = "<group>"; };
 		F03F3F162839E43200E605A7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F03F3F1B283B14F600E605A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F03F3F1E283B1C0700E605A7 /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
 		F03F3F30283B4B7D00E605A7 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		F03F3F34283BBB9700E605A7 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		F03F3F38283D481900E605A7 /* GPXTesting.gpx */ = {isa = PBXFileReference; lastKnownFileType = file; path = GPXTesting.gpx; sourceTree = SOURCE_ROOT; };
+		F03F3F38283D481900E605A7 /* GPXTesting.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GPXTesting.gpx; sourceTree = SOURCE_ROOT; };
 		F03F3F3C2847B54300E605A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F03F3F442847B72B00E605A7 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
 		F03F3F4A2847DDF100E605A7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				F0B874FF2839C9950084A126 /* RedeemPointsViewController.swift */,
 				F0B875032839C9A20084A126 /* EarnPointsViewController.swift */,
 				F0B875072839C9E90084A126 /* ScheduledEventsViewController.swift */,
+				F01AE1A3284999C9008DBE68 /* PartnerViewController.swift */,
 			);
 			path = SegueViews;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				F03F3F452847B72B00E605A7 /* FirebaseFunctions.swift in Sources */,
 				F03F3F4B2847DDF100E605A7 /* Utilities.swift in Sources */,
 				F03F3F1F283B1C0800E605A7 /* Permissions.swift in Sources */,
+				F01AE1A4284999C9008DBE68 /* PartnerViewController.swift in Sources */,
 				F03F3FAC284976D600E605A7 /* CustomTabBarController.swift in Sources */,
 				F0B875082839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */,
