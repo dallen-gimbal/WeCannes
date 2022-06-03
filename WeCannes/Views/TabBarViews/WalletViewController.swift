@@ -9,9 +9,12 @@ import UIKit
 
 class WalletViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var placeNameLabel: UITableView!
+    @IBOutlet weak var dwellTimeLabel: UITableView!
+    
     @IBOutlet weak var redeemPointsButton: UIButton!
     @IBOutlet weak var earnPointsButton: UIButton!
-    @IBOutlet weak var upcomingEventsButton: UIButton!
     
     private let util = Utilities.init()
     
@@ -21,8 +24,6 @@ class WalletViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Points")
-        util.updateButtonStyle(button: earnPointsButton, title: "Earn Points")
-        util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")
     }
 
 }

@@ -34,7 +34,7 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
             Gimbal.start()
         }
         
-        placeManager.delegate = self
+        self.placeManager.delegate = self
         
         util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Points")
         util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")

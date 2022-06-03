@@ -18,16 +18,7 @@ class LocalNotifications {
         notificationContent.body = body
         notificationContent.badge = NSNumber(value: 3)
         
-//        if let url = Bundle.main.url(forResource: "dune",
-//                                    withExtension: "png") {
-//            if let attachment = try? UNNotificationAttachment(identifier: "dune",
-//                                                            url: url,
-//                                                            options: nil) {
-//                notificationContent.attachments = [attachment]
-//            }
-//        }
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10,
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.001,
                                                         repeats: false)
         let request = UNNotificationRequest(identifier: "testNotification",
                                             content: notificationContent,
