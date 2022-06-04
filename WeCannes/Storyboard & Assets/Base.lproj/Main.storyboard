@@ -212,9 +212,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="5DF-gH-mnH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-jc-1e3">
-                                <rect key="frame" x="87" y="77" width="240" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-jc-1e3">
+                                <rect key="frame" x="87" y="67" width="240" height="116"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyK-a4-NBz">
                                 <rect key="frame" x="69" y="543" width="276" height="51"/>
@@ -245,14 +244,14 @@
                                 <rect key="frame" x="146" y="387" width="124" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="65"/>
-                                <color key="textColor" red="0.86274509799999999" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tokens" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFi-kV-Mu9">
                                 <rect key="frame" x="159" y="478" width="99" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="30"/>
-                                <color key="textColor" red="0.86274509799999999" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZO-no-o9j">
@@ -275,9 +274,8 @@
                                     <segue destination="4bJ-tU-P7f" kind="show" id="GJJ-tr-CS2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, Dustin Allen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bym-Vj-rAP">
-                                <rect key="frame" x="87" y="201" width="240" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Dustin Allen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bym-Vj-rAP">
+                                <rect key="frame" x="87" y="191" width="240" height="130"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -287,9 +285,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5DF-gH-mnH" firstAttribute="top" secondItem="CMP-UE-nMA" secondAttribute="top" id="2Ns-Gy-Qat"/>
+                            <constraint firstItem="bym-Vj-rAP" firstAttribute="width" secondItem="CMP-UE-nMA" secondAttribute="width" multiplier="0.57971" id="9RT-zI-9fo"/>
                             <constraint firstItem="5DF-gH-mnH" firstAttribute="trailing" secondItem="yqr-ql-7dv" secondAttribute="trailing" id="9WZ-NE-htk"/>
+                            <constraint firstItem="yqr-ql-7dv" firstAttribute="trailing" secondItem="zh6-jc-1e3" secondAttribute="trailing" constant="87" id="ESV-pm-aGg"/>
+                            <constraint firstItem="bym-Vj-rAP" firstAttribute="top" secondItem="zh6-jc-1e3" secondAttribute="bottom" constant="8" symbolic="YES" id="Kly-cg-ivD"/>
+                            <constraint firstItem="bym-Vj-rAP" firstAttribute="height" secondItem="CMP-UE-nMA" secondAttribute="height" multiplier="0.145089" id="fH2-QG-CKy"/>
+                            <constraint firstItem="zh6-jc-1e3" firstAttribute="width" secondItem="CMP-UE-nMA" secondAttribute="width" multiplier="0.57971" id="gST-5v-LxI"/>
+                            <constraint firstItem="zh6-jc-1e3" firstAttribute="leading" secondItem="yqr-ql-7dv" secondAttribute="leading" constant="87" id="i4K-AP-Kak"/>
+                            <constraint firstItem="bym-Vj-rAP" firstAttribute="centerX" secondItem="yqr-ql-7dv" secondAttribute="centerX" id="iQV-nS-Z82"/>
                             <constraint firstItem="5DF-gH-mnH" firstAttribute="leading" secondItem="yqr-ql-7dv" secondAttribute="leading" id="jFG-JS-2qR"/>
+                            <constraint firstItem="zh6-jc-1e3" firstAttribute="top" secondItem="yqr-ql-7dv" secondAttribute="top" constant="23" id="l0p-wr-QT9"/>
                             <constraint firstAttribute="bottom" secondItem="5DF-gH-mnH" secondAttribute="bottom" id="uBe-lW-Ioz"/>
+                            <constraint firstItem="zh6-jc-1e3" firstAttribute="height" secondItem="CMP-UE-nMA" secondAttribute="height" multiplier="0.129464" id="zbG-O8-nln"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="iOI-Mc-S6E"/>
@@ -753,8 +760,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="4dL-vd-709"/>
         <segue reference="6sj-dk-H4H"/>
-        <segue reference="fle-UZ-mH9"/>
-        <segue reference="hbM-bT-MWb"/>
+        <segue reference="AFG-xW-xt1"/>
+        <segue reference="GJJ-tr-CS2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cannes_theme_app" width="1170" height="2532"/>
