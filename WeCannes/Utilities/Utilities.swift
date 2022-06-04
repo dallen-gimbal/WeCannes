@@ -32,6 +32,11 @@ class Utilities {
         button.tintColor = UIColor.infillionGreen
     }
     
+    func dynamicallyChangeButtonSize(button: UIButton) {
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.titleLabel?.minimumScaleFactor = 0.50
+    }
+    
     func showTutorial(theUrl: String) -> SFSafariViewController {
         if let url = URL(string: theUrl) {
             let config = SFSafariViewController.Configuration()

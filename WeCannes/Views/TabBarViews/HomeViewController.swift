@@ -10,6 +10,7 @@ import Gimbal
 
 class HomeViewController: UIViewController, PlaceManagerDelegate {
     
+    @IBOutlet weak var partnerButton: UIButton!
     @IBOutlet weak var redeemPointsButton: UIButton!
     @IBOutlet weak var earnPointsButton: UIButton!
     @IBOutlet weak var upcomingEventsButton: UIButton!
@@ -20,11 +21,10 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
     let placeManager = PlaceManager()
     private let util = Utilities.init()
     
-    class func instantiate() -> UIViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "\(HomeViewController.self)") 
-
-        return viewController
+    override func viewWillAppear(_ animated: Bool) {
+        util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Points")
+        util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")
+        util.dynamicallyChangeButtonSize(button: earnPointsButton)
     }
 
     override func viewDidLoad() {
@@ -35,9 +35,6 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         }
         
         self.placeManager.delegate = self
-        
-        util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Points")
-        util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")
     }
     
     override func viewDidAppear(_ animated: Bool) {
