@@ -312,9 +312,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="98C-s3-y0d">
-                                <rect key="frame" x="0.0" y="-54" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="98C-s3-y0d">
+                                <rect key="frame" x="0.0" y="-54" width="414" height="996"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="i54-xa-uLW">
                                 <rect key="frame" x="87" y="95" width="240" height="128"/>
@@ -400,6 +399,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ApB-eh-ytW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="98C-s3-y0d" firstAttribute="trailing" secondItem="ApB-eh-ytW" secondAttribute="trailing" id="2Ej-YX-PbW"/>
+                            <constraint firstItem="98C-s3-y0d" firstAttribute="leading" secondItem="ApB-eh-ytW" secondAttribute="leading" id="Ayf-yT-pBt"/>
+                            <constraint firstItem="98C-s3-y0d" firstAttribute="top" secondItem="ZLG-6w-UyF" secondAttribute="top" constant="-54" id="WRj-p8-pqq"/>
+                            <constraint firstAttribute="bottom" secondItem="98C-s3-y0d" secondAttribute="bottom" constant="-100" id="w6y-2W-Rtv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kAK-QX-Gry"/>
                 </viewController>
@@ -661,9 +666,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="Con-ui-PMp">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="Con-ui-PMp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="942"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="1eC-uK-w8a">
                                 <rect key="frame" x="87" y="135" width="240" height="128"/>
@@ -679,6 +683,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Dc-E8-Ot0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Con-ui-PMp" secondAttribute="bottom" constant="-100" id="JmA-Xt-HPe"/>
+                            <constraint firstItem="Con-ui-PMp" firstAttribute="leading" secondItem="5Dc-E8-Ot0" secondAttribute="leading" id="bTZ-YC-sci"/>
+                            <constraint firstItem="Con-ui-PMp" firstAttribute="top" secondItem="d0u-KE-YTg" secondAttribute="top" id="rpr-G6-f0l"/>
+                            <constraint firstItem="Con-ui-PMp" firstAttribute="trailing" secondItem="5Dc-E8-Ot0" secondAttribute="trailing" id="zsr-KZ-DA4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JFS-4d-yiG"/>
                 </viewController>
@@ -694,9 +704,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="d3m-v1-j4x">
-                                <rect key="frame" x="0.0" y="-54" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="d3m-v1-j4x">
+                                <rect key="frame" x="0.0" y="-54" width="414" height="996"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-sC-mvi">
                                 <rect key="frame" x="87" y="95" width="240" height="128"/>
@@ -724,6 +733,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ILo-DF-QJJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="d3m-v1-j4x" secondAttribute="bottom" constant="-100" id="E8X-45-XcF"/>
+                            <constraint firstItem="d3m-v1-j4x" firstAttribute="top" secondItem="154-Br-2LD" secondAttribute="top" constant="-54" id="Yrg-zT-lKp"/>
+                            <constraint firstItem="d3m-v1-j4x" firstAttribute="trailing" secondItem="ILo-DF-QJJ" secondAttribute="trailing" id="a1B-pw-lit"/>
+                            <constraint firstItem="d3m-v1-j4x" firstAttribute="leading" secondItem="ILo-DF-QJJ" secondAttribute="leading" id="tP6-0c-HF4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dgo-l8-9pP"/>
                     <connections>
@@ -738,8 +753,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="4dL-vd-709"/>
         <segue reference="6sj-dk-H4H"/>
-        <segue reference="AFG-xW-xt1"/>
-        <segue reference="GJJ-tr-CS2"/>
+        <segue reference="fle-UZ-mH9"/>
+        <segue reference="hbM-bT-MWb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cannes_theme_app" width="1170" height="2532"/>
