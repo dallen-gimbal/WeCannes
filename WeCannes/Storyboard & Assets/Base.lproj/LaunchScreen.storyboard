@@ -16,29 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="jks-h1-TU1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="jks-h1-TU1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_cannes_logo_lockuo" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zKW-Ea-t0A">
                                 <rect key="frame" x="20" y="349" width="374" height="199"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="zKW-Ea-t0A" secondAttribute="height" multiplier="374:199" id="kyE-lM-eFg"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jks-h1-TU1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4af-JW-g73"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zKW-Ea-t0A" secondAttribute="bottom" constant="314" id="6Py-Z3-5Bm"/>
-                            <constraint firstItem="jks-h1-TU1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MuQ-c1-juu"/>
-                            <constraint firstItem="jks-h1-TU1" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="R6V-3s-tsu"/>
-                            <constraint firstItem="zKW-Ea-t0A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kLI-6U-mlF"/>
-                            <constraint firstItem="jks-h1-TU1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nYg-J9-rc0"/>
-                            <constraint firstAttribute="bottom" secondItem="jks-h1-TU1" secondAttribute="bottom" id="rSa-u0-nUP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zKW-Ea-t0A" secondAttribute="trailing" constant="20" id="uQN-x1-Txw"/>
-                            <constraint firstItem="zKW-Ea-t0A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="305" id="y6w-HG-Y6q"/>
-                            <constraint firstItem="jks-h1-TU1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z7c-Md-HIf"/>
+                            <constraint firstItem="jks-h1-TU1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="25R-4s-0C9"/>
+                            <constraint firstItem="zKW-Ea-t0A" firstAttribute="centerY" secondItem="jks-h1-TU1" secondAttribute="centerY" id="3fB-fq-g1o"/>
+                            <constraint firstItem="zKW-Ea-t0A" firstAttribute="centerX" secondItem="jks-h1-TU1" secondAttribute="centerX" id="WzA-2X-nET"/>
+                            <constraint firstItem="zKW-Ea-t0A" firstAttribute="width" secondItem="jks-h1-TU1" secondAttribute="width" multiplier="0.903382" id="bXV-8i-kSF"/>
+                            <constraint firstItem="zKW-Ea-t0A" firstAttribute="height" secondItem="jks-h1-TU1" secondAttribute="height" multiplier="0.222098" id="exE-iE-CIc"/>
+                            <constraint firstItem="jks-h1-TU1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i1v-ap-YK1"/>
+                            <constraint firstAttribute="bottom" secondItem="jks-h1-TU1" secondAttribute="bottom" id="uo7-6K-jom"/>
+                            <constraint firstItem="jks-h1-TU1" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zfh-wH-nfW"/>
                         </constraints>
                     </view>
                 </viewController>

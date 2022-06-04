@@ -204,11 +204,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-jc-1e3">
-                                <rect key="frame" x="87" y="135" width="240" height="128"/>
+                                <rect key="frame" x="87" y="108" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyK-a4-NBz">
-                                <rect key="frame" x="69" y="570" width="276" height="51"/>
+                                <rect key="frame" x="69" y="543" width="276" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Redeem Points"/>
@@ -216,18 +216,8 @@
                                     <segue destination="het-RM-W9p" kind="show" id="AFG-xW-xt1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i5-4Q-VFS">
-                                <rect key="frame" x="69" y="688" width="276" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="How Do I Earn Points?"/>
-                                <connections>
-                                    <segue destination="4bJ-tU-P7f" kind="show" id="Gie-BJ-rGu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rc-5x-XBO">
-                                <rect key="frame" x="69" y="629" width="276" height="51"/>
+                                <rect key="frame" x="69" y="602" width="276" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Upcoming Events"/>
@@ -236,35 +226,35 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, Dustin Allen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bym-Vj-rAP">
-                                <rect key="frame" x="87" y="260" width="240" height="106"/>
+                                <rect key="frame" x="87" y="233" width="240" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You currently have" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sq-57-MWg">
-                                <rect key="frame" x="98" y="374" width="218" height="32"/>
+                                <rect key="frame" x="98" y="347" width="218" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="25"/>
                                 <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1N-ss-KFS">
-                                <rect key="frame" x="146" y="414" width="124" height="83"/>
+                                <rect key="frame" x="146" y="387" width="124" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="65"/>
                                 <color key="textColor" red="0.86274509799999999" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFi-kV-Mu9">
-                                <rect key="frame" x="165" y="505" width="87" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tokens" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFi-kV-Mu9">
+                                <rect key="frame" x="159" y="478" width="99" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="30"/>
                                 <color key="textColor" red="0.86274509799999999" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZO-no-o9j">
-                                <rect key="frame" x="123" y="734" width="168" height="31"/>
+                                <rect key="frame" x="69" y="700" width="276" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -273,13 +263,22 @@
                                     <segue destination="9JN-dU-vgb" kind="show" id="Qda-kV-qs2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNd-gG-mng">
+                                <rect key="frame" x="69" y="661" width="276" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="How Do I Earn Points?"/>
+                                <connections>
+                                    <segue destination="4bJ-tU-P7f" kind="show" id="GJJ-tr-CS2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yqr-ql-7dv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="iOI-Mc-S6E"/>
                     <connections>
-                        <outlet property="earnPointsButton" destination="2i5-4Q-VFS" id="6GU-Cx-ycZ"/>
                         <outlet property="nameLabel" destination="bym-Vj-rAP" id="3df-vX-fI3"/>
                         <outlet property="pointsLabel" destination="h1N-ss-KFS" id="VuP-0h-dT8"/>
                         <outlet property="redeemPointsButton" destination="EyK-a4-NBz" id="1S1-jn-nte"/>
@@ -711,9 +710,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="4dL-vd-709"/>
         <segue reference="6sj-dk-H4H"/>
         <segue reference="AFG-xW-xt1"/>
-        <segue reference="Gie-BJ-rGu"/>
+        <segue reference="GJJ-tr-CS2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cannes_theme_app" width="1170" height="2532"/>
