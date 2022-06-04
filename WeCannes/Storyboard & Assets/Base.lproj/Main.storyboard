@@ -289,8 +289,8 @@
                             <constraint firstItem="KFi-kV-Mu9" firstAttribute="height" secondItem="CMP-UE-nMA" secondAttribute="height" multiplier="0.0424107" id="Hc3-qO-T6O"/>
                             <constraint firstItem="4Sq-57-MWg" firstAttribute="height" secondItem="CMP-UE-nMA" secondAttribute="height" multiplier="0.0558036" id="Ing-ll-tFR"/>
                             <constraint firstItem="bym-Vj-rAP" firstAttribute="top" secondItem="zh6-jc-1e3" secondAttribute="bottom" constant="8" symbolic="YES" id="Kly-cg-ivD"/>
-                            <constraint firstItem="yqr-ql-7dv" firstAttribute="trailing" secondItem="qZO-no-o9j" secondAttribute="trailing" constant="69" id="NNC-xc-Y0Z"/>
                             <constraint firstItem="mNd-gG-mng" firstAttribute="height" secondItem="CMP-UE-nMA" secondAttribute="height" multiplier="0.0345982" id="Raf-rZ-FjT"/>
+                            <constraint firstItem="qZO-no-o9j" firstAttribute="width" secondItem="mNd-gG-mng" secondAttribute="width" id="YTw-Nm-Xj5"/>
                             <constraint firstItem="qZO-no-o9j" firstAttribute="centerX" secondItem="yqr-ql-7dv" secondAttribute="centerX" id="ZtK-MA-zYH"/>
                             <constraint firstItem="h1N-ss-KFS" firstAttribute="top" secondItem="4Sq-57-MWg" secondAttribute="bottom" constant="-12" id="aBr-p8-MHq"/>
                             <constraint firstItem="9Rc-5x-XBO" firstAttribute="top" secondItem="EyK-a4-NBz" secondAttribute="bottom" constant="8" symbolic="YES" id="eDl-qu-1o7"/>
@@ -298,7 +298,6 @@
                             <constraint firstItem="h1N-ss-KFS" firstAttribute="width" secondItem="CMP-UE-nMA" secondAttribute="width" multiplier="0.299517" id="fjM-b2-tA0"/>
                             <constraint firstItem="qZO-no-o9j" firstAttribute="bottom" secondItem="yqr-ql-7dv" secondAttribute="bottom" id="gLn-iS-eqo"/>
                             <constraint firstItem="zh6-jc-1e3" firstAttribute="width" secondItem="CMP-UE-nMA" secondAttribute="width" multiplier="0.57971" id="gST-5v-LxI"/>
-                            <constraint firstItem="qZO-no-o9j" firstAttribute="leading" secondItem="yqr-ql-7dv" secondAttribute="leading" constant="69" id="gif-KZ-9ZU"/>
                             <constraint firstItem="EyK-a4-NBz" firstAttribute="centerX" secondItem="yqr-ql-7dv" secondAttribute="centerX" id="hvM-PD-tpe"/>
                             <constraint firstItem="zh6-jc-1e3" firstAttribute="leading" secondItem="yqr-ql-7dv" secondAttribute="leading" constant="87" id="i4K-AP-Kak"/>
                             <constraint firstItem="bym-Vj-rAP" firstAttribute="centerX" secondItem="yqr-ql-7dv" secondAttribute="centerX" id="iQV-nS-Z82"/>
@@ -782,7 +781,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4dL-vd-709"/>
         <segue reference="6sj-dk-H4H"/>
         <segue reference="AFG-xW-xt1"/>
         <segue reference="GJJ-tr-CS2"/>
