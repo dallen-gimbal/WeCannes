@@ -38,9 +38,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="Chg-tL-d1z">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="Chg-tL-d1z">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="bZe-c8-zAh">
                                 <rect key="frame" x="87" y="130" width="240" height="128"/>
@@ -99,6 +98,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GYc-az-kkT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Chg-tL-d1z" firstAttribute="leading" secondItem="GYc-az-kkT" secondAttribute="leading" id="FZl-Lm-rfn"/>
+                            <constraint firstItem="Chg-tL-d1z" firstAttribute="trailing" secondItem="GYc-az-kkT" secondAttribute="trailing" id="LC7-LS-J2b"/>
+                            <constraint firstItem="Chg-tL-d1z" firstAttribute="top" secondItem="eQj-1o-6z1" secondAttribute="top" id="PDz-66-50B"/>
+                            <constraint firstAttribute="bottom" secondItem="Chg-tL-d1z" secondAttribute="bottom" id="zfR-ml-VrL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wallet" image="dollarsign.circle" catalog="system" id="YhO-0u-c0u"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -122,9 +127,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-eR-q4W">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-eR-q4W">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="xAl-yA-uFL">
                                 <rect key="frame" x="87" y="116" width="240" height="128"/>
@@ -177,6 +181,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vHy-Bt-de0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TfX-eR-q4W" firstAttribute="top" secondItem="Puf-Ob-er4" secondAttribute="top" id="B5C-PR-tIS"/>
+                            <constraint firstItem="TfX-eR-q4W" firstAttribute="leading" secondItem="vHy-Bt-de0" secondAttribute="leading" id="DBx-kR-2Ek"/>
+                            <constraint firstItem="TfX-eR-q4W" firstAttribute="trailing" secondItem="vHy-Bt-de0" secondAttribute="trailing" id="k7n-F7-xYX"/>
+                            <constraint firstAttribute="bottom" secondItem="TfX-eR-q4W" secondAttribute="bottom" id="zgj-RH-qyt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ja0-45-1Sh"/>
                     <connections>
@@ -199,12 +209,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="5DF-gH-mnH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="5DF-gH-mnH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-jc-1e3">
-                                <rect key="frame" x="87" y="108" width="240" height="128"/>
+                                <rect key="frame" x="87" y="77" width="240" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyK-a4-NBz">
@@ -225,13 +234,6 @@
                                     <segue destination="K5h-af-e0N" kind="show" id="TVR-JN-by9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, Dustin Allen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bym-Vj-rAP">
-                                <rect key="frame" x="87" y="233" width="240" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="35"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You currently have" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sq-57-MWg">
                                 <rect key="frame" x="98" y="347" width="218" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -273,9 +275,22 @@
                                     <segue destination="4bJ-tU-P7f" kind="show" id="GJJ-tr-CS2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, Dustin Allen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bym-Vj-rAP">
+                                <rect key="frame" x="87" y="201" width="240" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yqr-ql-7dv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5DF-gH-mnH" firstAttribute="top" secondItem="CMP-UE-nMA" secondAttribute="top" id="2Ns-Gy-Qat"/>
+                            <constraint firstItem="5DF-gH-mnH" firstAttribute="trailing" secondItem="yqr-ql-7dv" secondAttribute="trailing" id="9WZ-NE-htk"/>
+                            <constraint firstItem="5DF-gH-mnH" firstAttribute="leading" secondItem="yqr-ql-7dv" secondAttribute="leading" id="jFG-JS-2qR"/>
+                            <constraint firstAttribute="bottom" secondItem="5DF-gH-mnH" secondAttribute="bottom" id="uBe-lW-Ioz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="iOI-Mc-S6E"/>
                     <connections>
@@ -438,9 +453,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="L5s-h8-10a">
-                                <rect key="frame" x="0.0" y="-54" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="L5s-h8-10a">
+                                <rect key="frame" x="0.0" y="-54" width="414" height="996"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="ksJ-v7-OAh">
                                 <rect key="frame" x="87" y="95" width="240" height="128"/>
@@ -499,6 +513,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CHD-Ij-oMq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="L5s-h8-10a" secondAttribute="bottom" constant="-100" id="0VF-4O-Jn9"/>
+                            <constraint firstAttribute="bottom" secondItem="L5s-h8-10a" secondAttribute="bottom" constant="-100" id="4WS-aL-JdK"/>
+                            <constraint firstItem="L5s-h8-10a" firstAttribute="leading" secondItem="CHD-Ij-oMq" secondAttribute="leading" id="KdM-rn-yhX"/>
+                            <constraint firstItem="L5s-h8-10a" firstAttribute="trailing" secondItem="CHD-Ij-oMq" secondAttribute="trailing" id="ZPB-dZ-oNM"/>
+                            <constraint firstItem="L5s-h8-10a" firstAttribute="top" secondItem="ste-Ft-v50" secondAttribute="top" constant="-54" id="nnS-a8-b9N"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="keH-Oh-nuJ"/>
                 </viewController>
@@ -530,9 +551,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="PuD-U5-j7o">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="PuD-U5-j7o">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLa-fR-Gtj">
                                 <rect key="frame" x="87" y="259" width="240" height="47"/>
@@ -598,7 +618,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxo-6T-Vj3">
-                                <rect key="frame" x="87" y="756" width="241" height="31"/>
+                                <rect key="frame" x="67" y="396" width="241" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -610,6 +630,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n6U-a9-uH6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PuD-U5-j7o" secondAttribute="bottom" id="531-02-rPw"/>
+                            <constraint firstItem="PuD-U5-j7o" firstAttribute="top" secondItem="HEd-JU-DRs" secondAttribute="top" id="Dbi-rL-3rm"/>
+                            <constraint firstItem="PuD-U5-j7o" firstAttribute="leading" secondItem="n6U-a9-uH6" secondAttribute="leading" id="sVQ-hb-OXs"/>
+                            <constraint firstItem="PuD-U5-j7o" firstAttribute="trailing" secondItem="n6U-a9-uH6" secondAttribute="trailing" id="vaf-OH-b2N"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nIf-70-Chl"/>
                     <connections>
