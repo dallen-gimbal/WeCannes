@@ -78,6 +78,9 @@
 		F0BA1A6D284C526B004DD906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BA1A6C284C526B004DD906 /* Main.storyboard */; };
 		F0BA1A6E284C526B004DD906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BA1A6C284C526B004DD906 /* Main.storyboard */; };
 		F0BA1A6F284C526B004DD906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BA1A6C284C526B004DD906 /* Main.storyboard */; };
+		F0BA1A71284C6FFE004DD906 /* WooHooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */; };
+		F0BA1A72284C6FFE004DD906 /* WooHooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */; };
+		F0BA1A73284C6FFE004DD906 /* WooHooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */; };
 		F0F82ACB284C48210024002C /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +143,7 @@
 		F0B8750B2839CA050084A126 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0B8750F2839CA0E0084A126 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F0BA1A6C284C526B004DD906 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WooHooViewController.swift; sourceTree = "<group>"; };
 		F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				F0B874FF2839C9950084A126 /* RedeemPointsViewController.swift */,
+				F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */,
 				F0B875032839C9A20084A126 /* EarnPointsViewController.swift */,
 				F0B875072839C9E90084A126 /* ScheduledEventsViewController.swift */,
 				F01AE1A3284999C9008DBE68 /* PartnerViewController.swift */,
@@ -606,6 +611,7 @@
 				F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */,
 				F03F3F35283BBB9700E605A7 /* Notifications.swift in Sources */,
 				F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */,
+				F0BA1A71284C6FFE004DD906 /* WooHooViewController.swift in Sources */,
 				F03F3FA0284903FD00E605A7 /* StoryboardLogic.swift in Sources */,
 				F0B874F82839C9680084A126 /* HomeViewController.swift in Sources */,
 				F0B875102839CA0E0084A126 /* SignInViewController.swift in Sources */,
@@ -634,6 +640,7 @@
 				F03F3FA1284903FE00E605A7 /* StoryboardLogic.swift in Sources */,
 				F03F3F32283B4B7D00E605A7 /* DataStorage.swift in Sources */,
 				F0B874FD2839C9850084A126 /* WalletViewController.swift in Sources */,
+				F0BA1A72284C6FFE004DD906 /* WooHooViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +663,7 @@
 				F0B875122839CA0E0084A126 /* SignInViewController.swift in Sources */,
 				F0B8750A2839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B874FA2839C9680084A126 /* HomeViewController.swift in Sources */,
+				F0BA1A73284C6FFE004DD906 /* WooHooViewController.swift in Sources */,
 				F0B875062839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,6 +25,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="t1i-2c-kS8"/>
+                    <connections>
+                        <segue destination="Fzb-pA-bV3" kind="show" id="bwt-7r-Rfk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deI-Vu-2Jv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,6 +170,7 @@
                         <outlet property="pointsLabel" destination="UsS-BL-3Uy" id="sOq-f3-E4j"/>
                         <outlet property="redeemPointsButton" destination="2zK-3a-jPQ" id="MjP-yL-w1y"/>
                         <outlet property="tableView" destination="Wd8-X0-5U7" id="M4t-V1-Ffe"/>
+                        <segue destination="Fzb-pA-bV3" kind="show" id="6Ll-yv-rPV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBR-AS-bz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -402,6 +406,7 @@
                         <outlet property="pointsLabel" destination="h1N-ss-KFS" id="VuP-0h-dT8"/>
                         <outlet property="redeemPointsButton" destination="EyK-a4-NBz" id="1S1-jn-nte"/>
                         <outlet property="upcomingEventsButton" destination="9Rc-5x-XBO" id="cok-Qy-8wN"/>
+                        <segue destination="Fzb-pA-bV3" kind="show" id="U5H-6n-xW2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRf-eL-UcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1025,11 +1030,56 @@
             </objects>
             <point key="canvasLocation" x="650.72463768115949" y="-2016.2946428571427"/>
         </scene>
+        <!--Woo Hoo View Controller-->
+        <scene sceneID="qL0-4h-69c">
+            <objects>
+                <viewController storyboardIdentifier="WooHooViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fzb-pA-bV3" customClass="WooHooViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N8B-ds-SNH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-SU-4pA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="tGo-av-LEx">
+                                <rect key="frame" x="87" y="67" width="240" height="116"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woo Hoo!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZN-lw-8nJ">
+                                <rect key="frame" x="48.5" y="191" width="317" height="68"/>
+                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ASW-FD-SDu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tGo-av-LEx" firstAttribute="height" secondItem="N8B-ds-SNH" secondAttribute="height" multiplier="0.137767" id="06c-aQ-6gU"/>
+                            <constraint firstItem="HZN-lw-8nJ" firstAttribute="top" secondItem="tGo-av-LEx" secondAttribute="bottom" constant="8" symbolic="YES" id="5Dw-Lm-VMe"/>
+                            <constraint firstItem="HZN-lw-8nJ" firstAttribute="width" secondItem="N8B-ds-SNH" secondAttribute="width" multiplier="0.7657" id="7we-Ke-GG3"/>
+                            <constraint firstAttribute="bottom" secondItem="Rch-SU-4pA" secondAttribute="bottom" constant="-56" id="BlH-wj-E9l"/>
+                            <constraint firstItem="tGo-av-LEx" firstAttribute="width" secondItem="N8B-ds-SNH" secondAttribute="width" multiplier="0.57971" id="Gge-BS-eAd"/>
+                            <constraint firstItem="tGo-av-LEx" firstAttribute="centerX" secondItem="ASW-FD-SDu" secondAttribute="centerX" id="X9S-gp-YYp"/>
+                            <constraint firstItem="Rch-SU-4pA" firstAttribute="trailing" secondItem="ASW-FD-SDu" secondAttribute="trailing" id="aXW-5w-NuX"/>
+                            <constraint firstItem="tGo-av-LEx" firstAttribute="top" secondItem="ASW-FD-SDu" secondAttribute="top" constant="23" id="fY8-sM-Tc6"/>
+                            <constraint firstItem="Rch-SU-4pA" firstAttribute="leading" secondItem="ASW-FD-SDu" secondAttribute="leading" id="l7A-0K-N6S"/>
+                            <constraint firstItem="Rch-SU-4pA" firstAttribute="top" secondItem="N8B-ds-SNH" secondAttribute="top" id="sf5-VH-mY4"/>
+                            <constraint firstItem="HZN-lw-8nJ" firstAttribute="height" secondItem="N8B-ds-SNH" secondAttribute="height" multiplier="0.0807601" id="uiX-Kf-D4Y"/>
+                            <constraint firstItem="HZN-lw-8nJ" firstAttribute="centerX" secondItem="ASW-FD-SDu" secondAttribute="centerX" id="waw-mt-pVS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="O8T-83-2B7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kuk-wH-ckc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="-1296"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="bwt-7r-Rfk"/>
         <segue reference="0Mz-pm-pYL"/>
-        <segue reference="AFG-xW-xt1"/>
-        <segue reference="GJJ-tr-CS2"/>
+        <segue reference="fle-UZ-mH9"/>
+        <segue reference="JtJ-nX-Kgq"/>
         <segue reference="4dL-vd-709"/>
     </inferredMetricsTieBreakers>
     <resources>
