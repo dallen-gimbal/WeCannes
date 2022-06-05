@@ -416,98 +416,130 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="98C-s3-y0d">
-                                <rect key="frame" x="0.0" y="-54" width="414" height="996"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="xKV-8k-xq3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="i54-xa-uLW">
-                                <rect key="frame" x="87" y="95" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How Do I Earn Points?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q0-iq-B7X">
-                                <rect key="frame" x="49" y="247" width="317" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Do I Earn Points?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Q0-iq-B7X">
+                                <rect key="frame" x="48.5" y="191" width="317" height="112"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There are several ways to earn points:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hv-8Y-Iuo">
-                                <rect key="frame" x="29" y="367" width="357" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="30"/>
-                                <color key="textColor" red="0.86274509803921573" green="0.0" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edi-PU-AQt">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edi-PU-AQt">
                                 <rect key="frame" x="0.0" y="484" width="414" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visit specific locations throughout Cannes Lions. Check your map for details!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdu-Px-HbV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visit specific locations throughout Cannes Lions. Check your map for details!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="bdu-Px-HbV">
                                         <rect key="frame" x="209" y="8" width="179" height="78"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="14"/>
                                         <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visit" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEz-Hl-NwC">
-                                        <rect key="frame" x="61" y="28" width="111" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visit" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="TEz-Hl-NwC">
+                                        <rect key="frame" x="26" y="28" width="153" height="38"/>
                                         <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="30"/>
                                         <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.76470588240000004" blue="0.15686274510000001" alpha="0.14928714171150662" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bdu-Px-HbV" secondAttribute="trailing" constant="26" id="Eme-fL-skO"/>
+                                    <constraint firstItem="TEz-Hl-NwC" firstAttribute="width" secondItem="edi-PU-AQt" secondAttribute="width" multiplier="0.369565" id="GFc-OK-EXW"/>
+                                    <constraint firstItem="bdu-Px-HbV" firstAttribute="leading" secondItem="TEz-Hl-NwC" secondAttribute="trailing" constant="30" id="HxT-3q-UXv"/>
+                                    <constraint firstItem="TEz-Hl-NwC" firstAttribute="height" secondItem="edi-PU-AQt" secondAttribute="height" multiplier="0.404255" id="V1e-FC-0hG"/>
+                                    <constraint firstItem="bdu-Px-HbV" firstAttribute="height" secondItem="edi-PU-AQt" secondAttribute="height" multiplier="0.829787" id="h0p-En-uOR"/>
+                                    <constraint firstItem="TEz-Hl-NwC" firstAttribute="centerY" secondItem="edi-PU-AQt" secondAttribute="centerY" id="jFq-ph-Zim"/>
+                                    <constraint firstItem="bdu-Px-HbV" firstAttribute="centerY" secondItem="edi-PU-AQt" secondAttribute="centerY" id="quY-po-GJT"/>
+                                    <constraint firstItem="bdu-Px-HbV" firstAttribute="width" secondItem="edi-PU-AQt" secondAttribute="width" multiplier="0.432367" id="xN6-bv-AHI"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZoT-vs-Uai">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoT-vs-Uai">
                                 <rect key="frame" x="0.0" y="586" width="414" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y52-8w-Ixz">
-                                        <rect key="frame" x="65" y="28" width="111" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="y52-8w-Ixz">
+                                        <rect key="frame" x="26" y="28" width="153" height="38"/>
                                         <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="30"/>
                                         <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The more time you spend at a selected location, the more points you earn!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMT-gS-9Cy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The more time you spend at a selected location, the more points you earn!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="cMT-gS-9Cy">
                                         <rect key="frame" x="208" y="8" width="170" height="78"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="14"/>
                                         <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.76470588240000004" blue="0.15686274510000001" alpha="0.14928714169999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cMT-gS-9Cy" firstAttribute="centerY" secondItem="ZoT-vs-Uai" secondAttribute="centerY" id="5qW-il-KTE"/>
+                                    <constraint firstItem="cMT-gS-9Cy" firstAttribute="leading" secondItem="y52-8w-Ixz" secondAttribute="trailing" constant="29" id="J3M-Xz-pkF"/>
+                                    <constraint firstItem="y52-8w-Ixz" firstAttribute="height" secondItem="ZoT-vs-Uai" secondAttribute="height" multiplier="0.404255" id="NyV-9P-MGB"/>
+                                    <constraint firstItem="cMT-gS-9Cy" firstAttribute="width" secondItem="ZoT-vs-Uai" secondAttribute="width" multiplier="0.410628" id="OUe-uz-9zh"/>
+                                    <constraint firstItem="y52-8w-Ixz" firstAttribute="width" secondItem="ZoT-vs-Uai" secondAttribute="width" multiplier="0.369565" id="Q0e-SB-ylD"/>
+                                    <constraint firstItem="cMT-gS-9Cy" firstAttribute="height" secondItem="ZoT-vs-Uai" secondAttribute="height" multiplier="0.829787" id="YZA-cR-ypv"/>
+                                    <constraint firstAttribute="trailing" secondItem="cMT-gS-9Cy" secondAttribute="trailing" constant="36" id="dYh-rr-xUF"/>
+                                    <constraint firstItem="y52-8w-Ixz" firstAttribute="centerY" secondItem="ZoT-vs-Uai" secondAttribute="centerY" id="qhW-4o-1dX"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fxt-xf-pt1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxt-xf-pt1">
                                 <rect key="frame" x="0.0" y="688" width="414" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interact" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAe-T8-yRD">
-                                        <rect key="frame" x="68" y="28" width="111" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interact" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="eAe-T8-yRD">
+                                        <rect key="frame" x="26" y="28" width="153" height="38"/>
                                         <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="30"/>
                                         <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interact with different experiences around our event and venue." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LV-4A-Azg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interact with different experiences around our event and venue." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="2LV-4A-Azg">
                                         <rect key="frame" x="211" y="8" width="170" height="78"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="14"/>
                                         <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.76470588240000004" blue="0.15686274510000001" alpha="0.14928714169999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2LV-4A-Azg" firstAttribute="height" secondItem="fxt-xf-pt1" secondAttribute="height" multiplier="0.829787" id="55N-0w-yO1"/>
+                                    <constraint firstItem="2LV-4A-Azg" firstAttribute="leading" secondItem="eAe-T8-yRD" secondAttribute="trailing" constant="32" id="Umn-Jd-9vE"/>
+                                    <constraint firstAttribute="trailing" secondItem="2LV-4A-Azg" secondAttribute="trailing" constant="33" id="XLy-g0-95W"/>
+                                    <constraint firstItem="eAe-T8-yRD" firstAttribute="centerY" secondItem="fxt-xf-pt1" secondAttribute="centerY" id="YAw-Ze-HoT"/>
+                                    <constraint firstItem="eAe-T8-yRD" firstAttribute="width" secondItem="fxt-xf-pt1" secondAttribute="width" multiplier="0.369565" id="hsa-ui-HVM"/>
+                                    <constraint firstItem="2LV-4A-Azg" firstAttribute="width" secondItem="fxt-xf-pt1" secondAttribute="width" multiplier="0.410628" id="iyL-yk-xPl"/>
+                                    <constraint firstItem="eAe-T8-yRD" firstAttribute="height" secondItem="fxt-xf-pt1" secondAttribute="height" multiplier="0.404255" id="izU-3d-33i"/>
+                                    <constraint firstItem="2LV-4A-Azg" firstAttribute="centerY" secondItem="fxt-xf-pt1" secondAttribute="centerY" id="rPg-Pt-1kN"/>
+                                </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="BIG-Cm-cK0">
+                                <rect key="frame" x="87" y="67" width="240" height="116"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ApB-eh-ytW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="98C-s3-y0d" firstAttribute="trailing" secondItem="ApB-eh-ytW" secondAttribute="trailing" id="2Ej-YX-PbW"/>
-                            <constraint firstItem="98C-s3-y0d" firstAttribute="leading" secondItem="ApB-eh-ytW" secondAttribute="leading" id="Ayf-yT-pBt"/>
-                            <constraint firstItem="98C-s3-y0d" firstAttribute="top" secondItem="ZLG-6w-UyF" secondAttribute="top" constant="-54" id="WRj-p8-pqq"/>
-                            <constraint firstAttribute="bottom" secondItem="98C-s3-y0d" secondAttribute="bottom" constant="-100" id="w6y-2W-Rtv"/>
+                            <constraint firstItem="BIG-Cm-cK0" firstAttribute="centerX" secondItem="ApB-eh-ytW" secondAttribute="centerX" id="0br-J9-PU1"/>
+                            <constraint firstItem="ZoT-vs-Uai" firstAttribute="centerX" secondItem="ApB-eh-ytW" secondAttribute="centerX" id="20B-mV-BUX"/>
+                            <constraint firstItem="fxt-xf-pt1" firstAttribute="top" secondItem="ZoT-vs-Uai" secondAttribute="bottom" constant="8" symbolic="YES" id="3A4-j9-1hn"/>
+                            <constraint firstItem="xKV-8k-xq3" firstAttribute="top" secondItem="ZLG-6w-UyF" secondAttribute="top" id="5HE-ob-YKJ"/>
+                            <constraint firstItem="6Q0-iq-B7X" firstAttribute="height" secondItem="ZLG-6w-UyF" secondAttribute="height" multiplier="0.133017" id="6ro-DQ-IA7"/>
+                            <constraint firstItem="fxt-xf-pt1" firstAttribute="height" secondItem="ZLG-6w-UyF" secondAttribute="height" multiplier="0.111639" id="8lx-OT-UPk"/>
+                            <constraint firstItem="fxt-xf-pt1" firstAttribute="width" secondItem="ZLG-6w-UyF" secondAttribute="width" id="D3v-Yh-am9"/>
+                            <constraint firstItem="ApB-eh-ytW" firstAttribute="bottom" secondItem="fxt-xf-pt1" secondAttribute="bottom" constant="60" id="FQw-ck-rtQ"/>
+                            <constraint firstItem="ZoT-vs-Uai" firstAttribute="top" secondItem="edi-PU-AQt" secondAttribute="bottom" constant="8" symbolic="YES" id="GKv-tI-JRV"/>
+                            <constraint firstItem="ZoT-vs-Uai" firstAttribute="width" secondItem="ZLG-6w-UyF" secondAttribute="width" id="MHd-D4-vjx"/>
+                            <constraint firstItem="edi-PU-AQt" firstAttribute="height" secondItem="ZLG-6w-UyF" secondAttribute="height" multiplier="0.111639" id="PAI-Jh-i0H"/>
+                            <constraint firstItem="xKV-8k-xq3" firstAttribute="leading" secondItem="ApB-eh-ytW" secondAttribute="leading" id="PuZ-80-J1c"/>
+                            <constraint firstItem="edi-PU-AQt" firstAttribute="width" secondItem="ZLG-6w-UyF" secondAttribute="width" id="Uif-gy-q6H"/>
+                            <constraint firstItem="ZoT-vs-Uai" firstAttribute="height" secondItem="ZLG-6w-UyF" secondAttribute="height" multiplier="0.111639" id="ZhJ-DQ-mHF"/>
+                            <constraint firstItem="edi-PU-AQt" firstAttribute="centerX" secondItem="ApB-eh-ytW" secondAttribute="centerX" id="ccg-OS-eUl"/>
+                            <constraint firstAttribute="bottom" secondItem="xKV-8k-xq3" secondAttribute="bottom" constant="-56" id="f1Z-DR-YGL"/>
+                            <constraint firstItem="xKV-8k-xq3" firstAttribute="trailing" secondItem="ApB-eh-ytW" secondAttribute="trailing" id="fPJ-rN-S4r"/>
+                            <constraint firstItem="6Q0-iq-B7X" firstAttribute="top" secondItem="BIG-Cm-cK0" secondAttribute="bottom" constant="8" symbolic="YES" id="j27-Qn-Zfv"/>
+                            <constraint firstItem="6Q0-iq-B7X" firstAttribute="width" secondItem="ZLG-6w-UyF" secondAttribute="width" multiplier="0.7657" id="jG4-Gt-SlD"/>
+                            <constraint firstItem="BIG-Cm-cK0" firstAttribute="height" secondItem="ZLG-6w-UyF" secondAttribute="height" multiplier="0.137767" id="oLS-7H-jX7"/>
+                            <constraint firstItem="BIG-Cm-cK0" firstAttribute="width" secondItem="ZLG-6w-UyF" secondAttribute="width" multiplier="0.57971" id="p1y-eT-Z3A"/>
+                            <constraint firstItem="fxt-xf-pt1" firstAttribute="centerX" secondItem="ApB-eh-ytW" secondAttribute="centerX" id="s60-Wc-ITS"/>
+                            <constraint firstItem="BIG-Cm-cK0" firstAttribute="top" secondItem="ApB-eh-ytW" secondAttribute="top" constant="23" id="yHa-UI-56b"/>
+                            <constraint firstItem="6Q0-iq-B7X" firstAttribute="centerX" secondItem="ApB-eh-ytW" secondAttribute="centerX" id="zI6-ma-JIH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kAK-QX-Gry"/>
@@ -946,40 +978,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="d3m-v1-j4x">
-                                <rect key="frame" x="0.0" y="-54" width="414" height="996"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="wH2-j1-iNj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-sC-mvi">
-                                <rect key="frame" x="87" y="95" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upcoming Events" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-56-o2x">
-                                <rect key="frame" x="49" y="247" width="317" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fnP-5c-a1e">
-                                <rect key="frame" x="0.0" y="519" width="414" height="289"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fnP-5c-a1e">
+                                <rect key="frame" x="0.0" y="445" width="414" height="397"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here are all the Infillion Events at Cannes:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR9-pr-f9F">
-                                <rect key="frame" x="37" y="367" width="357" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="30"/>
-                                <color key="textColor" red="0.86274509799999999" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="fBW-lx-gVH">
+                                <rect key="frame" x="87" y="67" width="240" height="116"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-56-o2x">
+                                <rect key="frame" x="48.5" y="191" width="317" height="112"/>
+                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ILo-DF-QJJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="d3m-v1-j4x" secondAttribute="bottom" constant="-100" id="E8X-45-XcF"/>
-                            <constraint firstItem="d3m-v1-j4x" firstAttribute="top" secondItem="154-Br-2LD" secondAttribute="top" constant="-54" id="Yrg-zT-lKp"/>
-                            <constraint firstItem="d3m-v1-j4x" firstAttribute="trailing" secondItem="ILo-DF-QJJ" secondAttribute="trailing" id="a1B-pw-lit"/>
-                            <constraint firstItem="d3m-v1-j4x" firstAttribute="leading" secondItem="ILo-DF-QJJ" secondAttribute="leading" id="tP6-0c-HF4"/>
+                            <constraint firstItem="fBW-lx-gVH" firstAttribute="width" secondItem="154-Br-2LD" secondAttribute="width" multiplier="0.57971" id="2wu-MC-vrc"/>
+                            <constraint firstItem="FbK-56-o2x" firstAttribute="height" secondItem="154-Br-2LD" secondAttribute="height" multiplier="0.133017" id="7iw-SY-xvr"/>
+                            <constraint firstItem="fBW-lx-gVH" firstAttribute="top" secondItem="ILo-DF-QJJ" secondAttribute="top" constant="23" id="CZJ-r7-zpE"/>
+                            <constraint firstItem="fnP-5c-a1e" firstAttribute="width" secondItem="154-Br-2LD" secondAttribute="width" id="I0x-IP-sEe"/>
+                            <constraint firstItem="fnP-5c-a1e" firstAttribute="bottom" secondItem="ILo-DF-QJJ" secondAttribute="bottom" id="L2E-wP-lJn"/>
+                            <constraint firstItem="FbK-56-o2x" firstAttribute="top" secondItem="fBW-lx-gVH" secondAttribute="bottom" constant="8" symbolic="YES" id="LGd-3t-tLv"/>
+                            <constraint firstAttribute="bottom" secondItem="wH2-j1-iNj" secondAttribute="bottom" constant="-56" id="MI4-pq-Mmz"/>
+                            <constraint firstItem="wH2-j1-iNj" firstAttribute="trailing" secondItem="ILo-DF-QJJ" secondAttribute="trailing" id="Um1-S0-Gda"/>
+                            <constraint firstItem="fnP-5c-a1e" firstAttribute="height" secondItem="154-Br-2LD" secondAttribute="height" multiplier="0.471496" id="ZMG-eA-HKQ"/>
+                            <constraint firstItem="fBW-lx-gVH" firstAttribute="height" secondItem="154-Br-2LD" secondAttribute="height" multiplier="0.137767" id="ZW2-m7-wHn"/>
+                            <constraint firstItem="FbK-56-o2x" firstAttribute="width" secondItem="154-Br-2LD" secondAttribute="width" multiplier="0.7657" id="efW-4M-eLV"/>
+                            <constraint firstItem="fBW-lx-gVH" firstAttribute="centerX" secondItem="ILo-DF-QJJ" secondAttribute="centerX" id="hq2-lJ-cyx"/>
+                            <constraint firstItem="fnP-5c-a1e" firstAttribute="centerX" secondItem="ILo-DF-QJJ" secondAttribute="centerX" id="jZM-FX-Te8"/>
+                            <constraint firstItem="wH2-j1-iNj" firstAttribute="leading" secondItem="ILo-DF-QJJ" secondAttribute="leading" id="r6r-WR-ebZ"/>
+                            <constraint firstItem="FbK-56-o2x" firstAttribute="centerX" secondItem="ILo-DF-QJJ" secondAttribute="centerX" id="v5N-gf-xfL"/>
+                            <constraint firstItem="wH2-j1-iNj" firstAttribute="top" secondItem="154-Br-2LD" secondAttribute="top" id="wSO-2K-8Jc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dgo-l8-9pP"/>
@@ -989,7 +1023,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2H-3A-XLk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="-2016"/>
+            <point key="canvasLocation" x="650.72463768115949" y="-2016.2946428571427"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
