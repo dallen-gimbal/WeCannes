@@ -17,12 +17,15 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
     private let firebaseFunctions = FirebaseFunctions()
+    private let util = Utilities.init()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        util.updateButtonStyle(button: loginButton, title: "Sign In")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Utilities.init().updateButtonStyle(button: loginButton, title: "Sign In")
-        Utilities.init().updateButtonStyle(button: registerButton, title: "No Account? Register for Free!")
     }
     
     
