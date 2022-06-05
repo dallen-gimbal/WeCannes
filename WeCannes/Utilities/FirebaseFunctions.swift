@@ -44,6 +44,10 @@ class FirebaseFunctions {
         }
     }
     
+    func recoverPassword(email: String) {
+        Auth.auth().sendPasswordReset(withEmail: email)
+    }
+    
     // MARK: Retrieve Data
     func getCollectionData(collection: String, completion: @escaping (QuerySnapshot?, Error?) -> Void) {
         Firestore.firestore().collection(collection).getDocuments(completion: { (documents, error) in

@@ -23,5 +23,8 @@ class RecoverPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func recoverPasswordAction(_ sender: Any) {
+        FirebaseFunctions.init().recoverPassword(email: emailField.text!)
+    }
+    
 }
