@@ -22,7 +22,7 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
     private let util = Utilities.init()
     
     override func viewWillAppear(_ animated: Bool) {
-        util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Points")
+        util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Tokens")
         util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")
         util.dynamicallyChangeButtonSize(button: earnPointsButton)
     }
