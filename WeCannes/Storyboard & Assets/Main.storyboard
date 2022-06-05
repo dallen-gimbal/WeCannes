@@ -902,16 +902,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="Con-ui-PMp">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="942"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="ra8-4C-zs1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="1eC-uK-w8a">
-                                <rect key="frame" x="87" y="135" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="R6G-NQ-WOA">
+                                <rect key="frame" x="87" y="67" width="240" height="116"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Partner List" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-vE-jUC">
-                                <rect key="frame" x="49" y="287" width="317" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner List" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-vE-jUC">
+                                <rect key="frame" x="48.5" y="191" width="317" height="68"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -920,10 +918,18 @@
                         <viewLayoutGuide key="safeArea" id="5Dc-E8-Ot0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Con-ui-PMp" secondAttribute="bottom" constant="-100" id="JmA-Xt-HPe"/>
-                            <constraint firstItem="Con-ui-PMp" firstAttribute="leading" secondItem="5Dc-E8-Ot0" secondAttribute="leading" id="bTZ-YC-sci"/>
-                            <constraint firstItem="Con-ui-PMp" firstAttribute="top" secondItem="d0u-KE-YTg" secondAttribute="top" id="rpr-G6-f0l"/>
-                            <constraint firstItem="Con-ui-PMp" firstAttribute="trailing" secondItem="5Dc-E8-Ot0" secondAttribute="trailing" id="zsr-KZ-DA4"/>
+                            <constraint firstItem="WB1-vE-jUC" firstAttribute="width" secondItem="d0u-KE-YTg" secondAttribute="width" multiplier="0.7657" id="0zj-Pd-fdO"/>
+                            <constraint firstItem="R6G-NQ-WOA" firstAttribute="width" secondItem="d0u-KE-YTg" secondAttribute="width" multiplier="0.57971" id="3hO-hC-V7C"/>
+                            <constraint firstItem="R6G-NQ-WOA" firstAttribute="centerX" secondItem="5Dc-E8-Ot0" secondAttribute="centerX" id="8SD-m9-jvM"/>
+                            <constraint firstItem="WB1-vE-jUC" firstAttribute="height" secondItem="d0u-KE-YTg" secondAttribute="height" multiplier="0.0807601" id="GBd-fb-foY"/>
+                            <constraint firstItem="ra8-4C-zs1" firstAttribute="trailing" secondItem="5Dc-E8-Ot0" secondAttribute="trailing" id="Jac-jM-CI6"/>
+                            <constraint firstItem="WB1-vE-jUC" firstAttribute="top" secondItem="R6G-NQ-WOA" secondAttribute="bottom" constant="8" symbolic="YES" id="SGM-CS-kuT"/>
+                            <constraint firstItem="R6G-NQ-WOA" firstAttribute="top" secondItem="5Dc-E8-Ot0" secondAttribute="top" constant="23" id="UY3-Ii-xq5"/>
+                            <constraint firstItem="WB1-vE-jUC" firstAttribute="centerX" secondItem="5Dc-E8-Ot0" secondAttribute="centerX" id="Vcv-ex-cE5"/>
+                            <constraint firstAttribute="bottom" secondItem="ra8-4C-zs1" secondAttribute="bottom" constant="-56" id="aPJ-y6-FRI"/>
+                            <constraint firstItem="ra8-4C-zs1" firstAttribute="leading" secondItem="5Dc-E8-Ot0" secondAttribute="leading" id="cyd-Vg-ORZ"/>
+                            <constraint firstItem="R6G-NQ-WOA" firstAttribute="height" secondItem="d0u-KE-YTg" secondAttribute="height" multiplier="0.137767" id="dBL-w7-T8I"/>
+                            <constraint firstItem="ra8-4C-zs1" firstAttribute="top" secondItem="d0u-KE-YTg" secondAttribute="top" id="fLo-PP-Ng7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JFS-4d-yiG"/>
