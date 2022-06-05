@@ -76,6 +76,7 @@
 		F0B875112839CA0E0084A126 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8750F2839CA0E0084A126 /* SignInViewController.swift */; };
 		F0B875122839CA0E0084A126 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8750F2839CA0E0084A126 /* SignInViewController.swift */; };
 		F0B8751F2839DC5A0084A126 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F0B8751E2839DC5A0084A126 /* FirebaseAuth */; };
+		F0F82ACB284C48210024002C /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		F0B875072839C9E90084A126 /* ScheduledEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEventsViewController.swift; sourceTree = "<group>"; };
 		F0B8750B2839CA050084A126 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0B8750F2839CA0E0084A126 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				F0B8750B2839CA050084A126 /* RegisterViewController.swift */,
+				F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */,
 				F0B8750F2839CA0E0084A126 /* SignInViewController.swift */,
 			);
 			path = AuthenticationViews;
@@ -603,6 +606,7 @@
 				F0B874F82839C9680084A126 /* HomeViewController.swift in Sources */,
 				F0B875102839CA0E0084A126 /* SignInViewController.swift in Sources */,
 				F03F3F1C283B14F600E605A7 /* OnboardingViewController.swift in Sources */,
+				F0F82ACB284C48210024002C /* RecoverPasswordViewController.swift in Sources */,
 				F0B874FC2839C9850084A126 /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

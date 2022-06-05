@@ -199,6 +199,9 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                <connections>
+                                    <segue destination="zKm-IG-NGn" kind="show" id="UbE-CR-M2I"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ck-dI-j3B">
                                 <rect key="frame" x="93.5" y="431" width="227" height="34"/>
@@ -657,6 +660,91 @@
             </objects>
             <point key="canvasLocation" x="-1288" y="-1739"/>
         </scene>
+        <!--Recover Password View Controller-->
+        <scene sceneID="W3I-TG-XBW">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="zKm-IG-NGn" customClass="RecoverPasswordViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Obi-Y6-cu7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="sR5-5b-enP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Your Password?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="1lp-Yb-DIL">
+                                <rect key="frame" x="87" y="191" width="240" height="106"/>
+                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="Ksm-wf-lId">
+                                <rect key="frame" x="87" y="67" width="240" height="116"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Emal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FED-3m-skl">
+                                <rect key="frame" x="87" y="431" width="240" height="34"/>
+                                <color key="textColor" red="0.086274509803921567" green="0.11372549019607843" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBO-T1-2ri">
+                                <rect key="frame" x="87" y="473" width="240" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Recover Password"/>
+                                <connections>
+                                    <action selector="submitRegistration:" destination="M7C-tR-PRr" eventType="touchUpInside" id="TsO-Vx-wjx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ne-fK-TfN">
+                                <rect key="frame" x="87" y="831" width="240" height="31"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
+                                <connections>
+                                    <segue destination="1N9-sI-CNw" kind="show" id="Tq8-fW-71h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7SF-jk-NXy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1lp-Yb-DIL" firstAttribute="height" secondItem="Obi-Y6-cu7" secondAttribute="height" multiplier="0.118304" id="0bp-O0-D3E"/>
+                            <constraint firstItem="8Ne-fK-TfN" firstAttribute="height" secondItem="Obi-Y6-cu7" secondAttribute="height" multiplier="0.0345982" id="1gr-fA-XsS"/>
+                            <constraint firstItem="FED-3m-skl" firstAttribute="centerY" secondItem="Obi-Y6-cu7" secondAttribute="centerY" id="3tA-TB-2aJ"/>
+                            <constraint firstItem="1lp-Yb-DIL" firstAttribute="centerX" secondItem="7SF-jk-NXy" secondAttribute="centerX" id="5Hn-L9-0pK"/>
+                            <constraint firstItem="sR5-5b-enP" firstAttribute="top" secondItem="Obi-Y6-cu7" secondAttribute="top" id="5N5-4D-Ar5"/>
+                            <constraint firstItem="YBO-T1-2ri" firstAttribute="top" secondItem="FED-3m-skl" secondAttribute="bottom" constant="8" symbolic="YES" id="6Fu-xd-Mrf"/>
+                            <constraint firstItem="Ksm-wf-lId" firstAttribute="height" secondItem="Obi-Y6-cu7" secondAttribute="height" multiplier="0.129464" id="7cZ-n9-ngA"/>
+                            <constraint firstItem="YBO-T1-2ri" firstAttribute="height" secondItem="Obi-Y6-cu7" secondAttribute="height" multiplier="0.0424107" id="9Yh-8B-Oxq"/>
+                            <constraint firstItem="sR5-5b-enP" firstAttribute="leading" secondItem="7SF-jk-NXy" secondAttribute="leading" id="O5g-if-tSS"/>
+                            <constraint firstItem="1lp-Yb-DIL" firstAttribute="width" secondItem="Obi-Y6-cu7" secondAttribute="width" multiplier="0.57971" id="Rmc-Iv-05B"/>
+                            <constraint firstItem="sR5-5b-enP" firstAttribute="height" secondItem="Obi-Y6-cu7" secondAttribute="height" id="Rx0-63-cMq"/>
+                            <constraint firstItem="1lp-Yb-DIL" firstAttribute="top" secondItem="Ksm-wf-lId" secondAttribute="bottom" constant="8" symbolic="YES" id="ThA-cr-eq6"/>
+                            <constraint firstItem="FED-3m-skl" firstAttribute="width" secondItem="Obi-Y6-cu7" secondAttribute="width" multiplier="0.57971" id="VJE-ZQ-VMI"/>
+                            <constraint firstItem="8Ne-fK-TfN" firstAttribute="width" secondItem="Obi-Y6-cu7" secondAttribute="width" multiplier="0.57971" id="WW6-6M-qzu"/>
+                            <constraint firstItem="Ksm-wf-lId" firstAttribute="top" secondItem="7SF-jk-NXy" secondAttribute="top" constant="23" id="YXd-GG-yHy"/>
+                            <constraint firstItem="sR5-5b-enP" firstAttribute="trailing" secondItem="7SF-jk-NXy" secondAttribute="trailing" id="dyx-pF-eD3"/>
+                            <constraint firstItem="FED-3m-skl" firstAttribute="height" secondItem="Obi-Y6-cu7" secondAttribute="height" multiplier="0.0379464" id="eMT-y1-Yxt"/>
+                            <constraint firstItem="8Ne-fK-TfN" firstAttribute="bottom" secondItem="7SF-jk-NXy" secondAttribute="bottom" id="l1l-ni-n2J"/>
+                            <constraint firstItem="YBO-T1-2ri" firstAttribute="centerX" secondItem="7SF-jk-NXy" secondAttribute="centerX" id="oCU-xK-RNv"/>
+                            <constraint firstItem="YBO-T1-2ri" firstAttribute="width" secondItem="Obi-Y6-cu7" secondAttribute="width" multiplier="0.57971" id="oXP-dU-9zP"/>
+                            <constraint firstItem="FED-3m-skl" firstAttribute="centerX" secondItem="Obi-Y6-cu7" secondAttribute="centerX" id="pDK-RW-8un"/>
+                            <constraint firstItem="8Ne-fK-TfN" firstAttribute="centerX" secondItem="7SF-jk-NXy" secondAttribute="centerX" id="qop-uF-g1e"/>
+                            <constraint firstItem="sR5-5b-enP" firstAttribute="width" secondItem="Obi-Y6-cu7" secondAttribute="width" id="rGd-h7-6XC"/>
+                            <constraint firstItem="Ksm-wf-lId" firstAttribute="centerX" secondItem="7SF-jk-NXy" secondAttribute="centerX" id="uaH-2l-q7g"/>
+                            <constraint firstItem="Ksm-wf-lId" firstAttribute="width" secondItem="Obi-Y6-cu7" secondAttribute="width" multiplier="0.57971" id="wwt-2c-WsB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xUd-Bz-fsD"/>
+                    <connections>
+                        <outlet property="emailField" destination="FED-3m-skl" id="4gk-dL-eDh"/>
+                        <outlet property="passwordButton" destination="YBO-T1-2ri" id="A5r-wg-KW8"/>
+                        <outlet property="signInButton" destination="8Ne-fK-TfN" id="UZw-UC-1Ee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSe-xV-9vv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2255.072463768116" y="-1739.0625"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="pai-Qs-SwQ">
             <objects>
@@ -889,6 +977,7 @@
         <segue reference="0Mz-pm-pYL"/>
         <segue reference="fle-UZ-mH9"/>
         <segue reference="JtJ-nX-Kgq"/>
+        <segue reference="Tq8-fW-71h"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cannes_theme_app" width="1170" height="2532"/>
