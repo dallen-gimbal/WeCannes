@@ -46,7 +46,6 @@
 		F03F3FAE284976D600E605A7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */; };
 		F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C32839BFC10084A126 /* AppDelegate.swift */; };
 		F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C52839BFC10084A126 /* SceneDelegate.swift */; };
-		F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874C92839BFC10084A126 /* Main.storyboard */; };
 		F0B874D02839BFC30084A126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874CE2839BFC30084A126 /* LaunchScreen.storyboard */; };
 		F0B874DB2839BFC40084A126 /* WeCannesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874DA2839BFC40084A126 /* WeCannesTests.swift */; };
 		F0B874E52839BFC40084A126 /* WeCannesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874E42839BFC40084A126 /* WeCannesUITests.swift */; };
@@ -76,6 +75,9 @@
 		F0B875112839CA0E0084A126 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8750F2839CA0E0084A126 /* SignInViewController.swift */; };
 		F0B875122839CA0E0084A126 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8750F2839CA0E0084A126 /* SignInViewController.swift */; };
 		F0B8751F2839DC5A0084A126 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F0B8751E2839DC5A0084A126 /* FirebaseAuth */; };
+		F0BA1A6D284C526B004DD906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BA1A6C284C526B004DD906 /* Main.storyboard */; };
+		F0BA1A6E284C526B004DD906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BA1A6C284C526B004DD906 /* Main.storyboard */; };
+		F0BA1A6F284C526B004DD906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BA1A6C284C526B004DD906 /* Main.storyboard */; };
 		F0F82ACB284C48210024002C /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -122,7 +124,6 @@
 		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B874C52839BFC10084A126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0B874CA2839BFC10084A126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0B874CF2839BFC30084A126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0B874D12839BFC30084A126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0B874D62839BFC40084A126 /* WeCannesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeCannesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +139,7 @@
 		F0B875072839C9E90084A126 /* ScheduledEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEventsViewController.swift; sourceTree = "<group>"; };
 		F0B8750B2839CA050084A126 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0B8750F2839CA0E0084A126 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F0BA1A6C284C526B004DD906 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -323,8 +325,8 @@
 		F0B8751C2839D0F40084A126 /* Storyboard & Assets */ = {
 			isa = PBXGroup;
 			children = (
-				F0B874C92839BFC10084A126 /* Main.storyboard */,
 				F0B874F32839C4850084A126 /* Assets.xcassets */,
+				F0BA1A6C284C526B004DD906 /* Main.storyboard */,
 				F0B874CE2839BFC30084A126 /* LaunchScreen.storyboard */,
 				F03F3F522848266400E605A7 /* Fonts */,
 			);
@@ -450,9 +452,9 @@
 				F03F3F9C284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
 				F03F3F39283D481900E605A7 /* GPXTesting.gpx in Resources */,
 				F0B874D02839BFC30084A126 /* LaunchScreen.storyboard in Resources */,
+				F0BA1A6D284C526B004DD906 /* Main.storyboard in Resources */,
 				F03F3F3D2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
 				F0B874F42839C4850084A126 /* Assets.xcassets in Resources */,
-				F0B874CB2839BFC10084A126 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F03F3F9D284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
+				F0BA1A6E284C526B004DD906 /* Main.storyboard in Resources */,
 				F0B874F52839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3A283D481900E605A7 /* GPXTesting.gpx in Resources */,
 				F03F3F3E2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
@@ -472,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F03F3F9E284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
+				F0BA1A6F284C526B004DD906 /* Main.storyboard in Resources */,
 				F0B874F62839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3B283D481900E605A7 /* GPXTesting.gpx in Resources */,
 				F03F3F3F2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
@@ -672,14 +676,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F0B874C92839BFC10084A126 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F0B874CA2839BFC10084A126 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F0B874CE2839BFC30084A126 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
