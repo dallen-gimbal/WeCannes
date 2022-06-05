@@ -185,9 +185,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-eR-q4W">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-eR-q4W">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5I-3X-N7J">
                                 <rect key="frame" x="93.5" y="520" width="227" height="47"/>
@@ -245,6 +244,8 @@
                             <constraint firstItem="v43-nM-fyr" firstAttribute="width" secondItem="Puf-Ob-er4" secondAttribute="width" multiplier="0.548309" id="5qf-aQ-58h"/>
                             <constraint firstItem="cKY-YO-wjB" firstAttribute="top" secondItem="8ck-dI-j3B" secondAttribute="bottom" constant="8" symbolic="YES" id="70H-RW-Wlc"/>
                             <constraint firstItem="V5I-3X-N7J" firstAttribute="centerX" secondItem="vHy-Bt-de0" secondAttribute="centerX" id="7hj-lL-6LI"/>
+                            <constraint firstItem="TfX-eR-q4W" firstAttribute="trailing" secondItem="vHy-Bt-de0" secondAttribute="trailing" id="8XW-Yi-Vs6"/>
+                            <constraint firstItem="TfX-eR-q4W" firstAttribute="leading" secondItem="vHy-Bt-de0" secondAttribute="leading" id="B6C-zg-omd"/>
                             <constraint firstItem="NMX-yJ-qUv" firstAttribute="top" secondItem="vHy-Bt-de0" secondAttribute="top" constant="23" id="FQ9-cS-j0s"/>
                             <constraint firstItem="cKY-YO-wjB" firstAttribute="height" secondItem="Puf-Ob-er4" secondAttribute="height" multiplier="0.0379464" id="FZH-Ls-Ea5"/>
                             <constraint firstItem="Hz6-Y3-Vth" firstAttribute="top" secondItem="NMX-yJ-qUv" secondAttribute="bottom" constant="8" symbolic="YES" id="LLZ-WF-bBt"/>
@@ -255,11 +256,13 @@
                             <constraint firstItem="d67-op-i9d" firstAttribute="height" secondItem="Puf-Ob-er4" secondAttribute="height" multiplier="0.0345982" id="SIJ-7k-qfs"/>
                             <constraint firstItem="v43-nM-fyr" firstAttribute="height" secondItem="Puf-Ob-er4" secondAttribute="height" multiplier="0.0345982" id="Z7N-Fm-mB5"/>
                             <constraint firstItem="V5I-3X-N7J" firstAttribute="width" secondItem="Puf-Ob-er4" secondAttribute="width" multiplier="0.548309" id="bWV-bl-uJa"/>
+                            <constraint firstAttribute="bottom" secondItem="TfX-eR-q4W" secondAttribute="bottom" id="cE0-5R-FFW"/>
                             <constraint firstItem="v43-nM-fyr" firstAttribute="centerX" secondItem="vHy-Bt-de0" secondAttribute="centerX" id="cda-cX-ikF"/>
                             <constraint firstItem="d67-op-i9d" firstAttribute="bottom" secondItem="vHy-Bt-de0" secondAttribute="bottom" id="fA3-Sq-ykJ"/>
                             <constraint firstItem="NMX-yJ-qUv" firstAttribute="width" secondItem="Puf-Ob-er4" secondAttribute="width" multiplier="0.57971" id="gJH-lY-tgO"/>
                             <constraint firstItem="Hz6-Y3-Vth" firstAttribute="centerX" secondItem="vHy-Bt-de0" secondAttribute="centerX" id="h6E-dA-0oT"/>
                             <constraint firstItem="v43-nM-fyr" firstAttribute="top" secondItem="V5I-3X-N7J" secondAttribute="bottom" constant="8" symbolic="YES" id="hAx-bv-Kea"/>
+                            <constraint firstItem="TfX-eR-q4W" firstAttribute="top" secondItem="Puf-Ob-er4" secondAttribute="top" id="kGC-lq-Y9l"/>
                             <constraint firstItem="d67-op-i9d" firstAttribute="centerX" secondItem="vHy-Bt-de0" secondAttribute="centerX" id="lS3-6p-Sow"/>
                             <constraint firstItem="8ck-dI-j3B" firstAttribute="height" secondItem="Puf-Ob-er4" secondAttribute="height" multiplier="0.0379464" id="oA9-Bh-ymg"/>
                             <constraint firstItem="Hz6-Y3-Vth" firstAttribute="width" secondItem="Puf-Ob-er4" secondAttribute="width" multiplier="0.57971" id="oyK-S8-Nac"/>
@@ -562,7 +565,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="M7C-tR-PRr" kind="relationship" relationship="rootViewController" id="UOc-88-4EF"/>
+                        <segue destination="kOa-hZ-qpx" kind="relationship" relationship="rootViewController" id="XWS-va-hJl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hic-3A-S1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -699,17 +702,20 @@
         <scene sceneID="7js-Ej-IZO">
             <objects>
                 <viewController storyboardIdentifier="OnboardingViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kOa-hZ-qpx" customClass="OnboardingViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="G8W-yy-3A8">
+                    <view key="view" contentMode="scaleToFill" id="G8W-yy-3A8" customClass="SwiftyOnboard" customModule="SwiftyOnboard">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bgu-1N-99f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="fuP-S4-6bw"/>
+                    <connections>
+                        <outlet property="swiftyOnboard" destination="G8W-yy-3A8" id="gvp-oT-Z8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrz-5O-kG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1288" y="-1739"/>
+            <point key="canvasLocation" x="-1288.4057971014495" y="-1739.0625"/>
         </scene>
         <!--Recover Password View Controller-->
         <scene sceneID="W3I-TG-XBW">
@@ -1077,7 +1083,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="bwt-7r-Rfk"/>
-        <segue reference="0Mz-pm-pYL"/>
         <segue reference="fle-UZ-mH9"/>
         <segue reference="JtJ-nX-Kgq"/>
         <segue reference="4dL-vd-709"/>

@@ -44,6 +44,12 @@
 		F03F3FAC284976D600E605A7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */; };
 		F03F3FAD284976D600E605A7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */; };
 		F03F3FAE284976D600E605A7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */; };
+		F0453F91284D474E00130EFA /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0453F89284D474E00130EFA /* OnboardingPage.swift */; };
+		F0453F92284D474E00130EFA /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0453F89284D474E00130EFA /* OnboardingPage.swift */; };
+		F0453F93284D474E00130EFA /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0453F89284D474E00130EFA /* OnboardingPage.swift */; };
+		F0453F94284D474E00130EFA /* OnboardingPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0453F8A284D474E00130EFA /* OnboardingPage.xib */; };
+		F0453F95284D474E00130EFA /* OnboardingPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0453F8A284D474E00130EFA /* OnboardingPage.xib */; };
+		F0453F96284D474E00130EFA /* OnboardingPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0453F8A284D474E00130EFA /* OnboardingPage.xib */; };
 		F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C32839BFC10084A126 /* AppDelegate.swift */; };
 		F0B874C62839BFC10084A126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B874C52839BFC10084A126 /* SceneDelegate.swift */; };
 		F0B874D02839BFC30084A126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B874CE2839BFC30084A126 /* LaunchScreen.storyboard */; };
@@ -124,6 +130,8 @@
 		F03F3F9B284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeVietnamPro-ExtraLight.ttf"; sourceTree = "<group>"; };
 		F03F3F9F284903FD00E605A7 /* StoryboardLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLogic.swift; sourceTree = "<group>"; };
 		F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		F0453F89284D474E00130EFA /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		F0453F8A284D474E00130EFA /* OnboardingPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingPage.xib; sourceTree = "<group>"; };
 		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B874C52839BFC10084A126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				F03F3F1B283B14F600E605A7 /* OnboardingViewController.swift */,
+				F0453F89284D474E00130EFA /* OnboardingPage.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				F0B874F32839C4850084A126 /* Assets.xcassets */,
+				F0453F8A284D474E00130EFA /* OnboardingPage.xib */,
 				F0BA1A6C284C526B004DD906 /* Main.storyboard */,
 				F0B874CE2839BFC30084A126 /* LaunchScreen.storyboard */,
 				F03F3F522848266400E605A7 /* Fonts */,
@@ -460,6 +470,7 @@
 				F0BA1A6D284C526B004DD906 /* Main.storyboard in Resources */,
 				F03F3F3D2847B54300E605A7 /* GoogleService-Info.plist in Resources */,
 				F0B874F42839C4850084A126 /* Assets.xcassets in Resources */,
+				F0453F94284D474E00130EFA /* OnboardingPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F03F3F9D284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
+				F0453F95284D474E00130EFA /* OnboardingPage.xib in Resources */,
 				F0BA1A6E284C526B004DD906 /* Main.storyboard in Resources */,
 				F0B874F52839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3A283D481900E605A7 /* GPXTesting.gpx in Resources */,
@@ -480,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F03F3F9E284828E200E605A7 /* BeVietnamPro-ExtraLight.ttf in Resources */,
+				F0453F96284D474E00130EFA /* OnboardingPage.xib in Resources */,
 				F0BA1A6F284C526B004DD906 /* Main.storyboard in Resources */,
 				F0B874F62839C4850084A126 /* Assets.xcassets in Resources */,
 				F03F3F3B283D481900E605A7 /* GPXTesting.gpx in Resources */,
@@ -606,6 +619,7 @@
 				F03F3F4B2847DDF100E605A7 /* Utilities.swift in Sources */,
 				F03F3F1F283B1C0800E605A7 /* Permissions.swift in Sources */,
 				F01AE1A4284999C9008DBE68 /* PartnerViewController.swift in Sources */,
+				F0453F91284D474E00130EFA /* OnboardingPage.swift in Sources */,
 				F03F3FAC284976D600E605A7 /* CustomTabBarController.swift in Sources */,
 				F0B875082839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B874C42839BFC10084A126 /* AppDelegate.swift in Sources */,
@@ -641,6 +655,7 @@
 				F03F3F32283B4B7D00E605A7 /* DataStorage.swift in Sources */,
 				F0B874FD2839C9850084A126 /* WalletViewController.swift in Sources */,
 				F0BA1A72284C6FFE004DD906 /* WooHooViewController.swift in Sources */,
+				F0453F92284D474E00130EFA /* OnboardingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +678,7 @@
 				F0B875122839CA0E0084A126 /* SignInViewController.swift in Sources */,
 				F0B8750A2839C9E90084A126 /* ScheduledEventsViewController.swift in Sources */,
 				F0B874FA2839C9680084A126 /* HomeViewController.swift in Sources */,
+				F0453F93284D474E00130EFA /* OnboardingPage.swift in Sources */,
 				F0BA1A73284C6FFE004DD906 /* WooHooViewController.swift in Sources */,
 				F0B875062839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
 			);
