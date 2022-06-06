@@ -10,12 +10,15 @@ import FirebaseFirestore
 
 class RedeemPointsViewController: UIViewController {
     
+    @IBOutlet weak var pointsLabel: UILabel!
+    
     private var prizeCount = 0
     private var companyArray = [String]()
     private var imageUrlArray = [String]()
     
     override func viewWillAppear(_ animated: Bool) {
         retrievePrizes()
+        pointsLabel.text = "\(Utilities.init().checkPointValue(key: "Points"))"
     }
     
     override func viewDidLoad() {

@@ -12,11 +12,13 @@ import CloudKit
 import IQKeyboardManagerSwift
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
 
     private let permissions = Permissions()
     private let store = UserDefaults.init()
-    private let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    private let notifications = LocalNotifications.init()
+    private let util = Utilities.init()
+    let placeManager = PlaceManager()
     
     var window: UIWindow?
 
@@ -37,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if locationStatus == .authorizedAlways || locationStatus == .authorizedWhenInUse {
             // Start Gimbal
             Gimbal.start()
+            self.placeManager.delegate = self
             if Gimbal.isStarted() {
                 print("Gimbal started")
             }
@@ -63,6 +66,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    //MARK: Gimbal Methods
+    func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
+        UserDefaults.init().set(true, forKey: "HadVisit")
+        guard let points = visit.place.attributes.string(forKey: "Points") else { return }
+        print("Fetched Points: \(points)")
+        util.storePoints(value: "\(points)") {
+            print("Stored Points: \(util.checkPointValue(key: "Points"))")
+        }
+        handlePlaceNotifications(visit: visit)
+        print(visit.place.name)
+    }
+    
+    func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
+        UserDefaults.init().set(true, forKey: "HadVisit")
+        handlePlaceNotifications(visit: visit)
+    }
+    
+    // Safely handle Place Notifications
+    func handlePlaceNotifications(visit: Visit) {
+        // If someone doesn't place attributes in the Place, we don't want to crash the app
+        guard let title = visit.place.attributes.string(forKey: "NotificationTitle") else { return }
+        guard let body = visit.place.attributes.string(forKey: "NotificationBody") else { return }
+        notifications.sendNotification(title: title, body: body)
     }
 
 

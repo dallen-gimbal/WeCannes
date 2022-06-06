@@ -693,6 +693,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="keH-Oh-nuJ"/>
+                    <connections>
+                        <outlet property="pointsLabel" destination="ycK-g5-0Yv" id="dzG-lC-ZvT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VN0-Yh-BW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

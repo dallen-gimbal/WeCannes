@@ -20,7 +20,6 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
     
     let placeManager = PlaceManager()
     private let util = Utilities.init()
-    private let notifications = LocalNotifications.init()
     
     override func viewWillAppear(_ animated: Bool) {
         util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Tokens")
@@ -28,43 +27,18 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         util.dynamicallyChangeButtonSize(button: earnPointsButton)
         
         updateLabels()
+        print(placeManager.currentVisits())
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.placeManager.delegate = self
-        
         if (!Gimbal.isStarted()) {
             Gimbal.start()
         }
         
-    }
-    
-    //MARK: Gimbal Methods
-    func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
-        UserDefaults.init().set(true, forKey: "HadVisit")
-        print("Made it here")
-        guard let points = visit.place.attributes.value(forKey: "Points") else { return }
-        print("Fetched Points: \(points)")
-        util.storePoints(value: "\(points)") {
-            print("Stored Points: \(util.checkPointValue(key: "Points"))")
-        }
-        handlePlaceNotifications(visit: visit)
-        print(visit.place.name)
-    }
-    
-    func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
-        UserDefaults.init().set(true, forKey: "HadVisit")
-        handlePlaceNotifications(visit: visit)
-    }
-    
-    // Safely handle Place Notifications
-    func handlePlaceNotifications(visit: Visit) {
-        // If someone doesn't place attributes in the Place, we don't want to crash the app
-        guard let title = visit.place.attributes.string(forKey: "NotificationTitle") else { return }
-        guard let body = visit.place.attributes.string(forKey: "NotificationBody") else { return }
-        notifications.sendNotification(title: title, body: body)
+        self.placeManager.delegate = self
+        
     }
     
     private func updateLabels() {
