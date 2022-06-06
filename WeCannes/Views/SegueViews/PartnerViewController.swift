@@ -14,11 +14,14 @@ class PartnerViewController: UIViewController {
     private var companyArray = [String]()
     private var landingUrlArray = [String]()
     private var imageUrlArray = [String]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updatePartnerList()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        updatePartnerList()
+        
     }
     
 

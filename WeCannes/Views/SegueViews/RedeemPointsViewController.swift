@@ -14,10 +14,13 @@ class RedeemPointsViewController: UIViewController {
     private var companyArray = [String]()
     private var imageUrlArray = [String]()
     
+    override func viewWillAppear(_ animated: Bool) {
+        retrievePrizes()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        retrievePrizes()
     }
     
 

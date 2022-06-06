@@ -14,12 +14,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let mapView = MKMapView()
     let locationManager = CLLocationManager()
     
+    override func viewWillAppear(_ animated: Bool) {
+        setupMapView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         locationManager.delegate = self
-
-        setupMapView()
         checkLocationAuthorization()
     }
     

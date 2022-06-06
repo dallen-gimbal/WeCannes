@@ -27,7 +27,7 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
         self.tableView.dataSource = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         updateEventsList()
     }
     
