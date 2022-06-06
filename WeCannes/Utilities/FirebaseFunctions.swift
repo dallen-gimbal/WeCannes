@@ -75,6 +75,7 @@ class FirebaseFunctions {
         store.set(true, forKey: "Authenticated")
         store.setValue(uid, forKey: "UID")
         utilities.storeValue(key: "Name", value: name) {
+            UserDefaults.init().set(0, forKey: "Points")
             return
         }
     }

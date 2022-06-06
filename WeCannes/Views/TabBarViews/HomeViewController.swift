@@ -44,7 +44,7 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
     //MARK: Gimbal Methods
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
         UserDefaults.init().set(true, forKey: "HadVisit")
-        
+        print("Made it here")
         guard let points = visit.place.attributes.value(forKey: "Points") else { return }
         print("Fetched Points: \(points)")
         util.storePoints(value: "\(points)") {
@@ -68,7 +68,7 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
     }
     
     private func updateLabels() {
-        if util.checkValue(key: "Name") == "" || util.checkPointValue(key: "Points") == 0 {
+        if util.checkValue(key: "Name") == "" {
             FirebaseFunctions.init().getCollectionData(collection: "users") { documents, error in
                 guard let users = documents as QuerySnapshot? else { return }
                 for user in users.documents {
