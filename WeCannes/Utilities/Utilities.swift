@@ -11,7 +11,10 @@ import SafariServices
 import IHProgressHUD
 
 class Utilities {
+
+    private let emailPattern = #"^\S+@\S+\.\S+$"#
     private let user = UserDefaults.init()
+    
     func randomString(length: Int) -> String {
       let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
       return String((0..<length).map{ _ in letters.randomElement()! })
@@ -61,6 +64,26 @@ class Utilities {
     func stopActivityIndicator() {
         DispatchQueue.main.async {
             IHProgressHUD.dismiss()
+        }
+    }
+    
+    // MARK: Input Validator
+    func validateInput(value: String) -> Bool {
+        let result = value.range(
+            of: emailPattern,
+            options: .regularExpression
+        )
+        return result != nil ? true : false
+    }
+    
+    // MARK: UIAlert
+    func displayAlert(vc: UIViewController, type: String) {
+        let alert = UIAlertController(title: "Whoops", message: "That's not a valid \(type).", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \(type) alert occured.")
+        }))
+        DispatchQueue.main.async {
+            vc.present(alert, animated: true, completion: nil)
         }
     }
 }

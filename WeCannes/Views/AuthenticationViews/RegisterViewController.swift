@@ -20,26 +20,32 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     
     private let firebaseFunctions = FirebaseFunctions()
-    
-    class func instantiate() -> UIViewController {
-        let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "\(RegisterViewController.self)")
-
-        return viewController
-    }
+    private let util = Utilities.init()
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        Utilities.init().updateButtonStyle(button: registerButton, title: "Register")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Utilities.init().updateButtonStyle(button: registerButton, title: "Register")
+        
     }
     
     
     @IBAction func submitRegistration(_ sender: Any) {
-        firebaseFunctions.registerUser(email: emailField.text!, password: passwordField.text!, name: "Dustin", company: "Infillion", title: "PM", phone: "123456789") { authResult, error in
+        guard let email = emailField.text else { return }
+        guard let password = passwordField.text else { return }
+        guard let name = nameField.text else { return }
+        guard let company = companyField.text else { return }
+        guard let title = titleField.text else { return }
+        guard let phone = phoneField.text else { return }
+        
+        if !util.validateInput(value: email) {
+            util.displayAlert(vc: self, type: "email")
+            return
+        }
+        
+        firebaseFunctions.registerUser(email: email, password: password, name: name, company: company, title: title, phone: phone) { authResult, error in
             if authResult {
                 StoryboardLogic.init().onboardingSegue()
             }

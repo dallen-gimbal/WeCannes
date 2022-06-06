@@ -30,7 +30,15 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func signInAction(_ sender: Any) {
-        firebaseFunctions.signIn(email: emailField.text!, password: passwordField.text!) { authResult, error in
+        guard let email = emailField.text else { return }
+        guard let password = passwordField.text else { return }
+        
+        if !util.validateInput(value: email) {
+            util.displayAlert(vc: self, type: "email")
+            return
+        }
+        
+        firebaseFunctions.signIn(email: email, password: password) { authResult, error in
             if authResult {
                 StoryboardLogic.init().tabBarSegue()
             }
