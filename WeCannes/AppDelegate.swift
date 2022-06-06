@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if locationStatus == .authorizedAlways || locationStatus == .authorizedWhenInUse {
             // Start Gimbal
             Gimbal.start()
-            if (Gimbal.isStarted()) {
+            if Gimbal.isStarted() {
                 print("Gimbal started")
             }
         } else {

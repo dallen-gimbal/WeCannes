@@ -70,7 +70,7 @@ class FirebaseFunctions {
     // MARK: Helpers
     private func storeUser(name: String, uid: String, company: String, title: String, phone: String) {
         let collection = Firestore.firestore().collection("users")
-        let user = ["uid": uid, "name": name, "company": company, "title": title, "phone": phone, "ar_id": self.utilities.randomString(length: 3)]
+        let user = ["uid": uid, "name": name, "company": company, "title": title, "phone": phone, "ar_id": self.utilities.randomString(length: 3), "points": 0] as [String : Any]
         collection.addDocument(data: user)
         store.set(true, forKey: "Authenticated")
         store.setValue(uid, forKey: "UID")

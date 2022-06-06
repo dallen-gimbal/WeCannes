@@ -27,44 +27,36 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")
         util.dynamicallyChangeButtonSize(button: earnPointsButton)
         
-        if util.checkValue(key: "Name") == "" {
-            FirebaseFunctions.init().getCollectionData(collection: "users") { documents, error in
-                print("Fetched")
-                guard let users = documents as QuerySnapshot? else { return }
-                for user in users.documents {
-                    guard let uid = user.data()["uid"] as? String else { return }
-                    if uid == self.util.checkValue(key: "UID") {
-                        guard let name = user.data()["name"] as? String else { return }
-                        UserDefaults.init().setValue(name, forKey: "Name")
-                        self.nameLabel.text = name
-                    }
-                }
-            }
-        } else {
-            nameLabel.text = util.checkValue(key: "Name")
-        }
+        updateLabels()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.placeManager.delegate = self
+        
         if (!Gimbal.isStarted()) {
             Gimbal.start()
         }
-        
-        self.placeManager.delegate = self
         
     }
     
     //MARK: Gimbal Methods
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
+        UserDefaults.init().set(true, forKey: "HadVisit")
+        
+        guard let points = visit.place.attributes.value(forKey: "Points") else { return }
+        print("Fetched Points: \(points)")
+        util.storePoints(value: "\(points)") {
+            print("Stored Points: \(util.checkPointValue(key: "Points"))")
+        }
         handlePlaceNotifications(visit: visit)
         print(visit.place.name)
     }
     
     func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
+        UserDefaults.init().set(true, forKey: "HadVisit")
         handlePlaceNotifications(visit: visit)
-        
     }
     
     // Safely handle Place Notifications
@@ -73,6 +65,31 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         guard let title = visit.place.attributes.string(forKey: "NotificationTitle") else { return }
         guard let body = visit.place.attributes.string(forKey: "NotificationBody") else { return }
         notifications.sendNotification(title: title, body: body)
+    }
+    
+    private func updateLabels() {
+        if util.checkValue(key: "Name") == "" || util.checkPointValue(key: "Points") == 0 {
+            FirebaseFunctions.init().getCollectionData(collection: "users") { documents, error in
+                guard let users = documents as QuerySnapshot? else { return }
+                for user in users.documents {
+                    guard let uid = user.data()["uid"] as? String else { return }
+                    if uid == self.util.checkValue(key: "UID") {
+                        
+                        guard let name = user.data()["name"] as? String else { return }
+                        guard let points = user.data()["points"] as? Int else { return }
+                        
+                        UserDefaults.init().setValue(name, forKey: "Name")
+                        UserDefaults.init().set(points, forKey: "Points")
+                        
+                        self.nameLabel.text = name
+                        self.pointsLabel.text = String(points)
+                    }
+                }
+            }
+        } else {
+            nameLabel.text = util.checkValue(key: "Name")
+            pointsLabel.text = "\(util.checkPointValue(key: "Points"))"
+        }
     }
 
 }

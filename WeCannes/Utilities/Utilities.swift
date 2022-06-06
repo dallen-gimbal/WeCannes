@@ -31,6 +31,15 @@ class Utilities {
         return user.string(forKey: key) ?? ""
     }
     
+    func checkPointValue(key: String) -> Int {
+        return user.integer(forKey: "Points")
+    }
+    
+    func storePoints(value: String, completion: () -> ()) {
+        user.set(calculatePoints(value:value), forKey: "Points")
+        completion()
+    }
+    
     // MARK: Buttons
     func updateButtonStyle(button: UIButton, title: String) {
         button.setTitle(title, for: .normal)
@@ -101,6 +110,17 @@ class Utilities {
         } else {
             displayAlert(vc: vc, message: "Some unkonwn error has occurred.")
         }
+    }
+    
+    // MARK: Helpers
+    private func calculatePoints(value: String) -> Int {
+        let points = checkValue(key: "Points")
+        if points != "" {
+            let oldPoints = Int(points) ?? 0
+            let newPoints = Int(value) ?? 0
+            return oldPoints + newPoints
+        }
+        return 0
     }
 }
 
