@@ -87,6 +87,7 @@
 		F0BA1A71284C6FFE004DD906 /* WooHooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */; };
 		F0BA1A72284C6FFE004DD906 /* WooHooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */; };
 		F0BA1A73284C6FFE004DD906 /* WooHooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */; };
+		F0D7C773284D830F00531E95 /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = F0D7C772284D830F00531E95 /* IHProgressHUD */; };
 		F0F82ACB284C48210024002C /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D7C773284D830F00531E95 /* IHProgressHUD in Frameworks */,
 				9B8B80491AD2C8A9CABECC58 /* Pods_WeCannes.framework in Frameworks */,
 				F0B8751F2839DC5A0084A126 /* FirebaseAuth in Frameworks */,
 				F03F3F492847C2B900E605A7 /* FirebaseFirestore in Frameworks */,
@@ -369,6 +371,7 @@
 			packageProductDependencies = (
 				F0B8751E2839DC5A0084A126 /* FirebaseAuth */,
 				F03F3F482847C2B900E605A7 /* FirebaseFirestore */,
+				F0D7C772284D830F00531E95 /* IHProgressHUD */,
 			);
 			productName = WeCannes;
 			productReference = F0B874C02839BFC10084A126 /* WeCannes.app */;
@@ -447,6 +450,7 @@
 			mainGroup = F0B874B72839BFC10084A126;
 			packageReferences = (
 				F0B8751D2839DC5A0084A126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F0D7C771284D830E00531E95 /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
 			);
 			productRefGroup = F0B874C12839BFC10084A126 /* Products */;
 			projectDirPath = "";
@@ -1027,6 +1031,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		F0D7C771284D830E00531E95 /* XCRemoteSwiftPackageReference "IHProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swiftify-Corp/IHProgressHUD.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1039,6 +1051,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F0B8751D2839DC5A0084A126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		F0D7C772284D830F00531E95 /* IHProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0D7C771284D830E00531E95 /* XCRemoteSwiftPackageReference "IHProgressHUD" */;
+			productName = IHProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

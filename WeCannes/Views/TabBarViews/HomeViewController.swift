@@ -35,6 +35,7 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         }
         
         self.placeManager.delegate = self
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

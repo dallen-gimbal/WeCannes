@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SafariServices
+import IHProgressHUD
 
 class Utilities {
     func randomString(length: Int) -> String {
@@ -26,6 +27,7 @@ class Utilities {
         return UserDefaults.init().string(forKey: key) ?? ""
     }
     
+    // MARK: Buttons
     func updateButtonStyle(button: UIButton, title: String) {
         button.setTitle(title, for: .normal)
         button.setTitleColor(UIColor.infillionBlack, for: .normal)
@@ -37,6 +39,7 @@ class Utilities {
         button.titleLabel?.minimumScaleFactor = 0.50
     }
     
+    // MARK: Onboarding
     func showTutorial(theUrl: String) -> SFSafariViewController {
         if let url = URL(string: theUrl) {
             let config = SFSafariViewController.Configuration()
@@ -44,9 +47,21 @@ class Utilities {
 
             let vc = SFSafariViewController(url: url, configuration: config)
             return vc
-//            present(vc, animated: true)
         }
         return SFSafariViewController.init(url: URL(string: "")!)
+    }
+    
+    // MARK: Progress Indicator
+    func showActivityIndicator(){
+        DispatchQueue.main.async {
+            IHProgressHUD.show()
+        }
+    }
+    
+    func stopActivityIndicator() {
+        DispatchQueue.main.async {
+            IHProgressHUD.dismiss()
+        }
     }
 }
 

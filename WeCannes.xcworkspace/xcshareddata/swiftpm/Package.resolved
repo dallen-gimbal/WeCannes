@@ -73,6 +73,15 @@
       }
     },
     {
+      "identity" : "ihprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swiftify-Corp/IHProgressHUD.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "c3e0cf90ba1b310073e841de7dc6ef0a2d4899e2"
+      }
+    },
+    {
       "identity" : "leveldb",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/leveldb.git",

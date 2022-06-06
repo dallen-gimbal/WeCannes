@@ -37,7 +37,7 @@ class OnboardingViewController: UIViewController {
             permissions.requestWhenInUsePermission()
             goToNextPage(index: count)
             count = 1
-
+            
         // Notifications
         } else if (count == 1) {
             permissions.requestNotificationPermission()

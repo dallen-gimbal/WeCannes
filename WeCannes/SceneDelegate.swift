@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         if !store.bool(forKey: "Authenticated") {
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController")
             self.window?.rootViewController = initialViewController
         } else {
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "CustomTabBarController")

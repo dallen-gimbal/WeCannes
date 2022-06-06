@@ -17,14 +17,16 @@ class FirebaseFunctions {
     
     // MARK: Auth Functions
     func registerUser(email: String, password: String, name: String, company: String, title: String, phone: String, completion: @escaping (Bool, Error?) -> Void) {
+        utilities.showActivityIndicator()
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if (error != nil) {
+                self.utilities.stopActivityIndicator()
                 completion(false, error)
             } else{
                 if let uid = authResult?.user.uid as? String {
-                    print("UID: \(uid)")
                     self.utilities.storeValue(key: "uid", value: uid) {
                         self.storeUser(name: name, uid: uid, company: company, title: title, phone: phone)
+                        self.utilities.stopActivityIndicator()
                         completion(true, error)
                     }
                 }
@@ -33,11 +35,14 @@ class FirebaseFunctions {
     }
     
     func signIn(email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
+        utilities.showActivityIndicator()
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if (error != nil) {
+                self.utilities.stopActivityIndicator()
                 print(error as Any)
                 completion(false, error)
             } else{
+                self.utilities.stopActivityIndicator()
                 self.store.set(true, forKey: "Authenticated")
                 completion(true, error)
             }
@@ -50,7 +55,9 @@ class FirebaseFunctions {
     
     // MARK: Retrieve Data
     func getCollectionData(collection: String, completion: @escaping (QuerySnapshot?, Error?) -> Void) {
+        utilities.showActivityIndicator()
         Firestore.firestore().collection(collection).getDocuments(completion: { (documents, error) in
+            self.utilities.stopActivityIndicator()
             completion(documents, error)
         })
     }
