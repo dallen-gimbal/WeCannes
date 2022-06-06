@@ -34,12 +34,15 @@ class FirebaseFunctions {
         }
     }
     
-    func signIn(email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
+    func signIn(vc: UIViewController, email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
         utilities.showActivityIndicator()
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if (error != nil) {
                 self.utilities.stopActivityIndicator()
-                print(error as Any)
+                if let err = error as? NSError {
+                    let errCode = AuthErrorCode(_nsError: err).code
+                    self.utilities.handleFirebaseAuthError(error: errCode, vc: vc)
+                }
                 completion(false, error)
             } else{
                 self.utilities.stopActivityIndicator()

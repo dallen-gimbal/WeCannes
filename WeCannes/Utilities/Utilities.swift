@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SafariServices
 import IHProgressHUD
+import FirebaseAuth
 
 class Utilities {
 
@@ -77,13 +78,28 @@ class Utilities {
     }
     
     // MARK: UIAlert
-    func displayAlert(vc: UIViewController, type: String) {
-        let alert = UIAlertController(title: "Whoops", message: "That's not a valid \(type).", preferredStyle: .alert)
+    func displayAlert(vc: UIViewController, message: String) {
+        let alert = UIAlertController(title: "Whoops", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \(type) alert occured.")
+            NSLog(message)
         }))
         DispatchQueue.main.async {
             vc.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: Errors
+    func handleFirebaseAuthError(error: FirebaseAuth.AuthErrorCode.Code, vc: UIViewController) {
+        if error == .userNotFound || error == .invalidEmail || error == .missingEmail || error == .wrongPassword {
+            displayAlert(vc: vc, message: "There was an issue authenticating your information.")
+        } else if error == .weakPassword {
+            displayAlert(vc: vc, message: "That password is too weak, please enter a stronger password.")
+        } else if error == .credentialAlreadyInUse || error == .emailAlreadyInUse {
+            displayAlert(vc: vc, message: "There is already an account matching those details.")
+        } else if error == .networkError || error == .webNetworkRequestFailed {
+            displayAlert(vc: vc, message: "There seems to be network connectivity issues.")
+        } else {
+            displayAlert(vc: vc, message: "Some unkonwn error has occurred.")
         }
     }
 }

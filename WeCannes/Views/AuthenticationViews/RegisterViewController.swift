@@ -41,12 +41,12 @@ class RegisterViewController: UIViewController {
         guard let phone = phoneField.text else { return }
         
         if !util.validateInput(value: email) {
-            util.displayAlert(vc: self, type: "email")
+            util.displayAlert(vc: self, message: "That's not a valid email.")
             return
         }
         
         firebaseFunctions.registerUser(email: email, password: password, name: name, company: company, title: title, phone: phone) { authResult, error in
-            if authResult {
+            if error == nil {
                 StoryboardLogic.init().onboardingSegue()
             }
         }

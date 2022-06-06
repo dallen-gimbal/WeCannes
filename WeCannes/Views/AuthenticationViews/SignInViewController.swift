@@ -34,12 +34,12 @@ class SignInViewController: UIViewController {
         guard let password = passwordField.text else { return }
         
         if !util.validateInput(value: email) {
-            util.displayAlert(vc: self, type: "email")
+            util.displayAlert(vc: self, message: "That's not a valid email.")
             return
         }
         
-        firebaseFunctions.signIn(email: email, password: password) { authResult, error in
-            if authResult {
+        firebaseFunctions.signIn(vc: self, email: email, password: password) { authResult, error in
+            if error == nil {
                 StoryboardLogic.init().tabBarSegue()
             }
         }
