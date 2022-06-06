@@ -44,6 +44,8 @@ class FirebaseFunctions {
             } else{
                 self.utilities.stopActivityIndicator()
                 self.store.set(true, forKey: "Authenticated")
+                guard let uid = authResult?.user.uid as? String else { return }
+                self.store.setValue(uid, forKey: "UID")
                 completion(true, error)
             }
         }
@@ -68,5 +70,9 @@ class FirebaseFunctions {
         let user = ["uid": uid, "name": name, "company": company, "title": title, "phone": phone, "ar_id": self.utilities.randomString(length: 3)]
         collection.addDocument(data: user)
         store.set(true, forKey: "Authenticated")
+        store.setValue(uid, forKey: "UID")
+        utilities.storeValue(key: "Name", value: name) {
+            return
+        }
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import Gimbal
+import FirebaseFirestore
 
 class HomeViewController: UIViewController, PlaceManagerDelegate {
     
@@ -17,14 +18,31 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     
-    let notifications = LocalNotifications.init()
     let placeManager = PlaceManager()
     private let util = Utilities.init()
+    private let notifications = LocalNotifications.init()
     
     override func viewWillAppear(_ animated: Bool) {
         util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Tokens")
         util.updateButtonStyle(button: upcomingEventsButton, title: "Upcoming Events")
         util.dynamicallyChangeButtonSize(button: earnPointsButton)
+        
+        if util.checkValue(key: "Name") == "" {
+            FirebaseFunctions.init().getCollectionData(collection: "users") { documents, error in
+                print("Fetched")
+                guard let users = documents as QuerySnapshot? else { return }
+                for user in users.documents {
+                    guard let uid = user.data()["uid"] as? String else { return }
+                    if uid == self.util.checkValue(key: "UID") {
+                        guard let name = user.data()["name"] as? String else { return }
+                        UserDefaults.init().setValue(name, forKey: "Name")
+                        self.nameLabel.text = name
+                    }
+                }
+            }
+        } else {
+            nameLabel.text = util.checkValue(key: "Name")
+        }
     }
 
     override func viewDidLoad() {
@@ -35,10 +53,6 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         }
         
         self.placeManager.delegate = self
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         
     }
     
