@@ -54,7 +54,7 @@
                                 <rect key="frame" x="0.0" y="550" width="414" height="263"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7gd-JL-lgJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="VisitsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VisitsTableViewCell" id="7gd-JL-lgJ" customClass="VisitsTableViewCell" customModule="WeCannes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7gd-JL-lgJ" id="pWg-7c-2Qp">
@@ -86,6 +86,11 @@
                                                 <constraint firstItem="4sl-ds-XXF" firstAttribute="centerY" secondItem="pWg-7c-2Qp" secondAttribute="centerY" id="zqt-dv-qAv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="VisitsTableViewCell" label="VisitsTableViewCell"/>
+                                        <connections>
+                                            <outlet property="dwellLabel" destination="4sl-ds-XXF" id="xpn-Az-jwY"/>
+                                            <outlet property="nameLabel" destination="iFG-Al-h3r" id="Do5-am-wNx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -109,7 +114,7 @@
                                     <segue destination="het-RM-W9p" kind="show" id="fle-UZ-mH9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="UsS-BL-3Uy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="UsS-BL-3Uy">
                                 <rect key="frame" x="145" y="231" width="124" height="83"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="65"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -164,9 +169,7 @@
                     <tabBarItem key="tabBarItem" title="Wallet" image="dollarsign.circle" catalog="system" id="YhO-0u-c0u"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="dwellTimeLabel" destination="Wd8-X0-5U7" id="SKS-Xq-ufP"/>
                         <outlet property="earnPointsButton" destination="IkL-qZ-cWW" id="9EQ-Sa-JmR"/>
-                        <outlet property="placeNameLabel" destination="Wd8-X0-5U7" id="R2r-Ez-fyP"/>
                         <outlet property="pointsLabel" destination="UsS-BL-3Uy" id="sOq-f3-E4j"/>
                         <outlet property="redeemPointsButton" destination="2zK-3a-jPQ" id="MjP-yL-w1y"/>
                         <outlet property="tableView" destination="Wd8-X0-5U7" id="M4t-V1-Ffe"/>
@@ -325,7 +328,7 @@
                                 <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="h1N-ss-KFS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="h1N-ss-KFS">
                                 <rect key="frame" x="145" y="387" width="124" height="83"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="65"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -611,7 +614,7 @@
                                 <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="ycK-g5-0Yv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="ycK-g5-0Yv">
                                 <rect key="frame" x="145" y="229" width="124" height="83"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="65"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1085,7 +1088,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bwt-7r-Rfk"/>
+        <segue reference="6Ll-yv-rPV"/>
         <segue reference="I0P-1f-7uM"/>
         <segue reference="fle-UZ-mH9"/>
         <segue reference="JtJ-nX-Kgq"/>
