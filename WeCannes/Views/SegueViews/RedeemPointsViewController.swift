@@ -85,7 +85,7 @@ class RedeemPointsViewController: UIViewController, UITableViewDataSource, UITab
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 guard let data = data, error == nil else { return }
                 
-                DispatchQueue.main.async { /// execute on main thread
+                DispatchQueue.main.async {
                     cell.prizeImageView.image = UIImage(data: data)
                 }
             }

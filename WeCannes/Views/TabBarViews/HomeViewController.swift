@@ -55,13 +55,13 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
                         UserDefaults.init().setValue(name, forKey: "Name")
                         UserDefaults.init().set(points, forKey: "Points")
                         
-                        self.nameLabel.text = name
+                        self.nameLabel.text = "Hello, \(name)"
                         self.pointsLabel.text = String(points)
                     }
                 }
             }
         } else {
-            nameLabel.text = util.checkValue(key: "Name")
+            nameLabel.text = "Hello, \(util.checkValue(key: "Name"))"
             pointsLabel.text = "\(util.checkPointValue(key: "Points"))"
         }
     }
