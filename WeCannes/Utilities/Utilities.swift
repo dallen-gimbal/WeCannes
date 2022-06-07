@@ -10,11 +10,13 @@ import UIKit
 import SafariServices
 import IHProgressHUD
 import FirebaseAuth
+import Gimbal
 
 class Utilities {
 
     private let emailPattern = #"^\S+@\S+\.\S+$"#
     private let user = UserDefaults.init()
+    private let placeManager = PlaceManager()
     
     func randomString(length: Int) -> String {
       let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -109,6 +111,25 @@ class Utilities {
             displayAlert(vc: vc, message: "There seems to be network connectivity issues.")
         } else {
             displayAlert(vc: vc, message: "Some unkonwn error has occurred.")
+        }
+    }
+    
+    // MARK: Gimbal
+    func handleCurrentVisits() {
+        let currentVisits = placeManager.currentVisits()
+        var ids = user.array(forKey: "VisitIDs") as? [String] ?? []
+        if currentVisits.isEmpty {
+            return
+        } else {
+            for visit in currentVisits {
+                for aID in ids {
+                    if visit.visitID == aID {
+                        return
+                    }
+                }
+                ids.append(visit.visitID)
+                user.set(ids, forKey: "VisitsID")
+            }
         }
     }
     

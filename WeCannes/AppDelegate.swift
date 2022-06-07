@@ -71,6 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
     //MARK: Gimbal Methods
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
         UserDefaults.init().set(true, forKey: "HadVisit")
+        print("Place Enter: \(visit.place.name)")
         
         // Logic for Points
         guard let points = visit.place.attributes.string(forKey: "Points") else { return }
@@ -82,18 +83,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
     
     func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
         UserDefaults.init().set(true, forKey: "HadVisit")
+        print("Place Exit: \(visit.place.name)")
         
         // Logic for Place Data
         let name = visit.place.name
         let dwell = visit.dwellTime
-        guard var visits = store.array(forKey: "Visits") else { return }
-        guard var dwells = store.array(forKey: "Dwells") else { return }
+        
+        var visits = store.array(forKey: "Visits") as? [String] ?? []
+        var dwells = store.array(forKey: "Dwells") as? [String] ?? []
+        
         visits.append(name)
-        dwells.append(dwell)
+        dwells.append("\(Int(round(dwell))) Seconds")
         
         // Set the UserDefaults
         store.set(visits, forKey: "Visits")
         store.set(dwells, forKey: "Dwells")
+        
+        for i in visits {
+            print(i)
+        }
     }
     
     // Safely handle Place Notifications

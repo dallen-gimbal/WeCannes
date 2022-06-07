@@ -13,6 +13,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let mapView = MKMapView()
     let locationManager = CLLocationManager()
+    private let util = Utilities.init()
     
     override func viewWillAppear(_ animated: Bool) {
         setupMapView()
