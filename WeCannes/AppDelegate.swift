@@ -100,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         
         // Logic for Points
         guard var points = visit.place.attributes.string(forKey: "Points") else { return }
-        points = "\(dwellTimeMultiplier(points: points, dwell: Int(round(dwell))))"
+        points = "\(util.dwellTimeMultiplier(points: points, dwell: Int(round(dwell))))"
         util.storePoints(value: points) {
             
         }
@@ -113,21 +113,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         guard let body = visit.place.attributes.string(forKey: "NotificationBody") else { return }
         notifications.sendNotification(title: title, body: body)
     }
-    
-    private func dwellTimeMultiplier(points: String, dwell: Int) -> Int {
-        let score = Int(points) ?? 0
-        if dwell < 120 {
-            return score
-        } else if dwell >= 120 && dwell < 240 {
-            return score * 2
-        } else if dwell >= 120 && dwell < 240 {
-            return score * 3
-        } else if dwell >= 120 && dwell < 240 {
-            return score * 4
-        }
-        return score * 5
-    }
-
-
 }
 

@@ -99,6 +99,22 @@ class Utilities {
         }
     }
     
+    // MARK: Points & Scoring
+    // Handle Dwell Time Logic
+    func dwellTimeMultiplier(points: String, dwell: Int) -> Int {
+        let score = Int(points) ?? 0
+        if dwell < 120 {
+            return score
+        } else if dwell >= 120 && dwell < 240 {
+            return score * 2
+        } else if dwell >= 120 && dwell < 240 {
+            return score * 3
+        } else if dwell >= 120 && dwell < 240 {
+            return score * 4
+        }
+        return score * 5
+    }
+    
     // MARK: Errors
     func handleFirebaseAuthError(error: FirebaseAuth.AuthErrorCode.Code, vc: UIViewController) {
         if error == .userNotFound || error == .invalidEmail || error == .missingEmail || error == .wrongPassword {
