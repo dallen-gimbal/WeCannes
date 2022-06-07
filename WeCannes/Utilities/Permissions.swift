@@ -22,13 +22,13 @@ class Permissions {
         center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             
             if error != nil {
-                print("Error with notification request")
+                print(error.debugDescription)
             }
             
-            if (granted) {
+            if granted {
                 self.storage.set(true, forKey: "NotificationPermissions")
             } else {
-                self.storage.set(true, forKey: "NotificationPermissions")
+                self.storage.set(false, forKey: "NotificationPermissions")
             }
         }
     }

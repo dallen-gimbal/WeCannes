@@ -114,25 +114,6 @@ class Utilities {
         }
     }
     
-    // MARK: Gimbal
-    func handleCurrentVisits() {
-        let currentVisits = placeManager.currentVisits()
-        var ids = user.array(forKey: "VisitIDs") as? [String] ?? []
-        if currentVisits.isEmpty {
-            return
-        } else {
-            for visit in currentVisits {
-                for aID in ids {
-                    if visit.visitID == aID {
-                        return
-                    }
-                }
-                ids.append(visit.visitID)
-                user.set(ids, forKey: "VisitsID")
-            }
-        }
-    }
-    
     // MARK: Helpers
     private func calculatePoints(value: String) -> Int {
         let points = checkValue(key: "Points")
