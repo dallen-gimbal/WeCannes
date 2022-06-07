@@ -73,11 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         UserDefaults.init().set(true, forKey: "HadVisit")
         print("Place Enter: \(visit.place.name)")
         
-        // Logic for Points
-        guard let points = visit.place.attributes.string(forKey: "Points") else { return }
-        util.storePoints(value: "\(points)") {
-//            print("Stored Points: \(util.checkPointValue(key: "Points"))")
-        }
         handlePlaceNotifications(visit: visit)
     }
     
@@ -102,6 +97,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         for i in visits {
             print(i)
         }
+        
+        // Logic for Points
+        guard var points = visit.place.attributes.string(forKey: "Points") else { return }
+        points = "\(dwellTimeMultiplier(points: points, dwell: Int(round(dwell))))"
+        util.storePoints(value: points) {
+            
+        }
     }
     
     // Safely handle Place Notifications
@@ -110,6 +112,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         guard let title = visit.place.attributes.string(forKey: "NotificationTitle") else { return }
         guard let body = visit.place.attributes.string(forKey: "NotificationBody") else { return }
         notifications.sendNotification(title: title, body: body)
+    }
+    
+    private func dwellTimeMultiplier(points: String, dwell: Int) -> Int {
+        let score = Int(points) ?? 0
+        if dwell < 120 {
+            return score
+        } else if dwell >= 120 && dwell < 240 {
+            return score * 2
+        } else if dwell >= 120 && dwell < 240 {
+            return score * 3
+        } else if dwell >= 120 && dwell < 240 {
+            return score * 4
+        }
+        return score * 5
     }
 
 
