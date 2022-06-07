@@ -19,7 +19,7 @@ class OnboardingViewController: UIViewController {
     
     //    var swiftyOnboard: SwiftyOnboard!
     var titleArray: [String] = ["This App Uses Location", "Notifications Enhance Your Experience", "Always Improves Your Experience", "Experience Beacon Magic"]
-    var subTitleArray: [String] = ["Confess lets you anonymously\n send confessions to your friends\n and receive confessions from them.", "All confessions sent are\n anonymous. Your friends will only\n know that it came from one of\n their facebook friends.", "Be nice to your friends.\n Send them confessions that\n will make them smile :)", "Because you're awesome"]
+    var subTitleArray: [String] = ["Unlock onsite reward opportunities and grow your digital wallet by enabling location services", "Notifications may include alerts and will honor your time and attention by notifying you when reward opportunities exist. This can be configured in settings", "Your location is used to unlock reward opportunities, event happenings, and better app experiences", "We use Bluetooth to know when you're visiting an Infillion or Partner activation so we can alert you to special events and reward opportunities."]
     
     override func viewDidLoad() {
         super.viewDidLoad()
