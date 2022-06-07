@@ -13,8 +13,11 @@ class RedeemPointsViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var pointsLabel: UILabel!
     
     private static var prizeCount = 0
-    private static var titleArray = [String]()
-    private static var imageUrlArray = [String]()
+    private var titleArray = [String]()
+    private var imageUrlArray = [String]()
+    private var subtitleArray = [String]()
+    private var pointsArray = [String]()
+    private var bodyArray = [String]()
     
     override func viewWillAppear(_ animated: Bool) {
         retrievePrizes()
@@ -38,10 +41,19 @@ class RedeemPointsViewController: UIViewController, UITableViewDataSource, UITab
                 RedeemPointsViewController.prizeCount = docs.documents.count
                 
                 if let title = doc.data()["title"] {
-                    RedeemPointsViewController.titleArray.append(title as! String)
+                    self.titleArray.append(title as? String ?? "")
                 }
-                if let url = doc.data()["image_url"] {
-                    RedeemPointsViewController.imageUrlArray.append(url as! String)
+                if let image_url = doc.data()["image_url"] {
+                    self.imageUrlArray.append(image_url as? String ?? "")
+                }
+                if let points = doc.data()["points"] {
+                    self.pointsArray.append(points as? String ?? "")
+                }
+                if let subtitle = doc.data()["subtitle"] {
+                    self.subtitleArray.append(subtitle as? String ?? "")
+                }
+                if let body = doc.data()["body"] {
+                    self.bodyArray.append(body as? String ?? "")
                 }
                 
                 DispatchQueue.main.async {
@@ -57,15 +69,28 @@ class RedeemPointsViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RedeemTokensTableViewCell", for: indexPath) as? RedeemTokensTableViewCell else { return UITableViewCell.init() }
 
-        cell.titleLabel.text = RedeemPointsViewController.titleArray[indexPath.row]
+        cell.titleLabel.text = self.titleArray[indexPath.row]
         cell.titleLabel.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 20.0)
         
-        let url = URL(string: RedeemPointsViewController.imageUrlArray[indexPath.row])
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-//        imageView.image = UIImage(data: data!)
-
-        cell.prizeImageView.image = UIImage(data: data!)
+        cell.pointsLabel.text = "\(self.pointsArray[indexPath.row]) Points"
+        cell.pointsLabel.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 20.0)
         
+        cell.subtitleLabel.text = self.subtitleArray[indexPath.row]
+        cell.subtitleLabel.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 20.0)
+        
+        cell.bodyLabel.text = self.bodyArray[indexPath.row]
+        cell.bodyLabel.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 20.0)
+        
+        if let url = URL(string: self.imageUrlArray[indexPath.row]) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil else { return }
+                
+                DispatchQueue.main.async { /// execute on main thread
+                    cell.prizeImageView.image = UIImage(data: data)
+                }
+            }
+            task.resume()
+        }
         return cell
     }
     
