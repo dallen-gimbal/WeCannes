@@ -77,7 +77,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         print("Place Enter: \(visit.place.name)")
         
         handlePlaceNotifications(visit: visit)
-        SceneDelegate.init().triggerPlaceEntryScreen()
+        
+        guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else {
+            return
+        }
+        
+        print("got active scene")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if  let wooVC = storyboard.instantiateViewController(withIdentifier: "WooHooViewController") as? WooHooViewController,
+            let tabBarVC = rootViewController as? UITabBarController {
+            
+            tabBarVC.selectedViewController?.present(wooVC, animated: true, completion: nil)
+        }
     }
     
     func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
