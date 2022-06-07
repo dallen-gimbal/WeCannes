@@ -51,6 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
             }
         }
         
+        // Don't forget
+        self.placeManager.delegate = self
+        
         return true
     }
 
@@ -74,6 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         print("Place Enter: \(visit.place.name)")
         
         handlePlaceNotifications(visit: visit)
+        SceneDelegate.init().triggerPlaceEntryScreen()
     }
     
     func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
@@ -88,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         var dwells = store.array(forKey: "Dwells") as? [String] ?? []
         
         visits.append(name)
-        dwells.append("\(Int(round(dwell))) Seconds")
+        dwells.append("\(Int(round(dwell)) / 60) Minutes")
         
         // Set the UserDefaults
         store.set(visits, forKey: "Visits")

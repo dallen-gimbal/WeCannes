@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.rootViewController = initialViewController
         } else {
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "CustomTabBarController")
-            window?.rootViewController = initialViewController
+            self.window?.rootViewController = initialViewController
         }
         
         window?.makeKeyAndVisible()
@@ -69,6 +69,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
          if let window = self.window {
               window.rootViewController = vc
          }
+    }
+    
+    func triggerPlaceEntryScreen() {
+        guard let windowScene = scene as? UIWindowScene else {return}
+        window = UIWindow(windowScene: windowScene)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "WooHooViewController")
+        self.window?.rootViewController = initialViewController
+        
+        window?.makeKeyAndVisible()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(identifier: "WooHooViewController")
+        
+        secondVC.modalPresentationStyle = .popover
+        secondVC.modalTransitionStyle = .crossDissolve
     }
 
 
