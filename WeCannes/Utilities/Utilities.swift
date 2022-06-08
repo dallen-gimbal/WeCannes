@@ -89,8 +89,8 @@ class Utilities {
     }
     
     // MARK: UIAlert
-    func displayAlert(vc: UIViewController, message: String) {
-        let alert = UIAlertController(title: "Whoops", message: message, preferredStyle: .alert)
+    func displayAlert(vc: UIViewController, message: String, title: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog(message)
         }))
@@ -118,15 +118,15 @@ class Utilities {
     // MARK: Errors
     func handleFirebaseAuthError(error: FirebaseAuth.AuthErrorCode.Code, vc: UIViewController) {
         if error == .userNotFound || error == .invalidEmail || error == .missingEmail || error == .wrongPassword {
-            displayAlert(vc: vc, message: "There was an issue authenticating your information.")
+            displayAlert(vc: vc, message: "There was an issue authenticating your information.", title: "Whoops")
         } else if error == .weakPassword {
-            displayAlert(vc: vc, message: "That password is too weak, please enter a stronger password.")
+            displayAlert(vc: vc, message: "That password is too weak, please enter a stronger password.", title: "Whoops")
         } else if error == .credentialAlreadyInUse || error == .emailAlreadyInUse {
-            displayAlert(vc: vc, message: "There is already an account matching those details.")
+            displayAlert(vc: vc, message: "There is already an account matching those details.", title: "Whoops")
         } else if error == .networkError || error == .webNetworkRequestFailed {
-            displayAlert(vc: vc, message: "There seems to be network connectivity issues.")
+            displayAlert(vc: vc, message: "There seems to be network connectivity issues.", title: "Whoops")
         } else {
-            displayAlert(vc: vc, message: "Some unkonwn error has occurred.")
+            displayAlert(vc: vc, message: "Some unkonwn error has occurred.", title: "Whoops")
         }
     }
     

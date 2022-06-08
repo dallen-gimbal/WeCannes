@@ -94,8 +94,12 @@ class RedeemPointsViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Happened")
+        FirebaseFunctions.init().redeemPrize(vc: self, points: Int(pointsArray[indexPath.row]) ?? 0, prize: titleArray[indexPath.row]) {
+            Utilities.init().displayAlert(vc: self, message: "Lookout for an email from Infillion on your prize!", title: "Congratulations!")
+            self.pointsLabel.text = "\(Utilities.init().checkPointValue(key: "Points"))"
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

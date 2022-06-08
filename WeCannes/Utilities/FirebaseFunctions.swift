@@ -67,6 +67,21 @@ class FirebaseFunctions {
         })
     }
     
+    // MARK: Redemption
+    func redeemPrize(vc: UIViewController, points: Int, prize: String, completion: @escaping () -> ()) {
+        if points > store.integer(forKey: "Points") {
+            Utilities.init().displayAlert(vc: vc, message: "Looks like you don't have enough points to redeem that prize.", title: "Whoops")
+        }
+        let collection = Firestore.firestore().collection("redemptions")
+        let uid = store.string(forKey: "UID") ?? ""
+        let user = ["uid": uid, "prize_name": prize]
+        collection.addDocument(data: user)
+        
+        let oldPoints = store.integer(forKey: "Points")
+        store.set(oldPoints - points, forKey: "Points")
+        completion()
+    }
+    
     // MARK: Helpers
     private func storeUser(name: String, uid: String, company: String, title: String, phone: String) {
         let collection = Firestore.firestore().collection("users")
