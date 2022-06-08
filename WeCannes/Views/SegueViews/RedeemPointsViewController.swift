@@ -12,7 +12,7 @@ class RedeemPointsViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pointsLabel: UILabel!
     
-    private static var prizeCount = 0
+    private var prizeCount = 0
     private var titleArray = [String]()
     private var imageUrlArray = [String]()
     private var subtitleArray = [String]()
@@ -38,7 +38,7 @@ class RedeemPointsViewController: UIViewController, UITableViewDataSource, UITab
             guard let docs = documents as QuerySnapshot? else { return }
             for doc in docs.documents {
                 print(doc.data())
-                RedeemPointsViewController.prizeCount = docs.documents.count
+                self.prizeCount = docs.documents.count
                 
                 if let title = doc.data()["title"] {
                     self.titleArray.append(title as? String ?? "")
@@ -63,7 +63,7 @@ class RedeemPointsViewController: UIViewController, UITableViewDataSource, UITab
         })
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return RedeemPointsViewController.prizeCount
+        return self.prizeCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
