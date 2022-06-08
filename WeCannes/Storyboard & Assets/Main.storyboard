@@ -1099,29 +1099,50 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Points Earned" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5j-MU-NJQ">
+                                <rect key="frame" x="48.5" y="267" width="317" height="68"/>
+                                <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="h3W-cc-cOH">
+                                <rect key="frame" x="107" y="349" width="200" height="200"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ASW-FD-SDu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tGo-av-LEx" firstAttribute="height" secondItem="N8B-ds-SNH" secondAttribute="height" multiplier="0.137767" id="06c-aQ-6gU"/>
+                            <constraint firstItem="h3W-cc-cOH" firstAttribute="centerX" secondItem="ASW-FD-SDu" secondAttribute="centerX" id="2dW-Bq-u28"/>
+                            <constraint firstItem="T5j-MU-NJQ" firstAttribute="width" secondItem="N8B-ds-SNH" secondAttribute="width" multiplier="0.7657" id="2qT-IC-tdd"/>
+                            <constraint firstItem="h3W-cc-cOH" firstAttribute="width" secondItem="N8B-ds-SNH" secondAttribute="width" multiplier="0.483092" id="4Zd-pK-rzt"/>
                             <constraint firstItem="HZN-lw-8nJ" firstAttribute="top" secondItem="tGo-av-LEx" secondAttribute="bottom" constant="8" symbolic="YES" id="5Dw-Lm-VMe"/>
+                            <constraint firstItem="h3W-cc-cOH" firstAttribute="height" secondItem="N8B-ds-SNH" secondAttribute="height" multiplier="0.23753" id="7HR-Lg-b9k"/>
                             <constraint firstItem="HZN-lw-8nJ" firstAttribute="width" secondItem="N8B-ds-SNH" secondAttribute="width" multiplier="0.7657" id="7we-Ke-GG3"/>
                             <constraint firstAttribute="bottom" secondItem="Rch-SU-4pA" secondAttribute="bottom" constant="-56" id="BlH-wj-E9l"/>
                             <constraint firstItem="tGo-av-LEx" firstAttribute="width" secondItem="N8B-ds-SNH" secondAttribute="width" multiplier="0.57971" id="Gge-BS-eAd"/>
+                            <constraint firstItem="T5j-MU-NJQ" firstAttribute="centerX" secondItem="ASW-FD-SDu" secondAttribute="centerX" id="Ofr-OZ-ppu"/>
                             <constraint firstItem="tGo-av-LEx" firstAttribute="centerX" secondItem="ASW-FD-SDu" secondAttribute="centerX" id="X9S-gp-YYp"/>
+                            <constraint firstItem="T5j-MU-NJQ" firstAttribute="top" secondItem="HZN-lw-8nJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ZQ6-6B-xvX"/>
                             <constraint firstItem="Rch-SU-4pA" firstAttribute="trailing" secondItem="ASW-FD-SDu" secondAttribute="trailing" id="aXW-5w-NuX"/>
                             <constraint firstItem="tGo-av-LEx" firstAttribute="top" secondItem="ASW-FD-SDu" secondAttribute="top" constant="23" id="fY8-sM-Tc6"/>
+                            <constraint firstItem="T5j-MU-NJQ" firstAttribute="height" secondItem="N8B-ds-SNH" secondAttribute="height" multiplier="0.0807601" id="igo-Av-O4l"/>
                             <constraint firstItem="Rch-SU-4pA" firstAttribute="leading" secondItem="ASW-FD-SDu" secondAttribute="leading" id="l7A-0K-N6S"/>
+                            <constraint firstItem="h3W-cc-cOH" firstAttribute="top" secondItem="T5j-MU-NJQ" secondAttribute="bottom" constant="14" id="myR-Wb-J7r"/>
                             <constraint firstItem="Rch-SU-4pA" firstAttribute="top" secondItem="N8B-ds-SNH" secondAttribute="top" id="sf5-VH-mY4"/>
                             <constraint firstItem="HZN-lw-8nJ" firstAttribute="height" secondItem="N8B-ds-SNH" secondAttribute="height" multiplier="0.0807601" id="uiX-Kf-D4Y"/>
                             <constraint firstItem="HZN-lw-8nJ" firstAttribute="centerX" secondItem="ASW-FD-SDu" secondAttribute="centerX" id="waw-mt-pVS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O8T-83-2B7"/>
+                    <connections>
+                        <outlet property="pointsLabel" destination="T5j-MU-NJQ" id="ezo-wa-A76"/>
+                        <outlet property="starView" destination="h3W-cc-cOH" id="X0o-FN-kj3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuk-wH-ckc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-400" y="-1296"/>
+            <point key="canvasLocation" x="-400.00000000000006" y="-1296.4285714285713"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -1136,6 +1157,7 @@
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <image name="star" width="512" height="512"/>
         <image name="we_cannes_logo_lockuo" width="1080" height="524"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

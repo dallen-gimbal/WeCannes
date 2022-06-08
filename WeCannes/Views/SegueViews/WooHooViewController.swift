@@ -6,24 +6,31 @@
 //
 
 import UIKit
+import Firebase
+import Gimbal
 
 class WooHooViewController: UIViewController {
 
+    @IBOutlet weak var starView: UIImageView!
+    @IBOutlet weak var pointsLabel: UILabel!
+    
+    private let placeManager = PlaceManager()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if placeManager.currentVisits().isEmpty {
+            pointsLabel.text = "More Points Earned"
+        } else {
+            let points = placeManager.currentVisits()[0].place.attributes.string(forKey: "Points") ?? "More"
+            pointsLabel.text = "\(points) Points Earned"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

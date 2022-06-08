@@ -142,11 +142,30 @@ class Utilities {
     }
 }
 
+// MARK: Extensions
 extension UIColor {
     class var infillionBlack:UIColor {
         return UIColor.init(red: 22/255, green: 29/255, blue: 36/255, alpha: 1.0)
     }
     class var infillionGreen:UIColor {
         return UIColor.init(red: 0/255, green: 195/255, blue: 71/255, alpha: 1.0)
+    }
+}
+
+extension UIView{
+    func rotate() {
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = NSNumber(value: Double.pi * 2)
+        rotation.duration = 1
+        rotation.isCumulative = true
+        rotation.repeatCount = Float.greatestFiniteMagnitude
+        self.layer.add(rotation, forKey: "rotationAnimation")
+    }
+    
+    func showFlip(){
+        if self.isHidden{
+            UIView.transition(with: self, duration: 1, options: [.transitionFlipFromRight,.allowUserInteraction], animations: nil, completion: nil)
+            self.isHidden = false
+        }
     }
 }
