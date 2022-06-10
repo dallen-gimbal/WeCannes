@@ -77,9 +77,9 @@ class FirebaseFunctions {
         let uid = store.string(forKey: "UID") ?? ""
         let user = ["uid": uid, "prize_name": prize]
         collection.addDocument(data: user)
-        
-        let oldPoints = store.integer(forKey: "Points")
-        store.set(oldPoints - points, forKey: "Points")
+//        
+//        let oldPoints = store.integer(forKey: "Points")
+//        store.set(oldPoints - points, forKey: "Points")
         completion()
     }
     

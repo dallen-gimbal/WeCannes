@@ -39,10 +39,13 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduledEventsTableViewCell", for: indexPath) as? ScheduledEventsTableViewCell else { return UITableViewCell.init() }
+
+        cell.eventNameLabel.text = cellTitleArray[indexPath.row]
+        cell.eventNameLabel.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 20.0)
         
-        cell.textLabel?.text = cellTitleArray[indexPath.row]
-        cell.textLabel?.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 20.0)
+        cell.eventTimeLabel.text = cellTimeArray[indexPath.row]
+        cell.eventTimeLabel.font = UIFont(name: "BeVietnamPro-ExtraLight", size: 20.0)
         
         return cell
     }
@@ -79,3 +82,10 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
     }
 
 }
+
+class ScheduledEventsTableViewCell: UITableViewCell {
+    @IBOutlet weak var eventNameLabel: UILabel!
+    @IBOutlet weak var eventTimeLabel: UILabel!
+    
+}
+
