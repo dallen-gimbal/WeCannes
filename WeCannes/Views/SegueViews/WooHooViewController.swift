@@ -18,10 +18,10 @@ class WooHooViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if placeManager.currentVisits().isEmpty {
-            pointsLabel.text = "More Points Earned"
+            pointsLabel.text = "More Tokens Earned"
         } else {
             let points = placeManager.currentVisits()[0].place.attributes.string(forKey: "Points") ?? "More"
-            pointsLabel.text = "\(points) Points Earned"
+            pointsLabel.text = "\(points) Tokens Earned"
         }
     }
     

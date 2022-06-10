@@ -18,7 +18,6 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     
-    let placeManager = PlaceManager()
     private let util = Utilities.init()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,7 +26,7 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         util.dynamicallyChangeButtonSize(button: earnPointsButton)
         
         updateLabels()
-        print(placeManager.currentVisits())
+//        print(placeManager.currentVisits())
     }
 
     override func viewDidLoad() {
@@ -35,10 +34,8 @@ class HomeViewController: UIViewController, PlaceManagerDelegate {
         
         if (!Gimbal.isStarted()) {
             Gimbal.start()
+            util.gdprConsent()
         }
-        
-        self.placeManager.delegate = self
-        
     }
     
     private func updateLabels() {

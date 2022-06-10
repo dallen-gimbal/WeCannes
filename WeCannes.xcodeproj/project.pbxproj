@@ -87,6 +87,9 @@
 		F0BA1A71284C6FFE004DD906 /* WooHooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */; };
 		F0BA1A72284C6FFE004DD906 /* WooHooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */; };
 		F0BA1A73284C6FFE004DD906 /* WooHooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */; };
+		F0CFADE02853C16F0066EE4B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFADDF2853C16F0066EE4B /* MainNavigationController.swift */; };
+		F0CFADE12853C1730066EE4B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFADDF2853C16F0066EE4B /* MainNavigationController.swift */; };
+		F0CFADE22853C1730066EE4B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFADDF2853C16F0066EE4B /* MainNavigationController.swift */; };
 		F0D7C773284D830F00531E95 /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = F0D7C772284D830F00531E95 /* IHProgressHUD */; };
 		F0F82ACB284C48210024002C /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
@@ -153,6 +156,7 @@
 		F0B8750F2839CA0E0084A126 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F0BA1A6C284C526B004DD906 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WooHooViewController.swift; sourceTree = "<group>"; };
+		F0CFADDF2853C16F0066EE4B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainNavigationController.swift; path = WeCannes/Views/MainNavigationController.swift; sourceTree = SOURCE_ROOT; };
 		F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +301,7 @@
 		F0B875132839CA150084A126 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0CFADDF2853C16F0066EE4B /* MainNavigationController.swift */,
 				F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */,
 				F03F3F1A283B14A400E605A7 /* Onboarding */,
 				F0B875142839CA280084A126 /* TabBarViews */,
@@ -618,6 +623,7 @@
 				F0B8750C2839CA050084A126 /* RegisterViewController.swift in Sources */,
 				F0B875002839C9950084A126 /* RedeemPointsViewController.swift in Sources */,
 				F0B875042839C9A20084A126 /* EarnPointsViewController.swift in Sources */,
+				F0CFADE02853C16F0066EE4B /* MainNavigationController.swift in Sources */,
 				F03F3F172839E43200E605A7 /* MapViewController.swift in Sources */,
 				F03F3F452847B72B00E605A7 /* FirebaseFunctions.swift in Sources */,
 				F03F3F4B2847DDF100E605A7 /* Utilities.swift in Sources */,
@@ -643,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CFADE12853C1730066EE4B /* MainNavigationController.swift in Sources */,
 				F0B874DB2839BFC40084A126 /* WeCannesTests.swift in Sources */,
 				F0B874F92839C9680084A126 /* HomeViewController.swift in Sources */,
 				F03F3FAD284976D600E605A7 /* CustomTabBarController.swift in Sources */,
@@ -676,6 +683,7 @@
 				F0B874FE2839C9850084A126 /* WalletViewController.swift in Sources */,
 				F03F3F472847B72B00E605A7 /* FirebaseFunctions.swift in Sources */,
 				F0B874E52839BFC40084A126 /* WeCannesUITests.swift in Sources */,
+				F0CFADE22853C1730066EE4B /* MainNavigationController.swift in Sources */,
 				F03F3F192839E43200E605A7 /* MapViewController.swift in Sources */,
 				F0B8750E2839CA050084A126 /* RegisterViewController.swift in Sources */,
 				F0B875022839C9950084A126 /* RedeemPointsViewController.swift in Sources */,

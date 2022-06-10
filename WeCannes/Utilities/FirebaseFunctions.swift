@@ -70,7 +70,8 @@ class FirebaseFunctions {
     // MARK: Redemption
     func redeemPrize(vc: UIViewController, points: Int, prize: String, completion: @escaping () -> ()) {
         if points > store.integer(forKey: "Points") {
-            Utilities.init().displayAlert(vc: vc, message: "Looks like you don't have enough points to redeem that prize.", title: "Whoops")
+            Utilities.init().displayAlert(vc: vc, message: "Looks like you don't have enough tokens to redeem that prize.", title: "Whoops")
+            return
         }
         let collection = Firestore.firestore().collection("redemptions")
         let uid = store.string(forKey: "UID") ?? ""

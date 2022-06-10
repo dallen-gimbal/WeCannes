@@ -39,7 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         if locationStatus == .authorizedAlways || locationStatus == .authorizedWhenInUse {
             // Start Gimbal
             Gimbal.start()
-            self.placeManager.delegate = self
+            
+            // GDPR Consent
+            util.gdprConsent()
+            
             if Gimbal.isStarted() {
                 print("Gimbal started")
             }

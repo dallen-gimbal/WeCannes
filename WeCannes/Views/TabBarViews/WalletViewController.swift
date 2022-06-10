@@ -15,6 +15,7 @@ class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var redeemPointsButton: UIButton!
     @IBOutlet weak var earnPointsButton: UIButton!
+    @IBOutlet weak var signOutButton: UIButton!
     
     private var cellTitleArray = [String]()
     private var cellTimeArray = [String]()
@@ -23,6 +24,7 @@ class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewWillAppear(_ animated: Bool) {
         util.updateButtonStyle(button: redeemPointsButton, title: "Redeem Tokens")
+        util.dynamicallyChangeButtonSize(button: signOutButton)
         pointsLabel.text = "\(util.checkPointValue(key: "Points"))"
         
         tableView.reloadData()
@@ -34,6 +36,8 @@ class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return retrieveVisitData().count
@@ -65,6 +69,16 @@ class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func retrieveDwellData() -> [String] {
         return ((UserDefaults.init().array(forKey: "Dwells") as? [String]) ?? ["No Dwell Data"])
     }
+//
+//    @IBAction func signOutAction(_ sender: Any) {
+//        print("tapped")
+//        let controller = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+//        controller.modalPresentationStyle = .fullScreen
+//        controller.modalTransitionStyle = .coverVertical
+//        present(controller, animated: true, completion: nil)
+//    }
+    
+    
 }
 
 class VisitsTableViewCell: UITableViewCell {

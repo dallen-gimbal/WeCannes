@@ -43,10 +43,10 @@ class Utilities {
     }
     
     // MARK: Buttons
-    func updateButtonStyle(button: UIButton, title: String) {
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(UIColor.infillionBlack, for: .normal)
-        button.tintColor = UIColor.infillionGreen
+    func updateButtonStyle(button: UIButton?, title: String) {
+        button?.setTitle(title, for: .normal)
+        button?.setTitleColor(UIColor.infillionBlack, for: .normal)
+        button?.tintColor = UIColor.infillionGreen
     }
     
     func dynamicallyChangeButtonSize(button: UIButton) {
@@ -129,6 +129,16 @@ class Utilities {
             displayAlert(vc: vc, message: "Some unkonwn error has occurred.", title: "Whoops")
         }
     }
+    
+    // MARK: GDPR Gimbal
+    func gdprConsent() {
+        if PrivacyManager.userConsent(for: .places) == ConsentState.unknown {
+            if PrivacyManager.gdprConsentRequirement() == .required {
+                PrivacyManager.setUserConsentFor(.places, to: .granted)
+            }
+        }
+    }
+
     
     // MARK: Helpers
     private func calculatePoints(value: String) -> Int {
