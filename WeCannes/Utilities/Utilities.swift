@@ -54,8 +54,8 @@ class Utilities {
         button.titleLabel?.minimumScaleFactor = 0.50
     }
     
-    // MARK: Onboarding
-    func showTutorial(theUrl: String) -> SFSafariViewController {
+    // MARK: Safari View
+    func showSafari(theUrl: String) -> SFSafariViewController {
         if let url = URL(string: theUrl) {
             let config = SFSafariViewController.Configuration()
             config.entersReaderIfAvailable = true

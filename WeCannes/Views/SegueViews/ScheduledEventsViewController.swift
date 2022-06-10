@@ -48,7 +48,7 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         print(cellUrlArray[indexPath.row])
         DispatchQueue.main.async {
-            self.present(Utilities.init().showTutorial(theUrl: self.cellUrlArray[indexPath.row]), animated: true)
+            self.present(Utilities.init().showSafari(theUrl: self.cellUrlArray[indexPath.row]), animated: true)
         }
     }
     

@@ -8,12 +8,14 @@
 import UIKit
 import FirebaseFirestore
 
-class PartnerViewController: UIViewController {
-    
+class PartnerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     private var partnerCount = 0
     private var companyArray = [String]()
     private var landingUrlArray = [String]()
     private var imageUrlArray = [String]()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
         updatePartnerList()
@@ -22,6 +24,8 @@ class PartnerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
 
@@ -42,11 +46,51 @@ class PartnerViewController: UIViewController {
                     self.landingUrlArray.append(landing as! String)
                 }
                 
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         })
     }
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return companyArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PartnerTableViewCell", for: indexPath) as? PartnerTableViewCell else { return UITableViewCell.init() }
+        
+        if let url = URL(string: self.imageUrlArray[indexPath.row]) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil else { return }
+                
+                DispatchQueue.main.async {
+                    cell.logoImage.image = UIImage(data: data)
+                }
+            }
+            task.resume()
+        }
+        
+        cell.layer.backgroundColor = UIColor.clear.cgColor
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            self.present(Utilities.init().showSafari(theUrl: self.landingUrlArray[indexPath.row]), animated: true)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.00
+    }
 
+}
+
+class PartnerTableViewCell: UITableViewCell {
+    @IBOutlet weak var logoImage: UIImageView!
+    
 }
