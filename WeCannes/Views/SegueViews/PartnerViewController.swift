@@ -18,7 +18,6 @@ class PartnerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
-        updatePartnerList()
     }
 
     override func viewDidLoad() {
@@ -26,6 +25,8 @@ class PartnerViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        updatePartnerList()
     }
     
 
@@ -78,7 +79,9 @@ class PartnerViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(self.landingUrlArray[indexPath.row])
+        print("Tapped")
         DispatchQueue.main.async {
             self.present(Utilities.init().showSafari(theUrl: self.landingUrlArray[indexPath.row]), animated: true)
         }

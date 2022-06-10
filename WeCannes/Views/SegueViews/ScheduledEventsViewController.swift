@@ -25,10 +25,12 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        updateEventsList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        updateEventsList()
+
     }
     
 
@@ -45,7 +47,7 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(cellUrlArray[indexPath.row])
         DispatchQueue.main.async {
             self.present(Utilities.init().showSafari(theUrl: self.cellUrlArray[indexPath.row]), animated: true)
