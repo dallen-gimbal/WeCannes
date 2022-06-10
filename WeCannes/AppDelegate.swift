@@ -40,9 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
             // Start Gimbal
             Gimbal.start()
             
-            // GDPR Consent
-            util.gdprConsent()
-            
             if Gimbal.isStarted() {
                 print("Gimbal started")
             }
@@ -56,6 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         
         // Don't forget
         self.placeManager.delegate = self
+        
+        // GDPR Consent
+        util.gdprConsent()
         
         return true
     }

@@ -132,10 +132,8 @@ class Utilities {
     
     // MARK: GDPR Gimbal
     func gdprConsent() {
-        if PrivacyManager.userConsent(for: .places) == ConsentState.unknown {
-            if PrivacyManager.gdprConsentRequirement() == .required {
-                PrivacyManager.setUserConsentFor(.places, to: .granted)
-            }
+        if PrivacyManager.gdprConsentRequirement() == .required {
+            PrivacyManager.setUserConsentFor(.places, to: .granted)
         }
     }
 
