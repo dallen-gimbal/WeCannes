@@ -6,7 +6,7 @@ target 'WeCannes' do
   use_frameworks!
 
   # Pods for WeCannes
-  pod 'GimbalXCFramework'
+#  pod 'GimbalXCFramework'
 #  pod 'Gimbal'
   pod 'SwiftyOnboard'
   pod 'IQKeyboardManagerSwift'

@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         FirebaseApp.configure()
         
         // Gimbal
-        Gimbal.setAPIKey("d56f22a1-11ef-47d7-b94b-dd4674fb6329", options: [:])
+        Gimbal.setAPIKey("0e7d7d1f-3d32-4458-90fa-70c6bb9b69c6", options: [:])
         
         // Permissions
         let locationStatus = permissions.checkLocationStatus()
