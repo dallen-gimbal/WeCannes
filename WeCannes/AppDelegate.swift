@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
     private let store = UserDefaults.init()
     private let notifications = LocalNotifications.init()
     private let util = Utilities.init()
+    private let fire = FirebaseFunctions.init()
     let placeManager = PlaceManager()
     
     var window: UIWindow?
@@ -76,21 +77,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
     
     //MARK: Gimbal Methods
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
+        // Local Storage
         UserDefaults.init().set(true, forKey: "HadVisit")
         print("Place Enter: \(visit.place.name)")
         
+        // Notifications
         handlePlaceNotifications(visit: visit)
+        
+        // Logic for WooHoo Screen
         guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else {
             return
         }
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
         if  let wooVC = storyboard.instantiateViewController(withIdentifier: "WooHooViewController") as? WooHooViewController,
             let tabBarVC = rootViewController as? UITabBarController {
-            
             tabBarVC.selectedViewController?.present(wooVC, animated: true, completion: nil)
         }
+        
+        // Analytics
+        fire.storeVisitData(uid: store.string(forKey: "UID") ?? "", place: visit.place.name, timestamp: "\(visit.arrivalDate.ISO8601Format())", visitID: "\(visit.visitID)", enter: true)
     }
     
     func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
@@ -118,9 +123,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         // Logic for Points
         guard var points = visit.place.attributes.string(forKey: "Points") else { return }
         points = "\(util.dwellTimeMultiplier(points: points, dwell: Int(round(dwell))))"
-        util.storePoints(value: points) {
-//            notifications.sendNotification(title: "You've Exited \(visit.place.name)", body: "Make sure to check how many points you've earned!")
-        }
+        util.storePoints(value: points) {}
+        
+        // Analytics
+        let uid = store.string(forKey: "UID") ?? ""
+        fire.storeVisitData(uid: uid, place: visit.place.name, timestamp: "\(visit.departureDate?.ISO8601Format() ?? "")", visitID: "\(visit.visitID)", enter: false)
+        fire.storePoints(uid: uid, points: Int(points) ?? 0)
     }
     
     // Safely handle Place Notifications

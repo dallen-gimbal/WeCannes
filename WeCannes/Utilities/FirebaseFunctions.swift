@@ -89,11 +89,27 @@ class FirebaseFunctions {
         completion()
     }
     
+    // MARK: Analytics
+    func storeVisitData(uid: String, place: String, timestamp: String, visitID: String, enter: Bool) {
+        let entry = enter ? "Entered" : "Exited"
+        let collection = Firestore.firestore().collection("visits").document("\(entry): \(visitID)")
+        let visit = ["uid": uid, "place": place, "timestamp": timestamp, "visitID": visitID]
+        collection.setData(visit)
+    }
+    
+    func storePoints(uid: String, points: Int) {
+        let collection = Firestore.firestore().collection("points").document(uid)
+        Firestore.firestore().collection("points").document(uid).getDocument(completion: { (document, error) in
+            let oldPoints = document?["points"] as? Int ?? 0
+            collection.setData(["points":(points + oldPoints)])
+        })
+    }
+    
     // MARK: Helpers
     private func storeUser(name: String, uid: String, company: String, title: String, phone: String) {
-        let collection = Firestore.firestore().collection("users")
+        let collection = Firestore.firestore().collection("users").document(uid)
         let user = ["uid": uid, "name": name, "company": company, "title": title, "phone": phone, "ar_id": self.utilities.randomString(length: 3), "points": 0] as [String : Any]
-        collection.addDocument(data: user)
+        collection.setData(user)
         store.set(true, forKey: "Authenticated")
         store.setValue(uid, forKey: "UID")
         utilities.storeValue(key: "Name", value: name) {
