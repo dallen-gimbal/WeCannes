@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>573983127263-jdnpro1kr1pbvbi9qlptnqlokhr4opus.apps.googleusercontent.com</string>
+	<string>573983127263-al2ht1ftc57ct8j1ujqr640rkpmlklvj.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.573983127263-jdnpro1kr1pbvbi9qlptnqlokhr4opus</string>
+	<string>com.googleusercontent.apps.573983127263-al2ht1ftc57ct8j1ujqr640rkpmlklvj</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCrCy-PzzMg8zjuVDRtH7QezWD3jksvK4w</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.gimbal.wecannes</string>
+	<string>com.gimbal.wecannesapp</string>
 	<key>PROJECT_ID</key>
 	<string>wecannes-49b04</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:573983127263:ios:b70fdfc6370d1235f45b6a</string>
+	<string>1:573983127263:ios:caf16247344198adf45b6a</string>
 </dict>
 </plist>

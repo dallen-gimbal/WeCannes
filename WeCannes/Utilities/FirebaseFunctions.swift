@@ -73,13 +73,19 @@ class FirebaseFunctions {
             Utilities.init().displayAlert(vc: vc, message: "Looks like you don't have enough tokens to redeem that prize.", title: "Whoops")
             return
         }
+        
+        if store.bool(forKey: "Redeemed") {
+            Utilities.init().displayAlert(vc: vc, message: "Looks like you've already redeemed a prize. You can't redeem your prize more than once.", title: "Whoops")
+            return
+        }
+        
         let collection = Firestore.firestore().collection("redemptions")
         let uid = store.string(forKey: "UID") ?? ""
         let user = ["uid": uid, "prize_name": prize]
         collection.addDocument(data: user)
-//        
-//        let oldPoints = store.integer(forKey: "Points")
-//        store.set(oldPoints - points, forKey: "Points")
+        
+        store.set(true, forKey: "Redeemed")
+
         completion()
     }
     

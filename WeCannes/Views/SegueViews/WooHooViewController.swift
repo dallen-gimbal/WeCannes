@@ -20,7 +20,11 @@ class WooHooViewController: UIViewController {
         if placeManager.currentVisits().isEmpty {
             pointsLabel.text = "More Tokens Earned"
         } else {
-            let points = placeManager.currentVisits()[0].place.attributes.string(forKey: "Points") ?? "More"
+            var count = placeManager.currentVisits().count - 1
+            if count < 0 {
+                count = 0
+            }
+            let points = placeManager.currentVisits()[count].place.attributes.string(forKey: "Points") ?? "More"
             pointsLabel.text = "\(points) Tokens Earned"
         }
     }

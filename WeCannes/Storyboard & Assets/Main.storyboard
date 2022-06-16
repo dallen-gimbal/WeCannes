@@ -24,9 +24,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="t1i-2c-kS8"/>
-                    <connections>
-                        <segue destination="Fzb-pA-bV3" kind="show" id="bwt-7r-Rfk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deI-Vu-2Jv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,9 +97,9 @@
                                 <rect key="frame" x="69" y="511" width="276" height="31"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="How Do I Earn Points?"/>
+                                <buttonConfiguration key="configuration" style="plain" title="How Do I Earn Tokens?"/>
                                 <connections>
-                                    <segue destination="4bJ-tU-P7f" kind="show" id="JtJ-nX-Kgq"/>
+                                    <segue destination="4bJ-tU-P7f" kind="show" identifier="EarnPoints2Segue" id="JtJ-nX-Kgq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zK-3a-jPQ">
@@ -110,7 +107,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Redeem Points"/>
                                 <connections>
-                                    <segue destination="het-RM-W9p" kind="show" id="fle-UZ-mH9"/>
+                                    <segue destination="het-RM-W9p" kind="show" identifier="Redeem1Segue" id="fle-UZ-mH9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="UsS-BL-3Uy">
@@ -131,7 +128,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign Out"/>
                                 <connections>
-                                    <segue destination="1N9-sI-CNw" kind="show" id="WP0-5d-rDO"/>
+                                    <segue destination="1N9-sI-CNw" kind="show" identifier="LogOutSegue" id="WP0-5d-rDO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -186,7 +183,6 @@
                         <outlet property="redeemPointsButton" destination="2zK-3a-jPQ" id="MjP-yL-w1y"/>
                         <outlet property="signOutButton" destination="dew-YJ-8M7" id="6sV-KI-qV5"/>
                         <outlet property="tableView" destination="Wd8-X0-5U7" id="M4t-V1-Ffe"/>
-                        <segue destination="Fzb-pA-bV3" kind="show" id="6Ll-yv-rPV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBR-AS-bz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -212,15 +208,15 @@
                                     <action selector="signInAction:" destination="1N9-sI-CNw" eventType="touchUpInside" id="66D-BW-s06"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ck-dI-j3B">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ck-dI-j3B">
                                 <rect key="frame" x="93.5" y="436" width="227" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKY-YO-wjB">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKY-YO-wjB">
                                 <rect key="frame" x="93.5" y="478" width="227" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-Y3-Vth">
                                 <rect key="frame" x="87" y="191" width="240" height="47"/>
@@ -237,7 +233,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Register for Free!"/>
                                 <connections>
-                                    <segue destination="M7C-tR-PRr" kind="show" id="0Mz-pm-pYL"/>
+                                    <segue destination="M7C-tR-PRr" kind="show" identifier="RegisterSegue" id="0Mz-pm-pYL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v43-nM-fyr">
@@ -246,7 +242,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
                                 <connections>
-                                    <segue destination="zKm-IG-NGn" kind="show" id="UbE-CR-M2I"/>
+                                    <segue destination="zKm-IG-NGn" kind="show" identifier="PasswordSegue" id="UbE-CR-M2I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -319,7 +315,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Redeem Points"/>
                                 <connections>
-                                    <segue destination="het-RM-W9p" kind="show" id="AFG-xW-xt1"/>
+                                    <segue destination="het-RM-W9p" kind="show" identifier="Redeem2Segue" id="AFG-xW-xt1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rc-5x-XBO">
@@ -327,7 +323,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Upcoming Events"/>
                                 <connections>
-                                    <segue destination="K5h-af-e0N" kind="show" id="TVR-JN-by9"/>
+                                    <segue destination="K5h-af-e0N" kind="show" identifier="UpcomingEventsSegue" id="TVR-JN-by9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Dustin Allen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="bym-Vj-rAP">
@@ -360,16 +356,16 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="See Infillion's Partners"/>
                                 <connections>
-                                    <segue destination="9JN-dU-vgb" kind="show" id="Qda-kV-qs2"/>
+                                    <segue destination="9JN-dU-vgb" kind="show" identifier="PartnersSegue" id="Qda-kV-qs2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNd-gG-mng">
                                 <rect key="frame" x="69" y="637" width="276" height="31"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="How Do I Earn Points?"/>
+                                <buttonConfiguration key="configuration" style="plain" title="How Do I Earn Tokens?"/>
                                 <connections>
-                                    <segue destination="4bJ-tU-P7f" kind="show" id="GJJ-tr-CS2"/>
+                                    <segue destination="4bJ-tU-P7f" kind="show" identifier="EarnPoints1Segue" id="GJJ-tr-CS2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -426,7 +422,6 @@
                         <outlet property="pointsLabel" destination="h1N-ss-KFS" id="VuP-0h-dT8"/>
                         <outlet property="redeemPointsButton" destination="EyK-a4-NBz" id="1S1-jn-nte"/>
                         <outlet property="upcomingEventsButton" destination="9Rc-5x-XBO" id="cok-Qy-8wN"/>
-                        <segue destination="Fzb-pA-bV3" kind="show" id="U5H-6n-xW2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRf-eL-UcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -444,7 +439,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="xKV-8k-xq3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Do I Earn Points?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Q0-iq-B7X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Do I Earn Tokens?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Q0-iq-B7X">
                                 <rect key="frame" x="48.5" y="191" width="317" height="112"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -487,7 +482,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The more time you spend at a selected location, the more points you earn!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="cMT-gS-9Cy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The more time you spend at a select location, the more tokens you earn!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="cMT-gS-9Cy">
                                         <rect key="frame" x="208" y="8" width="170" height="78"/>
                                         <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -602,9 +597,9 @@
                         <color key="selectedImageTintColor" red="0.86274509799999999" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="6GZ-cs-J3e" kind="relationship" relationship="viewControllers" id="Hs4-bw-WXK"/>
-                        <segue destination="mw7-Ya-W6x" kind="relationship" relationship="viewControllers" id="eky-zF-h2X"/>
-                        <segue destination="eZ6-sB-OZm" kind="relationship" relationship="viewControllers" id="OYB-2X-3Cp"/>
+                        <segue destination="6GZ-cs-J3e" kind="relationship" relationship="viewControllers" destinationCreationSelector="HomeSelector" id="Hs4-bw-WXK"/>
+                        <segue destination="mw7-Ya-W6x" kind="relationship" relationship="viewControllers" destinationCreationSelector="MapSelector" id="eky-zF-h2X"/>
+                        <segue destination="eZ6-sB-OZm" kind="relationship" relationship="viewControllers" destinationCreationSelector="WalletSelector" id="OYB-2X-3Cp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnX-Rw-Ig4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -818,7 +813,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
                                 <connections>
-                                    <segue destination="1N9-sI-CNw" kind="show" id="Tq8-fW-71h"/>
+                                    <segue destination="1N9-sI-CNw" kind="show" identifier="LoginSegue" id="Tq8-fW-71h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -875,38 +870,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your Free Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="SUk-h0-ApN">
-                                <rect key="frame" x="87" y="235" width="240" height="106"/>
+                                <rect key="frame" x="87" y="191" width="240" height="106"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wdG-3i-qFk">
-                                <rect key="frame" x="87" y="458" width="240" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wdG-3i-qFk">
+                                <rect key="frame" x="87" y="436" width="240" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hM-Xi-fH2">
-                                <rect key="frame" x="87" y="500" width="240" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hM-Xi-fH2">
+                                <rect key="frame" x="87" y="478" width="240" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m24-oQ-f2t">
-                                <rect key="frame" x="86.5" y="542" width="241" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m24-oQ-f2t">
+                                <rect key="frame" x="86.5" y="520" width="241" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Kj-i26">
-                                <rect key="frame" x="86" y="584" width="242" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Kj-i26">
+                                <rect key="frame" x="86" y="562" width="242" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Company" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEd-o3-N9e">
-                                <rect key="frame" x="86" y="626" width="242" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEd-o3-N9e">
+                                <rect key="frame" x="86" y="604" width="242" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Phone" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-DR-mtK">
-                                <rect key="frame" x="86" y="668" width="242" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-DR-mtK">
+                                <rect key="frame" x="86" y="646" width="242" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
@@ -920,7 +915,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMd-8Q-dEC">
-                                <rect key="frame" x="87" y="710" width="240" height="38"/>
+                                <rect key="frame" x="87" y="688" width="240" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register"/>
                                 <connections>
@@ -928,7 +923,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="GDB-4P-5hA">
-                                <rect key="frame" x="87" y="111" width="240" height="116"/>
+                                <rect key="frame" x="87" y="67" width="240" height="116"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n6U-a9-uH6"/>
@@ -1017,7 +1012,8 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0s2-P8-Xst">
                                 <rect key="frame" x="0.0" y="297" width="414" height="545"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartnerTableViewCell" rowHeight="241" id="DjA-lN-jiY" customClass="PartnerTableViewCell" customModule="WeCannes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="241"/>
@@ -1177,29 +1173,29 @@
             <objects>
                 <viewController storyboardIdentifier="WooHooViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fzb-pA-bV3" customClass="WooHooViewController" customModule="WeCannes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N8B-ds-SNH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cannes_theme_app" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-SU-4pA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="952"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_cannes_logo_lockuo" translatesAutoresizingMaskIntoConstraints="NO" id="tGo-av-LEx">
-                                <rect key="frame" x="87" y="67" width="240" height="116"/>
+                                <rect key="frame" x="87" y="67" width="240" height="123.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woo Hoo!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZN-lw-8nJ">
-                                <rect key="frame" x="48.5" y="191" width="317" height="68"/>
+                                <rect key="frame" x="48.5" y="198.5" width="317" height="72.5"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Points Earned" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5j-MU-NJQ">
-                                <rect key="frame" x="48.5" y="267" width="317" height="68"/>
+                                <rect key="frame" x="48.5" y="279" width="317" height="72"/>
                                 <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="h3W-cc-cOH">
-                                <rect key="frame" x="107" y="349" width="200" height="200"/>
+                                <rect key="frame" x="107" y="365" width="200" height="213"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ASW-FD-SDu"/>
@@ -1239,11 +1235,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Ll-yv-rPV"/>
-        <segue reference="I0P-1f-7uM"/>
-        <segue reference="fle-UZ-mH9"/>
-        <segue reference="JtJ-nX-Kgq"/>
-        <segue reference="WP0-5d-rDO"/>
+        <segue reference="0Mz-pm-pYL"/>
+        <segue reference="AFG-xW-xt1"/>
+        <segue reference="GJJ-tr-CS2"/>
+        <segue reference="4dL-vd-709"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cannes_theme_app" width="1170" height="2532"/>

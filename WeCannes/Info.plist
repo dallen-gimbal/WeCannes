@@ -2,10 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 	<key>NSUserNotificationsUsageDescription</key>
-	<string>We will update you about points earned, places visited, and upcoming events.</string>
+	<string>Notifications may include alerts and will honor your time and attention by notifying you when reward opportunities exist. This can be configured in settings</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>BeVietnamPro-ExtraLight.ttf</string>
@@ -29,7 +27,13 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

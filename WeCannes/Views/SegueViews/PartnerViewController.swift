@@ -18,6 +18,7 @@ class PartnerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
+        
     }
 
     override func viewDidLoad() {
@@ -27,6 +28,8 @@ class PartnerViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.dataSource = self
         
         updatePartnerList()
+        
+        self.tableView.backgroundColor = .white
     }
     
 
@@ -90,6 +93,12 @@ class PartnerViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200.00
     }
+    
+//    func table
+//    
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.backgroundColor = .clear
+//    }
 
 }
 

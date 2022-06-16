@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         FirebaseApp.configure()
         
         // Gimbal
-        Gimbal.setAPIKey("0722b77d-831d-4121-91d7-ca2a032ad99d", options: [:])
+        Gimbal.setAPIKey("d56f22a1-11ef-47d7-b94b-dd4674fb6329", options: [:])
         
         // Permissions
         let locationStatus = permissions.checkLocationStatus()
@@ -80,12 +80,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         print("Place Enter: \(visit.place.name)")
         
         handlePlaceNotifications(visit: visit)
-        
         guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else {
             return
         }
-        
-        print("got active scene")
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -122,7 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         guard var points = visit.place.attributes.string(forKey: "Points") else { return }
         points = "\(util.dwellTimeMultiplier(points: points, dwell: Int(round(dwell))))"
         util.storePoints(value: points) {
-            
+//            notifications.sendNotification(title: "You've Exited \(visit.place.name)", body: "Make sure to check how many points you've earned!")
         }
     }
     

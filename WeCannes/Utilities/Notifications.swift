@@ -16,11 +16,11 @@ class LocalNotifications {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = title
         notificationContent.body = body
-        notificationContent.badge = NSNumber(value: 3)
+        notificationContent.badge = NSNumber(value: 1)
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.001,
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1,
                                                         repeats: false)
-        let request = UNNotificationRequest(identifier: "testNotification",
+        let request = UNNotificationRequest(identifier: "PlaceEvent",
                                             content: notificationContent,
                                             trigger: trigger)
         
@@ -30,5 +30,4 @@ class LocalNotifications {
             }
         }
     }
-    
 }

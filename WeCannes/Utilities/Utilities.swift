@@ -107,9 +107,9 @@ class Utilities {
             return score
         } else if dwell >= 120 && dwell < 240 {
             return score * 2
-        } else if dwell >= 120 && dwell < 240 {
+        } else if dwell >= 240 && dwell < 360 {
             return score * 3
-        } else if dwell >= 120 && dwell < 240 {
+        } else if dwell >= 360 && dwell < 480 {
             return score * 4
         }
         return score * 5
@@ -126,7 +126,7 @@ class Utilities {
         } else if error == .networkError || error == .webNetworkRequestFailed {
             displayAlert(vc: vc, message: "There seems to be network connectivity issues.", title: "Whoops")
         } else {
-            displayAlert(vc: vc, message: "Some unkonwn error has occurred.", title: "Whoops")
+            displayAlert(vc: vc, message: "Some unknown error has occurred.", title: "Whoops")
         }
     }
     
