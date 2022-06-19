@@ -9,13 +9,12 @@ import UIKit
 import FirebaseFirestore
 import WebKit
 
-class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, WKNavigationDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
     private let cellReuseIdentifier = "scheduleCell"
-    private var webView = WKWebView()
-
+    private let webView = WKWebView()
     private var cellCount = 0
     private var cellTitleArray = [String]()
     private var cellTimeArray = [String]()
@@ -30,6 +29,9 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
         self.tableView.dataSource = self
         
         updateEventsList()
+        
+        self.webView.frame = view.bounds
+        self.webView.navigationDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,14 +58,30 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(cellUrlArray[indexPath.row])
         DispatchQueue.main.async {
-//            self.present(Utilities.init().showSafari(theUrl: self.cellUrlArray[indexPath.row]), animated: true)
-            self.webView = WKWebView(frame: CGRect(x: 0, y: 0,
-                                                   width: self.view.frame.width,
-                                                   height: self.view.frame.height))
-                                     
-            self.webView.loadURL(self.cellUrlArray[indexPath.row])
+            guard let url = URL(string: self.cellUrlArray[indexPath.row]) else { return }
+            let urlRequest = URLRequest(url: url)
+
+            self.webView.load(urlRequest)
+            self.webView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         }
     }
+    
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+       
+       guard let url = navigationAction.request.url else{
+           decisionHandler(.allow)
+           return
+       }
+       
+       let urlString = url.absoluteString.lowercased()
+       if urlString.starts(with: "http://") || urlString.starts(with: "https://") {
+           decisionHandler(.cancel)
+           UIApplication.shared.open(url, options: [:])
+       } else {
+           decisionHandler(.allow)
+       }
+       
+   }
     
     private func updateEventsList() {
         FirebaseFunctions.init().getCollectionData(collection: "events", completion: { documents, error in

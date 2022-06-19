@@ -91,6 +91,10 @@
 		F0E45AFF285BDBF600638A56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E45AFE285BDBF600638A56 /* GoogleService-Info.plist */; };
 		F0E45B00285BDBF600638A56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E45AFE285BDBF600638A56 /* GoogleService-Info.plist */; };
 		F0E45B01285BDBF600638A56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E45AFE285BDBF600638A56 /* GoogleService-Info.plist */; };
+		F0F5C000285F930A0054CC11 /* Gimbal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F5BFFE285F930A0054CC11 /* Gimbal.framework */; platformFilter = ios; };
+		F0F5C001285F930A0054CC11 /* Gimbal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F5BFFE285F930A0054CC11 /* Gimbal.framework */; platformFilter = ios; };
+		F0F5C002285F93150054CC11 /* Gimbal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F5BFFE285F930A0054CC11 /* Gimbal.framework */; };
+		F0F5C003285F93150054CC11 /* Gimbal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0F5BFFE285F930A0054CC11 /* Gimbal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0F82ACB284C48210024002C /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +122,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F0F5C003285F93150054CC11 /* Gimbal.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +175,7 @@
 		F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WooHooViewController.swift; sourceTree = "<group>"; };
 		F0CFADDF2853C16F0066EE4B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainNavigationController.swift; path = WeCannes/Views/MainNavigationController.swift; sourceTree = SOURCE_ROOT; };
 		F0E45AFE285BDBF600638A56 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F0F5BFFE285F930A0054CC11 /* Gimbal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Gimbal.framework; sourceTree = "<group>"; };
 		F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +188,7 @@
 				9B8B80491AD2C8A9CABECC58 /* Pods_WeCannes.framework in Frameworks */,
 				F0B8751F2839DC5A0084A126 /* FirebaseAuth in Frameworks */,
 				F03F3F492847C2B900E605A7 /* FirebaseFirestore in Frameworks */,
+				F0F5C002285F93150054CC11 /* Gimbal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F5C000285F930A0054CC11 /* Gimbal.framework in Frameworks */,
 				8DCEFB1E0EBF637C3F6DB93A /* Pods_WeCannesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F5C001285F930A0054CC11 /* Gimbal.framework in Frameworks */,
 				D79BBC2C264AB883FCC89518 /* Pods_WeCannes_WeCannesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +216,7 @@
 		3A6775164E9980B9B64FDF70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0F5BFFE285F930A0054CC11 /* Gimbal.framework */,
 				BB26792A1D1A7CDF0E8EFF99 /* Pods_WeCannes.framework */,
 				E235DDFC3D9C9FD15153FF5C /* Pods_WeCannes_WeCannesUITests.framework */,
 				38B1DF147F2E7FB543617E2E /* Pods_WeCannesTests.framework */,
