@@ -11,6 +11,7 @@ import SafariServices
 import IHProgressHUD
 import FirebaseAuth
 import Gimbal
+import WebKit
 
 class Utilities {
 
@@ -175,5 +176,12 @@ extension UIView{
             UIView.transition(with: self, duration: 1, options: [.transitionFlipFromRight,.allowUserInteraction], animations: nil, completion: nil)
             self.isHidden = false
         }
+    }
+}
+
+extension WKWebView {
+    func loadURL(_ string: String) {
+        guard let url = URL(string: string) else { return }
+        load(URLRequest(url: url))
     }
 }

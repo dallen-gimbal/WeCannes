@@ -96,9 +96,13 @@ class RedeemPointsViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Happened")
-        FirebaseFunctions.init().redeemPrize(vc: self, points: Int(pointsArray[indexPath.row]) ?? 0, prize: titleArray[indexPath.row]) {
-            Utilities.init().displayAlert(vc: self, message: "Lookout for an email from Infillion on your prize!", title: "Congratulations!")
-            self.pointsLabel.text = "\(Utilities.init().checkPointValue(key: "Points"))"
+        if Int(pointsArray[indexPath.row]) ?? 0 == 150 {
+            FirebaseFunctions.init().redeemPrize(vc: self, points: Int(pointsArray[indexPath.row]) ?? 0, prize: titleArray[indexPath.row]) {
+                Utilities.init().displayAlert(vc: self, message: "Lookout for an email from Infillion on your prize!", title: "Congratulations!")
+                self.pointsLabel.text = "\(Utilities.init().checkPointValue(key: "Points"))"
+            }
+        } else {
+            Utilities.init().displayAlert(vc: self, message: "All tokens will be donated to support Ukraine!", title: "Congratulations!")
         }
     }
     

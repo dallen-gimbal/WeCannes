@@ -1086,41 +1086,42 @@
                                 <rect key="frame" x="0.0" y="445" width="414" height="397"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ScheduledEventsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduledEventsTableViewCell" id="akY-ez-ve8" customClass="ScheduledEventsTableViewCell" customModule="WeCannes" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ScheduledEventsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduledEventsTableViewCell" rowHeight="120" id="akY-ez-ve8" customClass="ScheduledEventsTableViewCell" customModule="WeCannes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="akY-ez-ve8" id="xNV-5w-pMm">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pEq-Pm-0tG">
-                                                    <rect key="frame" x="20" y="9" width="171" height="26"/>
-                                                    <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pEq-Pm-0tG">
+                                                    <rect key="frame" x="20" y="11" width="204" height="98"/>
+                                                    <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.86274509799999999" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="xGP-Mc-pIC">
-                                                    <rect key="frame" x="199" y="11.5" width="195" height="21"/>
-                                                    <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Time" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGP-Mc-pIC">
+                                                    <rect key="frame" x="232" y="11" width="162" height="98"/>
+                                                    <fontDescription key="fontDescription" name="BeVietnamPro-ExtraLight" family="Be Vietnam Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.86274509799999999" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="xGP-Mc-pIC" firstAttribute="trailing" secondItem="xNV-5w-pMm" secondAttribute="trailingMargin" id="0Wv-hK-h3K"/>
-                                                <constraint firstItem="xGP-Mc-pIC" firstAttribute="centerY" secondItem="xNV-5w-pMm" secondAttribute="centerY" id="EjF-Rn-ZM4"/>
-                                                <constraint firstItem="xGP-Mc-pIC" firstAttribute="height" secondItem="xNV-5w-pMm" secondAttribute="height" multiplier="0.477273" id="MzB-vB-C2I"/>
-                                                <constraint firstItem="pEq-Pm-0tG" firstAttribute="leading" secondItem="xNV-5w-pMm" secondAttribute="leading" constant="20" symbolic="YES" id="SxN-JW-26t"/>
-                                                <constraint firstItem="xGP-Mc-pIC" firstAttribute="leading" secondItem="pEq-Pm-0tG" secondAttribute="trailing" constant="8" symbolic="YES" id="TXM-qq-Lz1"/>
-                                                <constraint firstItem="xGP-Mc-pIC" firstAttribute="width" secondItem="xNV-5w-pMm" secondAttribute="width" multiplier="0.471014" id="XrH-WC-PxF"/>
-                                                <constraint firstItem="pEq-Pm-0tG" firstAttribute="width" secondItem="xNV-5w-pMm" secondAttribute="width" multiplier="0.413043" id="p9u-HT-aAV"/>
-                                                <constraint firstItem="pEq-Pm-0tG" firstAttribute="height" secondItem="xNV-5w-pMm" secondAttribute="height" multiplier="0.597701" id="tB8-ph-FOF"/>
-                                                <constraint firstItem="pEq-Pm-0tG" firstAttribute="centerY" secondItem="xNV-5w-pMm" secondAttribute="centerY" id="vwG-kI-bAS"/>
+                                                <constraint firstItem="pEq-Pm-0tG" firstAttribute="width" secondItem="xNV-5w-pMm" secondAttribute="width" multiplier="0.492754" id="8XM-2u-x40"/>
+                                                <constraint firstItem="xGP-Mc-pIC" firstAttribute="trailing" secondItem="xNV-5w-pMm" secondAttribute="trailingMargin" id="EF0-Kh-jpa"/>
+                                                <constraint firstItem="xGP-Mc-pIC" firstAttribute="leading" secondItem="pEq-Pm-0tG" secondAttribute="trailing" constant="8" symbolic="YES" id="fy6-iR-96h"/>
+                                                <constraint firstItem="xGP-Mc-pIC" firstAttribute="centerY" secondItem="xNV-5w-pMm" secondAttribute="centerY" id="kiy-eW-obr"/>
+                                                <constraint firstItem="pEq-Pm-0tG" firstAttribute="height" secondItem="xNV-5w-pMm" secondAttribute="height" multiplier="0.816667" id="v26-y1-Sqh"/>
+                                                <constraint firstItem="pEq-Pm-0tG" firstAttribute="centerY" secondItem="xNV-5w-pMm" secondAttribute="centerY" id="ycJ-ru-4Tm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <accessibility key="accessibilityConfiguration" identifier="VisitsTableViewCell" label="VisitsTableViewCell"/>
+                                        <constraints>
+                                            <constraint firstItem="xGP-Mc-pIC" firstAttribute="height" secondItem="akY-ez-ve8" secondAttribute="height" multiplier="0.816667" id="7v6-3Q-FmW"/>
+                                            <constraint firstItem="xGP-Mc-pIC" firstAttribute="width" secondItem="akY-ez-ve8" secondAttribute="width" multiplier="0.391304" id="FM0-TB-1Yc"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="eventNameLabel" destination="pEq-Pm-0tG" id="0re-fJ-joa"/>
                                             <outlet property="eventTimeLabel" destination="xGP-Mc-pIC" id="WXI-wj-pcG"/>

@@ -88,10 +88,6 @@
 		F0CFADE12853C1730066EE4B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFADDF2853C16F0066EE4B /* MainNavigationController.swift */; };
 		F0CFADE22853C1730066EE4B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFADDF2853C16F0066EE4B /* MainNavigationController.swift */; };
 		F0D7C773284D830F00531E95 /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = F0D7C772284D830F00531E95 /* IHProgressHUD */; };
-		F0E45AFA285BD71100638A56 /* Gimbal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E45AF8285BD71100638A56 /* Gimbal.framework */; platformFilter = ios; };
-		F0E45AFB285BD71100638A56 /* Gimbal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E45AF8285BD71100638A56 /* Gimbal.framework */; platformFilter = ios; };
-		F0E45AFC285BD7D000638A56 /* Gimbal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E45AF8285BD71100638A56 /* Gimbal.framework */; };
-		F0E45AFD285BD7D000638A56 /* Gimbal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0E45AF8285BD71100638A56 /* Gimbal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0E45AFF285BDBF600638A56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E45AFE285BDBF600638A56 /* GoogleService-Info.plist */; };
 		F0E45B00285BDBF600638A56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E45AFE285BDBF600638A56 /* GoogleService-Info.plist */; };
 		F0E45B01285BDBF600638A56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E45AFE285BDBF600638A56 /* GoogleService-Info.plist */; };
@@ -122,7 +118,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F0E45AFD285BD7D000638A56 /* Gimbal.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,7 +148,7 @@
 		F03F3FAB284976D500E605A7 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		F0453F89284D474E00130EFA /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		F0453F8A284D474E00130EFA /* OnboardingPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingPage.xib; sourceTree = "<group>"; };
-		F0B874C02839BFC10084A126 /* WeCannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCannes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0B874C02839BFC10084A126 /* We Cannes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "We Cannes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B874C32839BFC10084A126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B874C52839BFC10084A126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F0B874CF2839BFC30084A126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -174,7 +169,6 @@
 		F0BA1A6C284C526B004DD906 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F0BA1A70284C6FFE004DD906 /* WooHooViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WooHooViewController.swift; sourceTree = "<group>"; };
 		F0CFADDF2853C16F0066EE4B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainNavigationController.swift; path = WeCannes/Views/MainNavigationController.swift; sourceTree = SOURCE_ROOT; };
-		F0E45AF8285BD71100638A56 /* Gimbal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Gimbal.framework; sourceTree = "<group>"; };
 		F0E45AFE285BDBF600638A56 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0F82ACA284C48210024002C /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,7 +182,6 @@
 				9B8B80491AD2C8A9CABECC58 /* Pods_WeCannes.framework in Frameworks */,
 				F0B8751F2839DC5A0084A126 /* FirebaseAuth in Frameworks */,
 				F03F3F492847C2B900E605A7 /* FirebaseFirestore in Frameworks */,
-				F0E45AFC285BD7D000638A56 /* Gimbal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +189,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0E45AFA285BD71100638A56 /* Gimbal.framework in Frameworks */,
 				8DCEFB1E0EBF637C3F6DB93A /* Pods_WeCannesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +197,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0E45AFB285BD71100638A56 /* Gimbal.framework in Frameworks */,
 				D79BBC2C264AB883FCC89518 /* Pods_WeCannes_WeCannesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +207,6 @@
 		3A6775164E9980B9B64FDF70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F0E45AF8285BD71100638A56 /* Gimbal.framework */,
 				BB26792A1D1A7CDF0E8EFF99 /* Pods_WeCannes.framework */,
 				E235DDFC3D9C9FD15153FF5C /* Pods_WeCannes_WeCannesUITests.framework */,
 				38B1DF147F2E7FB543617E2E /* Pods_WeCannesTests.framework */,
@@ -282,7 +272,7 @@
 		F0B874C12839BFC10084A126 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F0B874C02839BFC10084A126 /* WeCannes.app */,
+				F0B874C02839BFC10084A126 /* We Cannes.app */,
 				F0B874D62839BFC40084A126 /* WeCannesTests.xctest */,
 				F0B874E02839BFC40084A126 /* WeCannesUITests.xctest */,
 			);
@@ -403,7 +393,7 @@
 				F0D7C772284D830F00531E95 /* IHProgressHUD */,
 			);
 			productName = WeCannes;
-			productReference = F0B874C02839BFC10084A126 /* WeCannes.app */;
+			productReference = F0B874C02839BFC10084A126 /* We Cannes.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F0B874D52839BFC40084A126 /* WeCannesTests */ = {
@@ -877,7 +867,6 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeCannes/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Your location is used to unlock reward opportunities, event happenings, and better app experiences\", \"We use Bluetooth to know when you're visiting an Infillion or Partner activation so we can alert you to special events and reward opportunities.";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We use Bluetooth to know when you're visiting an Infillion or Partner activation so we can alert you to special events and reward opportunities.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your location is used to unlock reward opportunities, event happenings, and better app experiences";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is used to unlock reward opportunities, event happenings, and better app experiences";
@@ -895,7 +884,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gimbal.infillion.wecannes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "We Cannes";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -919,7 +908,6 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeCannes/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Your location is used to unlock reward opportunities, event happenings, and better app experiences\", \"We use Bluetooth to know when you're visiting an Infillion or Partner activation so we can alert you to special events and reward opportunities.";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We use Bluetooth to know when you're visiting an Infillion or Partner activation so we can alert you to special events and reward opportunities.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your location is used to unlock reward opportunities, event happenings, and better app experiences";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is used to unlock reward opportunities, event happenings, and better app experiences";
@@ -937,7 +925,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gimbal.infillion.wecannes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "We Cannes";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -7,12 +7,15 @@
 
 import UIKit
 import FirebaseFirestore
+import WebKit
 
 class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
     private let cellReuseIdentifier = "scheduleCell"
+    private var webView = WKWebView()
+
     private var cellCount = 0
     private var cellTitleArray = [String]()
     private var cellTimeArray = [String]()
@@ -53,7 +56,12 @@ class ScheduledEventsViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(cellUrlArray[indexPath.row])
         DispatchQueue.main.async {
-            self.present(Utilities.init().showSafari(theUrl: self.cellUrlArray[indexPath.row]), animated: true)
+//            self.present(Utilities.init().showSafari(theUrl: self.cellUrlArray[indexPath.row]), animated: true)
+            self.webView = WKWebView(frame: CGRect(x: 0, y: 0,
+                                                   width: self.view.frame.width,
+                                                   height: self.view.frame.height))
+                                     
+            self.webView.loadURL(self.cellUrlArray[indexPath.row])
         }
     }
     

@@ -58,6 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         // GDPR Consent
         util.gdprConsent()
         
+        scheduleTimeNotifications()
+        
         return true
     }
 
@@ -137,6 +139,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
         guard let title = visit.place.attributes.string(forKey: "NotificationTitle") else { return }
         guard let body = visit.place.attributes.string(forKey: "NotificationBody") else { return }
         notifications.sendNotification(title: title, body: body)
+    }
+    
+    func scheduleTimeNotifications() {
+        let notificationTitles = ["“Interactivity is the Future” panel is starting soon. Join us!", "Swing by our networking and cocktail hour with DJ Hesta Prynn", "Navigate the Consumer Experience in a 3.0 Future, happening now", "Earn tokens! Join our discussion on Media’s Connected Future", "Come by the Infillion Garden for a 90's nostalgia live performance"]
+        let notificationDays = [20, 20, 21, 23, 23]
+        let notificationHours = [15, 17, 16, 16, 18]
+        let notificationMinutes = [50, 0, 0, 20, 0]
+        for i in 0...4 {
+            notifications.scheduleNotfications(day: notificationDays[i], hour: notificationHours[i], minute: notificationMinutes[i], title: notificationTitles[i])
+        }
     }
 }
 
