@@ -10,6 +10,7 @@ import FirebaseCore
 import Gimbal
 import CloudKit
 import IQKeyboardManagerSwift
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
@@ -150,5 +151,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlaceManagerDelegate {
             notifications.scheduleNotfications(day: notificationDays[i], hour: notificationHours[i], minute: notificationMinutes[i], title: notificationTitles[i])
         }
     }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+
+        completionHandler([.banner, .sound, .badge])
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+
+        print("Local Notification :: ", response)
+    }
 }
+
+//extension AppDelegate: UNUserNotificationCenterDelegate {
+//  func userNotificationCenter(
+//    _ center: UNUserNotificationCenter,
+//    willPresent notification: UNNotification,
+//    withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void
+//  ) {
+//    completionHandler(.banner)
+//  }
+//}
 

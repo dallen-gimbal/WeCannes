@@ -11,25 +11,60 @@ import UserNotifications
 class LocalNotifications {
     
     let userNotificationCenter = UNUserNotificationCenter.current()
+    private let utilities = Utilities.init()
     
     func sendNotification(title: String, body: String) {
-        let notificationContent = UNMutableNotificationContent()
-        notificationContent.title = title
-        notificationContent.body = body
-        notificationContent.badge = NSNumber(value: 1)
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1,
-                                                        repeats: false)
-        let uuidString = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuidString,
-                                            content: notificationContent,
-                                            trigger: trigger)
-        
-        userNotificationCenter.add(request) { (error) in
+        // 2
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+
+        // 3
+        var trigger: UNNotificationTrigger?
+        trigger = UNTimeIntervalNotificationTrigger(
+        timeInterval: 1,
+        repeats: false)
+
+        // 4
+        if let trigger = trigger {
+          let request = UNNotificationRequest(
+              identifier: utilities.randomString(length: 6),
+              content: content,
+              trigger: trigger)
+          // 5
+          UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
-                print("Notification Error: ", error)
+              print(error)
             }
+          }
         }
+    }
+    
+    func scheduleNotification() {
+      // 2
+      let content = UNMutableNotificationContent()
+      content.title = "Worked!!!"
+      content.body = "Gentle reminder for your task!"
+
+      // 3
+      var trigger: UNNotificationTrigger?
+      trigger = UNTimeIntervalNotificationTrigger(
+      timeInterval: 1,
+      repeats: false)
+
+      // 4
+      if let trigger = trigger {
+        let request = UNNotificationRequest(
+            identifier: utilities.randomString(length: 6),
+            content: content,
+            trigger: trigger)
+        // 5
+        UNUserNotificationCenter.current().add(request) { error in
+          if let error = error {
+            print(error)
+          }
+        }
+      }
     }
     
     func scheduleNotfications(day: Int, hour: Int, minute: Int, title: String) {
@@ -45,7 +80,7 @@ class LocalNotifications {
         content.title = title
         let trigger = UNCalendarNotificationTrigger(
                  dateMatching: time, repeats: false)
-        let uuidString = UUID().uuidString
+        let uuidString = utilities.randomString(length: 6)
         let request = UNNotificationRequest(identifier: uuidString,
                     content: content, trigger: trigger)
 
@@ -81,4 +116,8 @@ class LocalNotifications {
 //            }
 //        }
 //    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .badge, .sound])
+    }
 }
